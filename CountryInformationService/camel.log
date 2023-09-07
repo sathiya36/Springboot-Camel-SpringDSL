@@ -1,0 +1,1032 @@
+2023-09-07 19:22:58,395 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 19:22:58,491 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 40936 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 19:22:58,497 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 19:23:03,675 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$a424fea6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 19:23:03,776 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 19:23:05,372 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 19:23:05,408 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 19:23:05,409 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 6820 ms
+2023-09-07 19:23:06,862 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@2ead6ba4
+2023-09-07 19:23:06,935 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 19:23:08,793 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 19:23:08,794 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 19:23:08,867 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 19:23:09,067 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 19:23:09,080 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 19:23:09,109 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 19:23:09,133 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 19:23:09,347 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 19:23:09,469 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 19:23:10,038 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-07 19:23:10,107 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:3 started:3)
+2023-09-07 19:23:10,107 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 19:23:10,107 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-07 19:23:10,108 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo)
+2023-09-07 19:23:10,108 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 770ms (build:197ms init:504ms start:69ms)
+2023-09-07 19:23:10,153 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 12.485 seconds (JVM running for 13.529)
+2023-09-07 19:24:41,768 | INFO | ServletContextImpl.java 389 | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-07 19:24:41,771 | INFO | FrameworkServlet.java 525 | Initializing Servlet 'dispatcherServlet'
+2023-09-07 19:24:41,777 | INFO | FrameworkServlet.java 547 | Completed initialization in 5 ms
+2023-09-07 19:25:07,127 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo,exchangeId:5F7620315B167DA-0000000000000000- Message-
+2023-09-07 20:36:48,685 | INFO | AbstractCamelContext.java 3386 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutting down (timeout:45s)
+2023-09-07 20:36:48,729 | INFO | CamelLogger.java 166 | Routes stopped (total:3 stopped:3)
+2023-09-07 20:36:48,729 | INFO | CamelLogger.java 166 |     Stopped /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo)
+2023-09-07 20:36:48,729 | INFO | CamelLogger.java 166 |     Stopped route1 (rest-api://api-doc)
+2023-09-07 20:36:48,729 | INFO | CamelLogger.java 166 |     Stopped /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 20:36:48,734 | INFO | AbstractCamelContext.java 3525 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutdown in 50ms (uptime:1h13m38s)
+2023-09-07 20:36:48,736 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 20:36:48,748 | INFO | ServletContextImpl.java 389 | Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-07 20:36:48,749 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 20:36:55,763 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 20:36:55,821 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 4416 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 20:36:55,823 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 20:36:58,626 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$9966c5a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 20:36:58,660 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 20:36:59,907 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 20:36:59,935 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 20:36:59,935 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 4042 ms
+2023-09-07 20:37:01,416 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@6af90849
+2023-09-07 20:37:01,517 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 20:37:03,553 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:37:03,553 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:37:03,626 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 20:37:03,816 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 20:37:03,828 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 20:37:03,856 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 20:37:03,876 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 20:37:04,061 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 20:37:04,172 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 20:37:04,726 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 20:37:04,744 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 20:37:04,783 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-07 20:37:04,874 | ERROR | SpringApplication.java 821 | Application run failed
+org.apache.camel.FailedToCreateRouteException: Failed to create route /getFullCountryInfo-Route at: >>> To[xslt:xslt/CountryInfoServiceRequest.xsl] <<< in route: Route(/getFullCountryInfo-Route)[From[direct:getFullCountryI... because of Failed to resolve endpoint: xslt://xslt/CountryInfoServiceRequest.xsl due to: javax.xml.transform.TransformerException: java.io.FileNotFoundException: Cannot find resource: classpath:xslt/CountryInfoServiceRequest.xsl for URI: classpath:xslt/CountryInfoServiceRequest.xsl
+	at org.apache.camel.reifier.RouteReifier.doCreateRoute(RouteReifier.java:240)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.reifier.RouteReifier.createRoute(RouteReifier.java:74)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultModelReifierFactory.createRoute(DefaultModelReifierFactory.java:49)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:862)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:750)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.doInit(AbstractCamelContext.java:2946)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.init(BaseService.java:83)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.init(AbstractCamelContext.java:2629)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.start(BaseService.java:111)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.start(AbstractCamelContext.java:2648)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:262)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:119)[camel-spring-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.start(CamelContextFactoryBean.java:428)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:483)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:99)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-07 20:37:44,087 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 20:37:44,138 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 95320 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 20:37:44,139 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 20:37:47,166 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e7711227] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 20:37:47,245 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 20:37:48,714 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 20:37:48,745 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 20:37:48,745 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 4536 ms
+2023-09-07 20:37:50,065 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@2404b5a
+2023-09-07 20:37:50,123 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 20:37:51,870 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:37:51,870 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:37:51,951 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 20:37:52,161 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 20:37:52,171 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 20:37:52,197 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 20:37:52,217 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 20:37:52,382 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 20:37:52,497 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 20:37:54,144 | INFO | SaajSoapMessageFactory.java 137 | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2023-09-07 20:37:54,471 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-07 20:37:54,635 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:3 started:3)
+2023-09-07 20:37:54,635 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 20:37:54,636 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-07 20:37:54,636 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 20:37:54,636 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 2s257ms (build:188ms init:1s905ms start:164ms)
+2023-09-07 20:37:54,679 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 11.176 seconds (JVM running for 12.15)
+2023-09-07 20:38:00,489 | INFO | AbstractCamelContext.java 3386 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutting down (timeout:45s)
+2023-09-07 20:38:00,508 | INFO | CamelLogger.java 166 | Routes stopped (total:3 stopped:3)
+2023-09-07 20:38:00,509 | INFO | CamelLogger.java 166 |     Stopped /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 20:38:00,509 | INFO | CamelLogger.java 166 |     Stopped route1 (rest-api://api-doc)
+2023-09-07 20:38:00,509 | INFO | CamelLogger.java 166 |     Stopped /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 20:38:00,514 | INFO | AbstractCamelContext.java 3525 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutdown in 25ms (uptime:6s42ms)
+2023-09-07 20:38:00,515 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 20:38:00,526 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 20:38:16,572 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 20:38:16,642 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 49160 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 20:38:16,645 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 20:38:22,710 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$b87b6e4e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 20:38:22,790 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 20:38:24,296 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 20:38:24,335 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 20:38:24,335 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 7583 ms
+2023-09-07 20:38:25,750 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@7dcb42a9
+2023-09-07 20:38:25,806 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 20:38:27,528 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:38:27,528 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:38:27,623 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 20:38:27,852 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 20:38:27,864 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 20:38:27,889 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 20:38:27,912 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 20:38:28,119 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 20:38:28,238 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 20:38:30,059 | INFO | SaajSoapMessageFactory.java 137 | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2023-09-07 20:38:30,373 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-07 20:38:30,570 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:3 started:3)
+2023-09-07 20:38:30,571 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 20:38:30,571 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-07 20:38:30,571 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 20:38:30,572 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 2s454ms (build:188ms init:2s68ms start:198ms)
+2023-09-07 20:38:30,627 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 14.673 seconds (JVM running for 16.669)
+2023-09-07 20:39:47,039 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:151780425EB9D81-0000000000000000- Message-
+2023-09-07 20:39:47,165 | ERROR | CamelLogger.java 163 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:151780425EB9D81-0000000000000000- Exception:net.sf.saxon.trans.XPathException: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+2023-09-07 20:40:18,596 | INFO | AbstractCamelContext.java 3386 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutting down (timeout:45s)
+2023-09-07 20:40:18,614 | INFO | CamelLogger.java 166 | Routes stopped (total:3 stopped:3)
+2023-09-07 20:40:18,614 | INFO | CamelLogger.java 166 |     Stopped /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 20:40:18,614 | INFO | CamelLogger.java 166 |     Stopped route1 (rest-api://api-doc)
+2023-09-07 20:40:18,615 | INFO | CamelLogger.java 166 |     Stopped /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 20:40:18,618 | INFO | AbstractCamelContext.java 3525 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutdown in 22ms (uptime:1m48s)
+2023-09-07 20:40:18,619 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 20:40:18,626 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 20:40:23,471 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 20:40:23,530 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 62516 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 20:40:23,532 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 20:40:26,420 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c8c0c487] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 20:40:26,461 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 20:40:27,746 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 20:40:27,784 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 20:40:27,785 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 4180 ms
+2023-09-07 20:40:29,186 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@7885776b
+2023-09-07 20:40:29,256 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 20:40:31,000 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:40:31,001 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:40:31,092 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 20:40:31,344 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 20:40:31,356 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 20:40:31,378 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 20:40:31,406 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 20:40:31,615 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 20:40:31,725 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 20:40:33,479 | INFO | SaajSoapMessageFactory.java 137 | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2023-09-07 20:40:33,804 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-07 20:40:33,805 | INFO | AbstractCamelContext.java 3222 | Tracing is enabled on CamelContext: CountryInformationService-Camel
+2023-09-07 20:40:34,001 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:3 started:3)
+2023-09-07 20:40:34,001 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 20:40:34,002 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-07 20:40:34,002 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 20:40:34,002 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 2s383ms (build:187ms init:1s999ms start:197ms)
+2023-09-07 20:40:34,062 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 11.097 seconds (JVM running for 12.051)
+2023-09-07 20:40:44,003 | INFO | DefaultTracer.java 264 | *--> [/GET-getCountryInfo           ] [from[rest://get:/CountryInfo:/getFullCountryInfo/%] Exchange[Id: F468376203DE455-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:40:44,004 | INFO | DefaultTracer.java 264 |      [/GET-getCountryInfo           ] [direct:getFullCountryInfo-route                   ] Exchange[Id: F468376203DE455-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:40:44,007 | INFO | DefaultTracer.java 264 | ---> [/getFullCountryInfo-Route     ] [from[direct:getFullCountryInfo-route]             ] Exchange[Id: F468376203DE455-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:40:44,007 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [log                                               ] Exchange[Id: F468376203DE455-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:40:44,013 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:F468376203DE455-0000000000000000- Message-
+2023-09-07 20:40:44,014 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [removeHeader[*]                                   ] Exchange[Id: F468376203DE455-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:40:44,015 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [setHeader[operationName]                          ] Exchange[Id: F468376203DE455-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:40:44,015 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [setHeader[Accept-Encoding]                        ] Exchange[Id: F468376203DE455-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:40:44,015 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [convertBodyTo[java.lang.String]                   ] Exchange[Id: F468376203DE455-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:40:44,017 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [xslt:xslt/CountryInfoServiceRequest.xsl           ] Exchange[Id: F468376203DE455-0000000000000000, BodyType: String, Body: ]
+2023-09-07 20:40:44,080 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [log                                               ] Exchange[Id: F468376203DE455-0000000000000000, BodyType: String, Body: ]
+2023-09-07 20:40:44,082 | ERROR | CamelLogger.java 163 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:F468376203DE455-0000000000000000- Exception:net.sf.saxon.trans.XPathException: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
+2023-09-07 20:40:44,086 | INFO | DefaultTracer.java 264 | <--- [/getFullCountryInfo-Route     ] [from[direct:getFullCountryInfo-route]             ] Exchange[Id: F468376203DE455-0000000000000000, BodyType: String, Body: ]
+2023-09-07 20:40:44,087 | INFO | DefaultTracer.java 264 | *<-- [/GET-getCountryInfo           ] [from[rest://get:/CountryInfo:/getFullCountryInfo/%] Exchange[Id: F468376203DE455-0000000000000000, BodyType: String, Body: ]
+2023-09-07 20:44:02,118 | INFO | AbstractCamelContext.java 3386 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutting down (timeout:45s)
+2023-09-07 20:44:02,144 | INFO | CamelLogger.java 166 | Routes stopped (total:3 stopped:3)
+2023-09-07 20:44:02,145 | INFO | CamelLogger.java 166 |     Stopped /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 20:44:02,145 | INFO | CamelLogger.java 166 |     Stopped route1 (rest-api://api-doc)
+2023-09-07 20:44:02,146 | INFO | CamelLogger.java 166 |     Stopped /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 20:44:02,153 | INFO | AbstractCamelContext.java 3525 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutdown in 35ms (uptime:3m28s)
+2023-09-07 20:44:02,154 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 20:44:02,164 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 20:44:07,952 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 20:44:08,005 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 65056 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 20:44:08,007 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 20:44:10,729 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$354c0af8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 20:44:10,767 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 20:44:11,474 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 20:44:11,499 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 20:44:11,499 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 3424 ms
+2023-09-07 20:44:12,384 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@2404b5a
+2023-09-07 20:44:12,434 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 20:44:14,027 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:44:14,027 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:44:14,090 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 20:44:14,292 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 20:44:14,301 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 20:44:14,322 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 20:44:14,348 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 20:44:14,522 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 20:44:14,642 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 20:44:16,300 | INFO | SaajSoapMessageFactory.java 137 | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2023-09-07 20:44:16,610 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-07 20:44:16,610 | INFO | AbstractCamelContext.java 3222 | Tracing is enabled on CamelContext: CountryInformationService-Camel
+2023-09-07 20:44:16,759 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:3 started:3)
+2023-09-07 20:44:16,759 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 20:44:16,760 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-07 20:44:16,760 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 20:44:16,761 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 2s156ms (build:112ms init:1s894ms start:150ms)
+2023-09-07 20:44:16,800 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 9.357 seconds (JVM running for 10.176)
+2023-09-07 20:44:26,746 | INFO | DefaultTracer.java 264 | *--> [/GET-getCountryInfo           ] [from[rest://get:/CountryInfo:/getFullCountryInfo/%] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:44:26,748 | INFO | DefaultTracer.java 264 |      [/GET-getCountryInfo           ] [direct:getFullCountryInfo-route                   ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:44:26,751 | INFO | DefaultTracer.java 264 | ---> [/getFullCountryInfo-Route     ] [from[direct:getFullCountryInfo-route]             ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:44:26,751 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [log                                               ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:44:26,754 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:DCC612510CD6BFB-0000000000000000- Message-
+2023-09-07 20:44:26,755 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [removeHeader[*]                                   ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:44:26,755 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [setHeader[operationName]                          ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:44:26,756 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [setHeader[Accept-Encoding]                        ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:44:26,756 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [transform[simple{<Data><CountryCode>IN</CountryCod] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: org.apache.camel.converter.stream.InputStreamCache, Body: [Body is instance of org.apache.camel.StreamCache]]
+2023-09-07 20:44:26,758 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [convertBodyTo[java.lang.String]                   ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: String, Body: <Data><CountryCode>IN</CountryCode></Data>]
+2023-09-07 20:44:26,758 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [xslt:xslt/CountryInfoServiceRequest.xsl           ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: String, Body: <Data><CountryCode>IN</CountryCode></Data>]
+2023-09-07 20:44:26,844 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [log                                               ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: String, Body: <?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><:sCountryISOCode>IN</:sCountryISOCode></CapitalCity>]
+2023-09-07 20:44:26,844 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:DCC612510CD6BFB-0000000000000000- Message-<?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><:sCountryISOCode>IN</:sCountryISOCode></CapitalCity>
+2023-09-07 20:44:26,845 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [circuitBreaker                                    ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: String, Body: <?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><:sCountryISOCode>IN</:sCountryISOCode></CapitalCity>]
+2023-09-07 20:44:26,855 | INFO | DefaultTracer.java 264 | ---> [/getFullCountryInfo-Route     ] [from[direct:getFullCountryInfo-route]             ] Exchange[Id: DCC612510CD6BFB-0000000000000001, BodyType: String, Body: <?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><:sCountryISOCode>IN</:sCountryISOCode></CapitalCity>]
+2023-09-07 20:44:26,856 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [spring-ws:{{countryinfo.service.endpoint}}?timeout] Exchange[Id: DCC612510CD6BFB-0000000000000001, BodyType: String, Body: <?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><:sCountryISOCode>IN</:sCountryISOCode></CapitalCity>]
+2023-09-07 20:44:27,902 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [convertBodyTo[java.lang.String]                   ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: javax.xml.transform.dom.DOMSource, Body: <m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>New Delhi</m:CapitalCityResult>
+    </m:CapitalCityResponse>]
+2023-09-07 20:44:27,903 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [log                                               ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: String, Body: <m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>New Delhi</m:CapitalCityResult>
+    </m:CapitalCityResponse>]
+2023-09-07 20:44:27,903 | INFO | CamelLogger.java 166 | /services/CountryInfo/getFullCountryInfo/IN-DCC612510CD6BFB-0000000000000000-Backend-Response-Body- <m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>New Delhi</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-07 20:44:27,904 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [xj:identity?transformDirection=XML2JSON           ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: String, Body: <m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>New Delhi</m:CapitalCityResult>
+    </m:CapitalCityResponse>]
+2023-09-07 20:44:27,982 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [log                                               ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: String, Body: {"CapitalCityResult":"New Delhi"}]
+2023-09-07 20:44:27,982 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:DCC612510CD6BFB-0000000000000000- Message-{"CapitalCityResult":"New Delhi"}
+2023-09-07 20:44:27,983 | INFO | DefaultTracer.java 264 |      [/getFullCountryInfo-Route     ] [setHeader[content-type]                           ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: String, Body: {"CapitalCityResult":"New Delhi"}]
+2023-09-07 20:44:27,983 | INFO | DefaultTracer.java 264 | <--- [/getFullCountryInfo-Route     ] [from[direct:getFullCountryInfo-route]             ] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: String, Body: {"CapitalCityResult":"New Delhi"}]
+2023-09-07 20:44:27,984 | INFO | DefaultTracer.java 264 | *<-- [/GET-getCountryInfo           ] [from[rest://get:/CountryInfo:/getFullCountryInfo/%] Exchange[Id: DCC612510CD6BFB-0000000000000000, BodyType: String, Body: {"CapitalCityResult":"New Delhi"}]
+2023-09-07 20:45:52,759 | INFO | AbstractCamelContext.java 3386 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutting down (timeout:45s)
+2023-09-07 20:45:52,783 | INFO | CamelLogger.java 166 | Routes stopped (total:3 stopped:3)
+2023-09-07 20:45:52,783 | INFO | CamelLogger.java 166 |     Stopped /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 20:45:52,784 | INFO | CamelLogger.java 166 |     Stopped route1 (rest-api://api-doc)
+2023-09-07 20:45:52,784 | INFO | CamelLogger.java 166 |     Stopped /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 20:45:52,792 | INFO | AbstractCamelContext.java 3525 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutdown in 33ms (uptime:1m36s)
+2023-09-07 20:45:52,793 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 20:45:52,802 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 20:46:10,437 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 20:46:10,498 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 98148 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 20:46:10,501 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 20:46:13,127 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$b61aaf3e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 20:46:13,173 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 20:46:14,230 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 20:46:14,264 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 20:46:14,264 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 3700 ms
+2023-09-07 20:46:15,557 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@2ead6ba4
+2023-09-07 20:46:15,614 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 20:46:17,336 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:46:17,337 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 20:46:17,417 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 20:46:17,625 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 20:46:17,634 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 20:46:17,658 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 20:46:17,681 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 20:46:17,851 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 20:46:17,964 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 20:46:19,611 | INFO | SaajSoapMessageFactory.java 137 | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2023-09-07 20:46:19,886 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-07 20:46:20,015 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:3 started:3)
+2023-09-07 20:46:20,016 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 20:46:20,016 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-07 20:46:20,016 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 20:46:20,017 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 2s144ms (build:166ms init:1s848ms start:130ms)
+2023-09-07 20:46:20,051 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 10.148 seconds (JVM running for 10.899)
+2023-09-07 20:46:26,182 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000000- Message-
+2023-09-07 20:46:26,311 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000000- Message-<?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><:sCountryISOCode>IN</:sCountryISOCode></CapitalCity>
+2023-09-07 20:46:27,283 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000000- Message-<m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>New Delhi</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-07 20:46:27,384 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000000- Message-{"CapitalCityResult":"New Delhi"}
+2023-09-07 20:46:30,241 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000001- Message-
+2023-09-07 20:46:30,246 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000001- Message-<?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><:sCountryISOCode>IN</:sCountryISOCode></CapitalCity>
+2023-09-07 20:46:30,682 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000001- Message-<m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>New Delhi</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-07 20:46:30,685 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000001- Message-{"CapitalCityResult":"New Delhi"}
+2023-09-07 20:47:01,877 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000002- Message-
+2023-09-07 20:47:01,880 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000002- Message-<?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><:sCountryISOCode>IN</:sCountryISOCode></CapitalCity>
+2023-09-07 20:47:02,528 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000002- Message-<m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>New Delhi</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-07 20:47:02,533 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000002- Message-{"CapitalCityResult":"New Delhi"}
+2023-09-07 21:39:26,382 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000003- Message-
+2023-09-07 21:39:26,385 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000003- Message-<?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><:sCountryISOCode>IN</:sCountryISOCode></CapitalCity>
+2023-09-07 21:39:27,083 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000003- Message-<m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>New Delhi</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-07 21:39:27,085 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:AD9D66A044D470D-0000000000000003- Message-{"CapitalCityResult":"New Delhi"}
+2023-09-07 21:40:59,074 | INFO | AbstractCamelContext.java 3386 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutting down (timeout:45s)
+2023-09-07 21:40:59,103 | INFO | CamelLogger.java 166 | Routes stopped (total:3 stopped:3)
+2023-09-07 21:40:59,103 | INFO | CamelLogger.java 166 |     Stopped /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 21:40:59,104 | INFO | CamelLogger.java 166 |     Stopped route1 (rest-api://api-doc)
+2023-09-07 21:40:59,104 | INFO | CamelLogger.java 166 |     Stopped /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 21:40:59,111 | INFO | AbstractCamelContext.java 3525 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutdown in 38ms (uptime:54m39s)
+2023-09-07 21:40:59,112 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 21:40:59,120 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 21:41:05,628 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 21:41:05,719 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 84312 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 21:41:05,720 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 21:41:11,361 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ed679ecb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 21:41:11,494 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 21:41:14,872 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 21:41:15,197 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 21:41:15,200 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 9379 ms
+2023-09-07 21:41:17,461 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@2404b5a
+2023-09-07 21:41:17,533 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 21:41:19,246 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 21:41:19,247 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 21:41:19,327 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 21:41:19,525 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 21:41:19,534 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 21:41:19,558 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 21:41:19,580 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 21:41:19,769 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 21:41:19,877 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 21:41:21,352 | INFO | SaajSoapMessageFactory.java 137 | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2023-09-07 21:41:21,603 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-07 21:41:21,768 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:3 started:3)
+2023-09-07 21:41:21,770 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 21:41:21,770 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-07 21:41:21,770 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 21:41:21,770 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 2s71ms (build:237ms init:1s668ms start:166ms)
+2023-09-07 21:41:21,810 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 17.027 seconds (JVM running for 18.315)
+2023-09-07 21:41:32,891 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:F2AF75026C6D03D-0000000000000000- Message-
+2023-09-07 21:41:32,896 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_TRANSFORM,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:F2AF75026C6D03D-0000000000000000- Message-<Data><CountryCode>IN</CountryCode></Data>
+2023-09-07 21:41:33,016 | INFO | CamelLogger.java 166 | tracePoint:AFTER_TRANSFORM,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:F2AF75026C6D03D-0000000000000000- Message-<?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><:sCountryISOCode>IN</:sCountryISOCode></CapitalCity>
+2023-09-07 21:41:33,017 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:F2AF75026C6D03D-0000000000000000- Message-<?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><:sCountryISOCode>IN</:sCountryISOCode></CapitalCity>
+2023-09-07 21:41:34,279 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:F2AF75026C6D03D-0000000000000000- Message-<m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>New Delhi</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-07 21:41:34,344 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:F2AF75026C6D03D-0000000000000000- Message-{"CapitalCityResult":"New Delhi"}
+2023-09-07 21:44:08,859 | INFO | AbstractCamelContext.java 3386 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutting down (timeout:45s)
+2023-09-07 21:44:08,878 | INFO | CamelLogger.java 166 | Routes stopped (total:3 stopped:3)
+2023-09-07 21:44:08,878 | INFO | CamelLogger.java 166 |     Stopped /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 21:44:08,878 | INFO | CamelLogger.java 166 |     Stopped route1 (rest-api://api-doc)
+2023-09-07 21:44:08,879 | INFO | CamelLogger.java 166 |     Stopped /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 21:44:08,883 | INFO | AbstractCamelContext.java 3525 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutdown in 24ms (uptime:2m47s)
+2023-09-07 21:44:08,883 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 21:44:08,889 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 21:44:14,339 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 21:44:14,405 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 81284 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 21:44:14,406 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 21:44:17,163 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$cdb38e10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 21:44:17,229 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 21:44:18,681 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 21:44:18,716 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 21:44:18,716 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 4244 ms
+2023-09-07 21:44:20,200 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@7dcb42a9
+2023-09-07 21:44:20,278 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 21:44:22,389 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 21:44:22,390 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 21:44:22,455 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 21:44:22,650 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 21:44:22,660 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 21:44:22,682 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 21:44:22,703 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 21:44:22,908 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 21:44:23,019 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 21:44:24,788 | INFO | SaajSoapMessageFactory.java 137 | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2023-09-07 21:44:25,077 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-07 21:44:25,205 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:3 started:3)
+2023-09-07 21:44:25,206 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 21:44:25,206 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-07 21:44:25,206 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 21:44:25,206 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 2s360ms (build:245ms init:1s986ms start:129ms)
+2023-09-07 21:44:25,246 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 11.421 seconds (JVM running for 12.188)
+2023-09-07 21:44:34,555 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:8F0843AD577E165-0000000000000000- Message-
+2023-09-07 21:44:34,559 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_TRANSFORM,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:8F0843AD577E165-0000000000000000- Message-<Data><CountryCode>IN</CountryCode></Data>
+2023-09-07 21:44:34,643 | INFO | CamelLogger.java 166 | tracePoint:AFTER_TRANSFORM,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:8F0843AD577E165-0000000000000000- Message-<?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>IN</sCountryISOCode></CapitalCity>
+2023-09-07 21:44:34,644 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:8F0843AD577E165-0000000000000000- Message-<?xml version="1.0" encoding="UTF-8"?><CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>IN</sCountryISOCode></CapitalCity>
+2023-09-07 21:44:35,747 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:8F0843AD577E165-0000000000000000- Message-<m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>New Delhi</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-07 21:44:35,805 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/IN,exchangeId:8F0843AD577E165-0000000000000000- Message-{"CapitalCityResult":"New Delhi"}
+2023-09-07 22:06:11,395 | INFO | AbstractCamelContext.java 3386 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutting down (timeout:45s)
+2023-09-07 22:06:11,408 | INFO | CamelLogger.java 166 | Routes stopped (total:3 stopped:3)
+2023-09-07 22:06:11,409 | INFO | CamelLogger.java 166 |     Stopped /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 22:06:11,409 | INFO | CamelLogger.java 166 |     Stopped route1 (rest-api://api-doc)
+2023-09-07 22:06:11,409 | INFO | CamelLogger.java 166 |     Stopped /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 22:06:11,414 | INFO | AbstractCamelContext.java 3525 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutdown in 19ms (uptime:21m46s)
+2023-09-07 22:06:11,414 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:06:11,421 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:06:18,721 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:06:18,767 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 63752 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:06:18,770 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:06:22,014 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$6f1dc8b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:06:22,122 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:06:23,858 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:06:23,893 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:06:23,894 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 5056 ms
+2023-09-07 22:06:25,283 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@6af90849
+2023-09-07 22:06:25,348 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:06:26,977 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:06:26,977 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:06:27,096 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:06:27,289 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:06:27,297 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:06:27,321 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:06:27,344 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:06:27,520 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:06:27,632 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:06:28,087 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:06:28,103 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:06:28,144 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-07 22:06:28,187 | ERROR | SpringApplication.java 821 | Application run failed
+org.apache.camel.FailedToCreateRouteException: Failed to create route /getFullCountryInfo-Route at: >>> Multicast[[To[getCapitalCity], To[getCountryCurrency]]] <<< in route: Route(/getFullCountryInfo-Route)[From[direct:getFullCountryI... because of No endpoint could be found for: getCapitalCity, please check your classpath contains the needed Camel component jar.
+	at org.apache.camel.reifier.RouteReifier.doCreateRoute(RouteReifier.java:240)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.reifier.RouteReifier.createRoute(RouteReifier.java:74)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultModelReifierFactory.createRoute(DefaultModelReifierFactory.java:49)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:862)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:750)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.doInit(AbstractCamelContext.java:2946)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.init(BaseService.java:83)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.init(AbstractCamelContext.java:2629)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.start(BaseService.java:111)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.start(AbstractCamelContext.java:2648)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:262)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:119)[camel-spring-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.start(CamelContextFactoryBean.java:428)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:483)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:99)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-07 22:08:26,732 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:08:26,781 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 73884 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:08:26,783 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:08:29,456 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$6f1dc8b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:08:29,496 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:08:30,197 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:08:30,230 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:08:30,230 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 3373 ms
+2023-09-07 22:08:31,102 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@6af90849
+2023-09-07 22:08:31,149 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:08:32,824 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:08:32,825 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:08:32,910 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:08:33,107 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:08:33,115 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:08:33,136 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:08:33,163 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:08:33,342 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:08:33,457 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:08:33,931 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:08:33,950 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:08:33,986 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-07 22:08:34,027 | ERROR | SpringApplication.java 821 | Application run failed
+org.apache.camel.FailedToCreateRouteException: Failed to create route /getFullCountryInfo-Route at: >>> Multicast[[To[getCapitalCity], To[getCountryCurrency]]] <<< in route: Route(/getFullCountryInfo-Route)[From[direct:getFullCountryI... because of No endpoint could be found for: getCapitalCity, please check your classpath contains the needed Camel component jar.
+	at org.apache.camel.reifier.RouteReifier.doCreateRoute(RouteReifier.java:240)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.reifier.RouteReifier.createRoute(RouteReifier.java:74)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultModelReifierFactory.createRoute(DefaultModelReifierFactory.java:49)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:862)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:750)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.doInit(AbstractCamelContext.java:2946)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.init(BaseService.java:83)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.init(AbstractCamelContext.java:2629)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.start(BaseService.java:111)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.start(AbstractCamelContext.java:2648)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:262)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:119)[camel-spring-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.start(CamelContextFactoryBean.java:428)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:483)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:99)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-07 22:11:10,848 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:11:10,894 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 99836 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:11:10,895 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:11:13,507 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$9a8ee815] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:11:13,548 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:11:14,712 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:11:14,748 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:11:14,749 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 3788 ms
+2023-09-07 22:11:16,158 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@2404b5a
+2023-09-07 22:11:16,236 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:11:17,973 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:11:17,974 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:11:18,037 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:11:18,250 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:11:18,262 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:11:18,285 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:11:18,309 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:11:18,494 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:11:18,624 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:11:19,059 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:11:19,076 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:11:19,112 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-07 22:11:19,156 | ERROR | SpringApplication.java 821 | Application run failed
+org.apache.camel.FailedToCreateRouteException: Failed to create route /getFullCountryInfo-Route at: >>> Multicast[[To[getCountryCurrency]]] <<< in route: Route(/getFullCountryInfo-Route)[From[direct:getFullCountryI... because of No endpoint could be found for: getCountryCurrency, please check your classpath contains the needed Camel component jar.
+	at org.apache.camel.reifier.RouteReifier.doCreateRoute(RouteReifier.java:240)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.reifier.RouteReifier.createRoute(RouteReifier.java:74)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultModelReifierFactory.createRoute(DefaultModelReifierFactory.java:49)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:862)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:750)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.doInit(AbstractCamelContext.java:2946)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.init(BaseService.java:83)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.init(AbstractCamelContext.java:2629)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.start(BaseService.java:111)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.start(AbstractCamelContext.java:2648)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:262)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:119)[camel-spring-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.start(CamelContextFactoryBean.java:428)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:483)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:99)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-07 22:12:26,280 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:12:26,320 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 94000 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:12:26,322 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:12:30,340 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$52be13a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:12:30,431 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:12:32,003 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:12:32,030 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:12:32,031 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 5644 ms
+2023-09-07 22:12:33,092 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@152c4495
+2023-09-07 22:12:33,128 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:12:34,402 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:12:34,403 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:12:34,472 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:12:34,658 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:12:34,668 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:12:34,691 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:12:34,712 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:12:34,888 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:12:34,995 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:12:35,440 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:12:35,457 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:12:35,502 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-07 22:12:35,565 | ERROR | SpringApplication.java 821 | Application run failed
+org.apache.camel.FailedToCreateRouteException: Failed to create route /getFullCountryInfo-Route at: >>> To[getCapitalCity] <<< in route: Route(/getFullCountryInfo-Route)[From[direct:getFullCountryI... because of No endpoint could be found for: getCapitalCity, please check your classpath contains the needed Camel component jar.
+	at org.apache.camel.reifier.RouteReifier.doCreateRoute(RouteReifier.java:240)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.reifier.RouteReifier.createRoute(RouteReifier.java:74)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultModelReifierFactory.createRoute(DefaultModelReifierFactory.java:49)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:862)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:750)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.doInit(AbstractCamelContext.java:2946)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.init(BaseService.java:83)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.init(AbstractCamelContext.java:2629)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.start(BaseService.java:111)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.start(AbstractCamelContext.java:2648)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:262)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:119)[camel-spring-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.start(CamelContextFactoryBean.java:428)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:483)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:99)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-07 22:16:51,605 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:16:52,024 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 57856 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:16:52,028 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:17:03,033 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e12e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:17:03,157 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:17:04,798 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:17:04,831 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:17:04,831 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 12362 ms
+2023-09-07 22:17:06,052 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@28a9494b
+2023-09-07 22:17:06,111 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:17:07,725 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:17:07,725 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:17:07,792 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:17:07,958 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:17:07,969 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:17:07,992 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:17:08,013 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:17:08,191 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:17:08,301 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:17:08,752 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:17:08,770 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:17:08,802 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-07 22:17:08,846 | ERROR | SpringApplication.java 821 | Application run failed
+org.apache.camel.FailedToCreateRouteException: Failed to create route /getFullCountryInfo-Route at: >>> To[getCapitalCity] <<< in route: Route(/getFullCountryInfo-Route)[From[direct:getFullCountryI... because of No endpoint could be found for: getCapitalCity, please check your classpath contains the needed Camel component jar.
+	at org.apache.camel.reifier.RouteReifier.doCreateRoute(RouteReifier.java:240)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.reifier.RouteReifier.createRoute(RouteReifier.java:74)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultModelReifierFactory.createRoute(DefaultModelReifierFactory.java:49)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:862)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:750)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.doInit(AbstractCamelContext.java:2946)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.init(BaseService.java:83)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.init(AbstractCamelContext.java:2629)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.start(BaseService.java:111)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.start(AbstractCamelContext.java:2648)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:262)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:119)[camel-spring-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.start(CamelContextFactoryBean.java:428)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:483)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:99)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-07 22:18:42,192 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:18:42,243 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 101852 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:18:42,246 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:18:44,858 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f793386a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:18:44,915 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:18:46,199 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:18:46,227 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:18:46,227 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 3912 ms
+2023-09-07 22:18:47,398 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@2ead6ba4
+2023-09-07 22:18:47,469 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:18:49,194 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:18:49,194 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:18:49,276 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:18:49,458 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:18:49,469 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:18:49,496 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:18:49,517 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:18:49,693 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:18:49,804 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:18:50,288 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:18:50,307 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:18:50,349 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-07 22:18:50,389 | ERROR | SpringApplication.java 821 | Application run failed
+org.apache.camel.FailedToCreateRouteException: Failed to create route CountryInfoServiceCall-Route: Route(CountryInfoServiceCall-Route)[From[CountryInfoServiceC... because of No endpoint could be found for: CountryInfoServiceCall, please check your classpath contains the needed Camel component jar.
+	at org.apache.camel.reifier.RouteReifier.createRoute(RouteReifier.java:80)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultModelReifierFactory.createRoute(DefaultModelReifierFactory.java:49)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:862)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:750)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.doInit(AbstractCamelContext.java:2946)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.init(BaseService.java:83)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.init(AbstractCamelContext.java:2629)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.start(BaseService.java:111)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.start(AbstractCamelContext.java:2648)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:262)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:119)[camel-spring-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.start(CamelContextFactoryBean.java:428)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:483)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:99)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-07 22:22:17,995 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:22:18,207 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 102028 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:22:18,213 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:22:26,133 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f687fa86] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:22:26,221 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:22:28,025 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:22:28,067 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:22:28,067 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 9571 ms
+2023-09-07 22:22:29,430 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@40247d48
+2023-09-07 22:22:29,494 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:22:31,264 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:22:31,265 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:22:31,330 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:22:31,543 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:22:31,555 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:22:31,581 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:22:31,601 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:22:31,782 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:22:31,929 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:22:32,455 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:22:32,474 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:22:32,519 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-07 22:22:32,566 | ERROR | SpringApplication.java 821 | Application run failed
+org.apache.camel.FailedToCreateRouteException: Failed to create route CountryInfoServiceCall-Route: Route(CountryInfoServiceCall-Route)[From[CountryInfoServiceC... because of No endpoint could be found for: CountryInfoServiceCall, please check your classpath contains the needed Camel component jar.
+	at org.apache.camel.reifier.RouteReifier.createRoute(RouteReifier.java:80)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultModelReifierFactory.createRoute(DefaultModelReifierFactory.java:49)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:862)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:750)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.doInit(AbstractCamelContext.java:2946)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.init(BaseService.java:83)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.init(AbstractCamelContext.java:2629)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.start(BaseService.java:111)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.start(AbstractCamelContext.java:2648)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:262)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:119)[camel-spring-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.start(CamelContextFactoryBean.java:428)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:483)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:99)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-07 22:24:11,465 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:24:11,612 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 93720 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:24:11,618 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:24:18,281 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4395627c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:24:18,394 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:24:19,999 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:24:20,036 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:24:20,036 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 8138 ms
+2023-09-07 22:24:21,387 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@322ba549
+2023-09-07 22:24:21,476 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:24:23,289 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:24:23,289 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:24:23,356 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:24:23,567 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:24:23,579 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:24:23,609 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:24:23,637 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:24:23,863 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:24:23,978 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:24:24,459 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:24:24,479 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:24:24,511 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-07 22:24:24,556 | ERROR | SpringApplication.java 821 | Application run failed
+org.apache.camel.FailedToCreateRouteException: Failed to create route CountryInfoServiceCall-Route: Route(CountryInfoServiceCall-Route)[From[CountryInfoServiceC... because of No endpoint could be found for: CountryInfoServiceCall, please check your classpath contains the needed Camel component jar.
+	at org.apache.camel.reifier.RouteReifier.createRoute(RouteReifier.java:80)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultModelReifierFactory.createRoute(DefaultModelReifierFactory.java:49)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:862)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:750)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.doInit(AbstractCamelContext.java:2946)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.init(BaseService.java:83)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.init(AbstractCamelContext.java:2629)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.start(BaseService.java:111)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.start(AbstractCamelContext.java:2648)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:262)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:119)[camel-spring-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.start(CamelContextFactoryBean.java:428)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:483)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:99)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-07 22:25:03,305 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:25:03,426 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 74060 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:25:03,431 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:25:10,182 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e2a4d78b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:25:10,267 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:25:12,065 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:25:12,117 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:25:12,118 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 8521 ms
+2023-09-07 22:25:13,664 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@6af90849
+2023-09-07 22:25:13,734 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:25:15,529 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:25:15,530 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:25:15,597 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:25:15,761 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:25:15,773 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:25:15,797 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:25:15,820 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:25:16,004 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:25:16,129 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:25:16,836 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-07 22:25:16,898 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:3 started:3)
+2023-09-07 22:25:16,899 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 22:25:16,899 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-07 22:25:16,899 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 22:25:16,900 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 883ms (build:194ms init:627ms start:62ms)
+2023-09-07 22:25:16,950 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 15.246 seconds (JVM running for 16.309)
+2023-09-07 22:26:21,675 | INFO | AbstractCamelContext.java 3386 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutting down (timeout:45s)
+2023-09-07 22:26:21,692 | INFO | CamelLogger.java 166 | Routes stopped (total:3 stopped:3)
+2023-09-07 22:26:21,692 | INFO | CamelLogger.java 166 |     Stopped /GET-getCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-07 22:26:21,693 | INFO | CamelLogger.java 166 |     Stopped route1 (rest-api://api-doc)
+2023-09-07 22:26:21,693 | INFO | CamelLogger.java 166 |     Stopped /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-07 22:26:21,698 | INFO | AbstractCamelContext.java 3525 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutdown in 23ms (uptime:1m4s)
+2023-09-07 22:26:21,698 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:26:21,711 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:26:25,951 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:26:26,011 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 48956 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:26:26,014 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:26:30,466 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$6f1dc8b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:26:30,597 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:26:32,475 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:26:32,517 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:26:32,517 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 6421 ms
+2023-09-07 22:26:34,135 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@6af90849
+2023-09-07 22:26:34,230 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:26:36,122 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:26:36,123 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:26:36,223 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:26:36,453 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:26:36,466 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:26:36,489 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:26:36,513 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:26:36,717 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:26:36,862 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:26:37,413 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:26:37,433 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:26:53,776 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:26:53,878 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 92936 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:26:53,882 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:27:00,159 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$6f1dc8b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:27:00,268 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:27:01,877 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:27:01,909 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:27:01,909 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 7865 ms
+2023-09-07 22:27:03,105 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@6af90849
+2023-09-07 22:27:03,165 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:27:04,853 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:27:04,854 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:27:04,909 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:27:05,097 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:27:05,105 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:27:05,130 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:27:05,155 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:27:05,346 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:27:05,453 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:27:05,896 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:27:05,914 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:27:05,942 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-07 22:27:05,990 | ERROR | SpringApplication.java 821 | Application run failed
+org.apache.camel.FailedToCreateRouteException: Failed to create route /getFullCountryInfo-Route at: >>> Multicast[[To[getCapitalCity], To[getCountryCurrency]]] <<< in route: Route(/getFullCountryInfo-Route)[From[direct:getFullCountryI... because of No endpoint could be found for: getCapitalCity, please check your classpath contains the needed Camel component jar.
+	at org.apache.camel.reifier.RouteReifier.doCreateRoute(RouteReifier.java:240)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.reifier.RouteReifier.createRoute(RouteReifier.java:74)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultModelReifierFactory.createRoute(DefaultModelReifierFactory.java:49)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:862)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:750)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.doInit(AbstractCamelContext.java:2946)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.init(BaseService.java:83)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.init(AbstractCamelContext.java:2629)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.start(BaseService.java:111)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.start(AbstractCamelContext.java:2648)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:262)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:119)[camel-spring-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.start(CamelContextFactoryBean.java:428)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:483)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:99)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-07 22:28:14,952 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-07 22:28:15,008 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 16036 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-07 22:28:15,010 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-07 22:28:18,667 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f1cb2417] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-07 22:28:18,766 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-07 22:28:20,298 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-07 22:28:20,346 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-07 22:28:20,346 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 5268 ms
+2023-09-07 22:28:21,661 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@31a2a9fa
+2023-09-07 22:28:21,726 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-07 22:28:23,481 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:28:23,482 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-07 22:28:23,555 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-07 22:28:23,760 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-07 22:28:23,769 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-07 22:28:23,791 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-07 22:28:23,816 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-07 22:28:24,027 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-07 22:28:24,147 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-07 22:28:24,640 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-07 22:28:24,657 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-07 22:28:24,695 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-07 22:28:24,745 | ERROR | SpringApplication.java 821 | Application run failed
+org.apache.camel.FailedToCreateRouteException: Failed to create route /getFullCountryInfo-Route at: >>> To[getCapitalCity] <<< in route: Route(/getFullCountryInfo-Route)[From[direct:getFullCountryI... because of No endpoint could be found for: getCapitalCity, please check your classpath contains the needed Camel component jar.
+	at org.apache.camel.reifier.RouteReifier.doCreateRoute(RouteReifier.java:240)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.reifier.RouteReifier.createRoute(RouteReifier.java:74)[camel-core-reifier-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultModelReifierFactory.createRoute(DefaultModelReifierFactory.java:49)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:862)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:750)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.doInit(AbstractCamelContext.java:2946)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.init(BaseService.java:83)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.init(AbstractCamelContext.java:2629)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.support.service.BaseService.start(BaseService.java:111)[camel-api-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.engine.AbstractCamelContext.start(AbstractCamelContext.java:2648)[camel-base-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:262)[camel-core-engine-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:119)[camel-spring-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.start(CamelContextFactoryBean.java:428)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:483)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.apache.camel.spring.xml.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:99)[camel-spring-xml-3.17.0.jar:3.17.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:938)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
