@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!-- START SNIPPET: e1 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+    ">
+
+    <!-- this is an included XML file where we only the routeContext -->
+    <routeContext id="getFullCountryInfo" xmlns="http://camel.apache.org/schema/spring">
+        <route id="/getFullCountryInfo-Route">
+            <from uri="direct:getFullCountryInfo-route"/>
+            <onException>
+                <exception>java.lang.Exception</exception>
+                <handled>
+                    <constant>true</constant>
+                </handled>
+                <log message="tracePoint:END,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Exception:${exception}" loggingLevel="ERROR"/>
+            </onException>
+            <removeHeader name="*"/>
+            <log message="tracePoint:START,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId},CountryCode:${in.headers.CountryCode},Message:${body}" loggingLevel="INFO"/>
+            <transform>
+                <simple>&lt;Data&gt;&lt;CountryCode&gt;${in.headers.CountryCode}&lt;/CountryCode&gt;&lt;/Data&gt;</simple>
+            </transform>
+            <multicast stopOnException="true" parallelProcessing="true" timeout="10000" aggregationStrategy="#class:com.sathiya.examples.aggregationStrategy.MergeAggregator">
+                <to uri="direct:getCapitalCity"/>
+                <to uri="direct:getCountryCurrency"/>
+                <to uri="direct:CountryIntPhone"/>
+                <to uri="direct:CountryName"/>
+            </multicast>
+            <choice>
+                <when>
+                    <simple>${exchangeProperty[ErrorCode]}== '404'</simple>
+                    <to uri="direct:error"/>
+                </when>
+                <otherwise>
+                    <transform>
+                        <simple>&lt;aggregatedMessage&gt;${body}&lt;/aggregatedMessage&gt;</simple>
+                    </transform>
+                    <setHeader name="operationName">
+                        <simple>getFullCountryInfo</simple>
+                    </setHeader>
+                    <to uri="xj:xslt/CountryInfoServiceResponse.xsl?transformDirection=XML2JSON"/>
+                    <log message="tracePoint:END,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="INFO"/>
+                    <setHeader name="content-type">
+                        <constant>"application/json"</constant>
+                    </setHeader>
+                </otherwise>
+            </choice>
+        </route>
+
+        <route id="getCapitalCity-Route">
+            <from uri="direct:getCapitalCity"/>
+            <setHeader name="operationName">
+                <simple>CapitalCity</simple>
+            </setHeader>
+            <setHeader name="Accept-Encoding">
+                <constant>*</constant>
+            </setHeader>
+            <convertBodyTo type="java.lang.String"></convertBodyTo>
+            <log message="tracePoint:BEFORE_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+            <to uri="xslt:xslt/CountryInfoServiceRequest.xsl"/>
+            <log message="tracePoint:AFTER_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+            <to uri="direct:CountryInfoServiceCall"/>
+        </route>
+
+        <route id="getCountryCurrency-Route">
+            <from uri="direct:getCountryCurrency"/>
+            <setHeader name="operationName">
+                <simple>CountryCurrency</simple>
+            </setHeader>
+            <setHeader name="Accept-Encoding">
+                <constant>*</constant>
+            </setHeader>
+            <convertBodyTo type="java.lang.String"></convertBodyTo>
+            <log message="tracePoint:BEFORE_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+            <to uri="xslt:xslt/CountryInfoServiceRequest.xsl"/>
+            <log message="tracePoint:AFTER_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+            <to uri="direct:CountryInfoServiceCall"/>
+        </route>
+
+        <route id="getCountryIntPhoneCode-Route">
+            <from uri="direct:CountryIntPhone"/>
+            <setHeader name="operationName">
+                <simple>CountryIntPhone</simple>
+            </setHeader>
+            <setHeader name="Accept-Encoding">
+                <constant>*</constant>
+            </setHeader>
+            <convertBodyTo type="java.lang.String"></convertBodyTo>
+            <log message="tracePoint:BEFORE_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+            <to uri="xslt:xslt/CountryInfoServiceRequest.xsl"/>
+            <log message="tracePoint:AFTER_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+            <to uri="direct:CountryInfoServiceCall"/>
+        </route>
+
+        <route id="getCountryName-Route">
+            <from uri="direct:CountryName"/>
+            <setHeader name="operationName">
+                <simple>CountryName</simple>
+            </setHeader>
+            <setHeader name="Accept-Encoding">
+                <constant>*</constant>
+            </setHeader>
+            <convertBodyTo type="java.lang.String"></convertBodyTo>
+            <log message="tracePoint:BEFORE_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+            <to uri="xslt:xslt/CountryInfoServiceRequest.xsl"/>
+            <log message="tracePoint:AFTER_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+            <to uri="direct:CountryInfoServiceCall"/>
+        </route>
+
+        <route id="CountryInfoServiceCall-Route">
+            <from uri="direct:CountryInfoServiceCall"/>
+            <onException>
+                <exception>java.lang.Exception</exception>
+                <handled>
+                    <constant>true</constant>
+                </handled>
+                <log message="tracePoint:EXCEPTION,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Exception:${exception}" loggingLevel="ERROR"/>
+                <to uri="direct:error"/>
+            </onException>
+            <log message="tracePoint:BEFORE_API_OR_BACKEND,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="INFO"/>
+            <circuitBreaker>
+                <to uri="spring-ws:{{countryinfo.service.endpoint}}?timeout={{countryinfo.service.responseTimeout}}"/>
+                <onFallback>
+                    <setBody>
+                        <simple>&lt;message&gt;Circuit Breaker Activated&lt;/message&gt;</simple>
+                    </setBody>
+                    <setHeader name="Exchange.HTTP_RESPONSE_CODE">
+                        <constant>503</constant>
+                    </setHeader>
+                    <setProperty name="ErrorCode">
+                        <constant>404</constant>
+                    </setProperty>
+                    <log message="tracePoint:FALLBACK,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="ERROR"/>
+                </onFallback>
+            </circuitBreaker>
+            <convertBodyTo type="java.lang.String"></convertBodyTo>
+            <log message="tracePoint:AFTER_API_OR_BACKEND,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="INFO"/>
+            <to uri="xslt:xslt/Remove-Namespaces.xsl"/>
+        </route>
+    </routeContext>
+
+</beans>

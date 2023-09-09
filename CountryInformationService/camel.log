@@ -1030,3 +1030,426 @@ org.apache.camel.FailedToCreateRouteException: Failed to create route /getFullCo
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
 	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-09 17:50:43,763 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-09 17:50:43,817 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 41284 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-09 17:50:43,819 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-09 17:50:48,773 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$3f6f54c2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-09 17:50:48,880 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-09 17:50:50,413 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-09 17:50:50,457 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-09 17:50:50,457 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 6571 ms
+2023-09-09 17:50:51,949 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@2ceee4b6
+2023-09-09 17:50:52,013 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-09 17:50:53,623 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-09 17:50:53,624 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-09 17:50:53,686 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-09 17:50:53,899 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-09 17:50:53,910 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-09 17:50:53,937 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-09 17:50:53,958 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-09 17:50:54,144 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-09 17:50:54,275 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-09 17:50:56,755 | INFO | SaajSoapMessageFactory.java 137 | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2023-09-09 17:50:57,186 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-09 17:50:57,356 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:9 started:9)
+2023-09-09 17:50:57,356 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-09 17:50:57,357 | INFO | AbstractCamelContext.java 3170 |     Started getCapitalCity-Route (direct://getCapitalCity)
+2023-09-09 17:50:57,357 | INFO | AbstractCamelContext.java 3170 |     Started getCountryCurrency-Route (direct://getCountryCurrency)
+2023-09-09 17:50:57,357 | INFO | AbstractCamelContext.java 3170 |     Started getCountryIntPhoneCode-Route (direct://CountryIntPhone)
+2023-09-09 17:50:57,359 | INFO | AbstractCamelContext.java 3170 |     Started getCountryName-Route (direct://CountryName)
+2023-09-09 17:50:57,359 | INFO | AbstractCamelContext.java 3170 |     Started CountryInfoServiceCall-Route (direct://CountryInfoServiceCall)
+2023-09-09 17:50:57,359 | INFO | AbstractCamelContext.java 3170 |     Started ErrorHandling-Route (direct://error)
+2023-09-09 17:50:57,360 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-09 17:50:57,360 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getFullCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-09 17:50:57,360 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 3s210ms (build:234ms init:2s803ms start:173ms)
+2023-09-09 17:50:57,417 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 14.223 seconds (JVM running for 16.014)
+2023-09-09 17:53:12,411 | INFO | AbstractCamelContext.java 3386 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutting down (timeout:45s)
+2023-09-09 17:53:12,436 | INFO | CamelLogger.java 166 | Routes stopped (total:9 stopped:9)
+2023-09-09 17:53:12,436 | INFO | CamelLogger.java 166 |     Stopped /GET-getFullCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-09 17:53:12,436 | INFO | CamelLogger.java 166 |     Stopped route1 (rest-api://api-doc)
+2023-09-09 17:53:12,438 | INFO | CamelLogger.java 166 |     Stopped ErrorHandling-Route (direct://error)
+2023-09-09 17:53:12,438 | INFO | CamelLogger.java 166 |     Stopped CountryInfoServiceCall-Route (direct://CountryInfoServiceCall)
+2023-09-09 17:53:12,438 | INFO | CamelLogger.java 166 |     Stopped getCountryName-Route (direct://CountryName)
+2023-09-09 17:53:12,438 | INFO | CamelLogger.java 166 |     Stopped getCountryIntPhoneCode-Route (direct://CountryIntPhone)
+2023-09-09 17:53:12,438 | INFO | CamelLogger.java 166 |     Stopped getCountryCurrency-Route (direct://getCountryCurrency)
+2023-09-09 17:53:12,438 | INFO | CamelLogger.java 166 |     Stopped getCapitalCity-Route (direct://getCapitalCity)
+2023-09-09 17:53:12,439 | INFO | CamelLogger.java 166 |     Stopped /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-09 17:53:12,443 | INFO | AbstractCamelContext.java 3525 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutdown in 32ms (uptime:2m15s)
+2023-09-09 17:53:12,443 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-09 17:53:12,454 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-09 17:53:17,269 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-09 17:53:17,334 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 101316 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-09 17:53:17,335 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-09 17:53:18,557 | WARN | AbstractApplicationContext.java 591 | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 12 in XML document from class path resource [spring/camel-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 12; columnNumber: 43; cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://camel.apache.org/schema/spring":routeContextRef}'. One of '{"http://camel.apache.org/schema/spring":threadPoolProfile, "http://camel.apache.org/schema/spring":threadPool, "http://camel.apache.org/schema/spring":endpoint, "http://camel.apache.org/schema/spring":dataFormats, "http://camel.apache.org/schema/spring":transformers, "http://camel.apache.org/schema/spring":validators, "http://camel.apache.org/schema/spring":redeliveryPolicyProfile, "http://camel.apache.org/schema/spring":onException, "http://camel.apache.org/schema/spring":onCompletion, "http://camel.apache.org/schema/spring":intercept, "http://camel.apache.org/schema/spring":interceptFrom, "http://camel.apache.org/schema/spring":interceptSendToEndpoint, "http://camel.apache.org/schema/spring":restConfiguration, "http://camel.apache.org/schema/spring":rest, "http://camel.apache.org/schema/spring":routeConfiguration, "http://camel.apache.org/schema/spring":routeTemplate, "http://camel.apache.org/schema/spring":templatedRoute, "http://camel.apache.org/schema/spring":route}' is expected.
+2023-09-09 17:53:18,570 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-09 17:53:18,595 | ERROR | SpringApplication.java 821 | Application run failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 12 in XML document from class path resource [spring/camel-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 12; columnNumber: 43; cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://camel.apache.org/schema/spring":routeContextRef}'. One of '{"http://camel.apache.org/schema/spring":threadPoolProfile, "http://camel.apache.org/schema/spring":threadPool, "http://camel.apache.org/schema/spring":endpoint, "http://camel.apache.org/schema/spring":dataFormats, "http://camel.apache.org/schema/spring":transformers, "http://camel.apache.org/schema/spring":validators, "http://camel.apache.org/schema/spring":redeliveryPolicyProfile, "http://camel.apache.org/schema/spring":onException, "http://camel.apache.org/schema/spring":onCompletion, "http://camel.apache.org/schema/spring":intercept, "http://camel.apache.org/schema/spring":interceptFrom, "http://camel.apache.org/schema/spring":interceptSendToEndpoint, "http://camel.apache.org/schema/spring":restConfiguration, "http://camel.apache.org/schema/spring":rest, "http://camel.apache.org/schema/spring":routeConfiguration, "http://camel.apache.org/schema/spring":routeTemplate, "http://camel.apache.org/schema/spring":templatedRoute, "http://camel.apache.org/schema/spring":route}' is expected.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:402)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:338)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:310)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:196)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:232)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:203)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromImportedResources$0(ConfigurationClassBeanDefinitionReader.java:390)[spring-context-5.3.21.jar:5.3.21]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)[:]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromImportedResources(ConfigurationClassBeanDefinitionReader.java:354)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:156)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-09 18:04:45,580 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-09 18:04:45,723 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 80692 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-09 18:04:45,736 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-09 18:04:48,063 | WARN | AbstractApplicationContext.java 591 | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [spring/camel-context.xml,spring/testRoute.xml]; nested exception is java.io.FileNotFoundException: class path resource [spring/camel-context.xml,spring/testRoute.xml] cannot be opened because it does not exist
+2023-09-09 18:04:48,208 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-09 18:04:48,252 | ERROR | SpringApplication.java 821 | Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [spring/camel-context.xml,spring/testRoute.xml]; nested exception is java.io.FileNotFoundException: class path resource [spring/camel-context.xml,spring/testRoute.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:342)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:310)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:196)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:232)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:203)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromImportedResources$0(ConfigurationClassBeanDefinitionReader.java:390)[spring-context-5.3.21.jar:5.3.21]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)[:]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromImportedResources(ConfigurationClassBeanDefinitionReader.java:354)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:156)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-09 18:05:20,572 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-09 18:05:20,666 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 97804 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-09 18:05:20,670 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-09 18:05:22,733 | WARN | AbstractApplicationContext.java 591 | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [spring/camel-context.xml,classpath:spring/testRoute.xml]; nested exception is java.io.FileNotFoundException: class path resource [spring/camel-context.xml,classpath:spring/testRoute.xml] cannot be opened because it does not exist
+2023-09-09 18:05:22,901 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-09 18:05:22,945 | ERROR | SpringApplication.java 821 | Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [spring/camel-context.xml,classpath:spring/testRoute.xml]; nested exception is java.io.FileNotFoundException: class path resource [spring/camel-context.xml,classpath:spring/testRoute.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:342)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:310)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:196)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:232)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:203)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromImportedResources$0(ConfigurationClassBeanDefinitionReader.java:390)[spring-context-5.3.21.jar:5.3.21]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)[:]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromImportedResources(ConfigurationClassBeanDefinitionReader.java:354)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:156)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-09 18:10:23,396 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-09 18:10:23,452 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 81420 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-09 18:10:23,454 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-09 18:10:24,696 | WARN | AbstractApplicationContext.java 591 | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 20 in XML document from class path resource [spring/camel-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 43; cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://camel.apache.org/schema/spring":routeContextRef}'. One of '{"http://camel.apache.org/schema/spring":rest, "http://camel.apache.org/schema/spring":routeConfiguration, "http://camel.apache.org/schema/spring":routeTemplate, "http://camel.apache.org/schema/spring":templatedRoute, "http://camel.apache.org/schema/spring":route}' is expected.
+2023-09-09 18:10:24,712 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-09 18:10:24,736 | ERROR | SpringApplication.java 821 | Application run failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 20 in XML document from class path resource [spring/camel-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 43; cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://camel.apache.org/schema/spring":routeContextRef}'. One of '{"http://camel.apache.org/schema/spring":rest, "http://camel.apache.org/schema/spring":routeConfiguration, "http://camel.apache.org/schema/spring":routeTemplate, "http://camel.apache.org/schema/spring":templatedRoute, "http://camel.apache.org/schema/spring":route}' is expected.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:402)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:338)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:310)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:196)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:232)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:203)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromImportedResources$0(ConfigurationClassBeanDefinitionReader.java:390)[spring-context-5.3.21.jar:5.3.21]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)[:]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromImportedResources(ConfigurationClassBeanDefinitionReader.java:354)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:156)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-09 18:12:28,269 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-09 18:12:28,329 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 95340 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-09 18:12:28,332 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-09 18:12:29,700 | WARN | AbstractApplicationContext.java 591 | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 20 in XML document from class path resource [spring/camel-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 43; cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://camel.apache.org/schema/spring":routeContextRef}'. One of '{"http://camel.apache.org/schema/spring":rest, "http://camel.apache.org/schema/spring":routeConfiguration, "http://camel.apache.org/schema/spring":routeTemplate, "http://camel.apache.org/schema/spring":templatedRoute, "http://camel.apache.org/schema/spring":route}' is expected.
+2023-09-09 18:12:29,716 | INFO | ConditionEvaluationReportLoggingListener.java 136 | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-09 18:12:29,740 | ERROR | SpringApplication.java 821 | Application run failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 20 in XML document from class path resource [spring/camel-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 43; cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://camel.apache.org/schema/spring":routeContextRef}'. One of '{"http://camel.apache.org/schema/spring":rest, "http://camel.apache.org/schema/spring":routeConfiguration, "http://camel.apache.org/schema/spring":routeTemplate, "http://camel.apache.org/schema/spring":templatedRoute, "http://camel.apache.org/schema/spring":route}' is expected.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:402)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:338)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:310)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:196)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:232)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:203)[spring-beans-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromImportedResources$0(ConfigurationClassBeanDefinitionReader.java:390)[spring-context-5.3.21.jar:5.3.21]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)[:]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromImportedResources(ConfigurationClassBeanDefinitionReader.java:354)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:156)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)[spring-context-5.3.21.jar:5.3.21]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)[spring-boot-2.7.15.jar:2.7.15]
+	at com.sathiya.examples.CountryInformationService.CountryInformationServiceApplication.main(CountryInformationServiceApplication.java:12)[file:/D:/Learnings/Apache%20Camel/Git%20Offline%20Repo/Springboot-Camel-SpringDSL/CountryInformationService/target/classes/:]
+2023-09-09 18:13:19,115 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-09 18:13:19,175 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 91744 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-09 18:13:19,177 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-09 18:13:22,219 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$73eafe87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-09 18:13:22,296 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-09 18:13:23,675 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-09 18:13:23,707 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-09 18:13:23,707 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 4464 ms
+2023-09-09 18:13:24,977 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@10272bbb
+2023-09-09 18:13:25,044 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-09 18:13:26,734 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-09 18:13:26,735 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-09 18:13:26,808 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-09 18:13:27,042 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-09 18:13:27,052 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-09 18:13:27,079 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-09 18:13:27,101 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-09 18:13:27,295 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-09 18:13:27,410 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-09 18:13:29,346 | INFO | SaajSoapMessageFactory.java 137 | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2023-09-09 18:13:29,682 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-09 18:13:29,893 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:10 started:10)
+2023-09-09 18:13:29,894 | INFO | AbstractCamelContext.java 3170 |     Started cool (timer://simpleTimer)
+2023-09-09 18:13:29,894 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-09 18:13:29,894 | INFO | AbstractCamelContext.java 3170 |     Started getCapitalCity-Route (direct://getCapitalCity)
+2023-09-09 18:13:29,894 | INFO | AbstractCamelContext.java 3170 |     Started getCountryCurrency-Route (direct://getCountryCurrency)
+2023-09-09 18:13:29,894 | INFO | AbstractCamelContext.java 3170 |     Started getCountryIntPhoneCode-Route (direct://CountryIntPhone)
+2023-09-09 18:13:29,895 | INFO | AbstractCamelContext.java 3170 |     Started getCountryName-Route (direct://CountryName)
+2023-09-09 18:13:29,895 | INFO | AbstractCamelContext.java 3170 |     Started CountryInfoServiceCall-Route (direct://CountryInfoServiceCall)
+2023-09-09 18:13:29,895 | INFO | AbstractCamelContext.java 3170 |     Started ErrorHandling-Route (direct://error)
+2023-09-09 18:13:29,895 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-09 18:13:29,896 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getFullCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-09 18:13:29,896 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 2s595ms (build:174ms init:2s207ms start:214ms)
+2023-09-09 18:13:29,930 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 11.347 seconds (JVM running for 12.111)
+2023-09-09 18:13:30,930 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:30 IST 2023
+2023-09-09 18:13:31,918 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:31 IST 2023
+2023-09-09 18:13:32,920 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:32 IST 2023
+2023-09-09 18:13:33,922 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:33 IST 2023
+2023-09-09 18:13:34,935 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:34 IST 2023
+2023-09-09 18:13:35,948 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:35 IST 2023
+2023-09-09 18:13:36,948 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:36 IST 2023
+2023-09-09 18:13:37,964 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:37 IST 2023
+2023-09-09 18:13:38,963 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:38 IST 2023
+2023-09-09 18:13:39,966 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:39 IST 2023
+2023-09-09 18:13:40,969 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:40 IST 2023
+2023-09-09 18:13:41,969 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:41 IST 2023
+2023-09-09 18:13:42,970 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:42 IST 2023
+2023-09-09 18:13:43,972 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:43 IST 2023
+2023-09-09 18:13:44,989 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:44 IST 2023
+2023-09-09 18:13:45,996 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:45 IST 2023
+2023-09-09 18:13:47,011 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:47 IST 2023
+2023-09-09 18:13:48,025 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:48 IST 2023
+2023-09-09 18:13:49,026 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:49 IST 2023
+2023-09-09 18:13:50,038 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:50 IST 2023
+2023-09-09 18:13:51,052 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:51 IST 2023
+2023-09-09 18:13:52,063 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:52 IST 2023
+2023-09-09 18:13:53,063 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:53 IST 2023
+2023-09-09 18:13:54,077 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:54 IST 2023
+2023-09-09 18:13:55,091 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:55 IST 2023
+2023-09-09 18:13:56,103 | INFO | CamelLogger.java 166 | Hello from timer at Sat Sep 09 18:13:56 IST 2023
+2023-09-09 18:13:56,881 | INFO | AbstractCamelContext.java 3386 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutting down (timeout:45s)
+2023-09-09 18:13:56,893 | INFO | CamelLogger.java 166 | Routes stopped (total:10 stopped:10)
+2023-09-09 18:13:56,894 | INFO | CamelLogger.java 166 |     Stopped /GET-getFullCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-09 18:13:56,894 | INFO | CamelLogger.java 166 |     Stopped route1 (rest-api://api-doc)
+2023-09-09 18:13:56,894 | INFO | CamelLogger.java 166 |     Stopped ErrorHandling-Route (direct://error)
+2023-09-09 18:13:56,894 | INFO | CamelLogger.java 166 |     Stopped CountryInfoServiceCall-Route (direct://CountryInfoServiceCall)
+2023-09-09 18:13:56,894 | INFO | CamelLogger.java 166 |     Stopped getCountryName-Route (direct://CountryName)
+2023-09-09 18:13:56,894 | INFO | CamelLogger.java 166 |     Stopped getCountryIntPhoneCode-Route (direct://CountryIntPhone)
+2023-09-09 18:13:56,894 | INFO | CamelLogger.java 166 |     Stopped getCountryCurrency-Route (direct://getCountryCurrency)
+2023-09-09 18:13:56,894 | INFO | CamelLogger.java 166 |     Stopped getCapitalCity-Route (direct://getCapitalCity)
+2023-09-09 18:13:56,894 | INFO | CamelLogger.java 166 |     Stopped /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-09 18:13:56,894 | INFO | CamelLogger.java 166 |     Stopped cool (timer://simpleTimer)
+2023-09-09 18:13:56,897 | INFO | AbstractCamelContext.java 3525 | Apache Camel 3.17.0 (CountryInformationService-Camel) shutdown in 16ms (uptime:27s215ms)
+2023-09-09 18:13:56,898 | INFO | Undertow.java 259 | stopping server: Undertow - 2.2.26.Final
+2023-09-09 18:13:56,908 | INFO | CamelHttpTransportServlet.java 84 | Destroyed CamelHttpTransportServlet[CamelServlet]
+2023-09-09 18:19:00,661 | INFO | Version.java 21 | HV000001: Hibernate Validator 6.2.5.Final
+2023-09-09 18:19:00,727 | INFO | StartupInfoLogger.java 55 | Starting CountryInformationServiceApplication using Java 11.0.17 on SathiyaPC with PID 60712 (D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService\target\classes started by Sathiya in D:\Learnings\Apache Camel\Git Offline Repo\Springboot-Camel-SpringDSL\CountryInformationService)
+2023-09-09 18:19:00,729 | INFO | SpringApplication.java 631 | No active profile set, falling back to 1 default profile: "default"
+2023-09-09 18:19:03,743 | INFO | PostProcessorRegistrationDelegate.java 376 | Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$fa1f121e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-09 18:19:03,815 | INFO | AbstractAddressingEndpointMapping.java 239 | Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-09-09 18:19:05,334 | WARN | Bootstrap.java 68 | UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-09-09 18:19:05,374 | INFO | ServletContextImpl.java 389 | Initializing Spring embedded WebApplicationContext
+2023-09-09 18:19:05,374 | INFO | ServletWebServerApplicationContext.java 292 | Root WebApplicationContext: initialization completed in 4565 ms
+2023-09-09 18:19:06,814 | INFO | AbstractCamelContextFactoryBean.java 1317 | Using custom default ThreadPoolProfile with id: defaultThreadPoolProfile and implementation: org.apache.camel.model.ThreadPoolProfileDefinition@a146b11
+2023-09-09 18:19:06,889 | INFO | BaseExecutorServiceManager.java 125 | Using custom DefaultThreadPoolProfile: ThreadPoolProfile[defaultThreadPoolProfile (true) size:10-20, keepAlive:60 SECONDS, maxQueue:1000, allowCoreThreadTimeOut:true, rejectedPolicy:CallerRuns]
+2023-09-09 18:19:08,520 | WARN | TransformerFactoryUtils.java 62 | http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-09 18:19:08,520 | WARN | TransformerFactoryUtils.java 71 | http://javax.xml.XMLConstants/property/accessExternalStylesheet property not supported by net.sf.saxon.TransformerFactoryImpl
+2023-09-09 18:19:08,578 | INFO | EndpointLinksResolver.java 58 | Exposing 3 endpoint(s) beneath base path '/actuator'
+2023-09-09 18:19:08,786 | INFO | CamelHttpTransportServlet.java 74 | Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2023-09-09 18:19:08,798 | INFO | Undertow.java 120 | starting server: Undertow - 2.2.26.Final
+2023-09-09 18:19:08,822 | INFO | Xnio.java 95 | XNIO version 3.8.7.Final
+2023-09-09 18:19:08,841 | INFO | NioXnio.java 58 | XNIO NIO Implementation Version 3.8.7.Final
+2023-09-09 18:19:09,014 | INFO | Version.java 52 | JBoss Threads version 3.1.0.Final
+2023-09-09 18:19:09,132 | INFO | UndertowWebServer.java 119 | Undertow started on port(s) 8080 (http)
+2023-09-09 18:19:09,594 | INFO | SaajSoapMessageFactory.java 137 | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2023-09-09 18:19:11,349 | INFO | AbstractCamelContext.java 3004 | Apache Camel 3.17.0 (CountryInformationService-Camel) is starting
+2023-09-09 18:19:11,501 | INFO | AbstractCamelContext.java 3165 | Routes startup (total:9 started:9)
+2023-09-09 18:19:11,501 | INFO | AbstractCamelContext.java 3170 |     Started CountryInfoServiceCall-Route (direct://CountryInfoServiceCall)
+2023-09-09 18:19:11,501 | INFO | AbstractCamelContext.java 3170 |     Started getCountryName-Route (direct://CountryName)
+2023-09-09 18:19:11,502 | INFO | AbstractCamelContext.java 3170 |     Started getCountryIntPhoneCode-Route (direct://CountryIntPhone)
+2023-09-09 18:19:11,502 | INFO | AbstractCamelContext.java 3170 |     Started getCountryCurrency-Route (direct://getCountryCurrency)
+2023-09-09 18:19:11,502 | INFO | AbstractCamelContext.java 3170 |     Started getCapitalCity-Route (direct://getCapitalCity)
+2023-09-09 18:19:11,503 | INFO | AbstractCamelContext.java 3170 |     Started /getFullCountryInfo-Route (direct://getFullCountryInfo-route)
+2023-09-09 18:19:11,503 | INFO | AbstractCamelContext.java 3170 |     Started ErrorHandling-Route (direct://error)
+2023-09-09 18:19:11,503 | INFO | AbstractCamelContext.java 3170 |     Started route1 (rest-api://api-doc)
+2023-09-09 18:19:11,504 | INFO | AbstractCamelContext.java 3170 |     Started /GET-getFullCountryInfo (rest://get:/CountryInfo:/getFullCountryInfo/%7BCountryCode%7D)
+2023-09-09 18:19:11,504 | INFO | AbstractCamelContext.java 3194 | Apache Camel 3.17.0 (CountryInformationService-Camel) started in 2s500ms (build:198ms init:2s147ms start:155ms)
+2023-09-09 18:19:11,545 | INFO | StartupInfoLogger.java 61 | Started CountryInformationServiceApplication in 11.406 seconds (JVM running for 12.121)
+2023-09-09 18:19:49,565 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000000,CountryCode:NZ,Message:
+2023-09-09 18:19:49,767 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000002- Message-<CountryName xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryName>
+2023-09-09 18:19:49,769 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000004- Message-<CountryIntPhoneCode xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryIntPhoneCode>
+2023-09-09 18:19:49,767 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000001- Message-<CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CapitalCity>
+2023-09-09 18:19:49,768 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000003- Message-<CountryCurrency xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryCurrency>
+2023-09-09 18:19:50,860 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000002- Message-<m:CountryNameResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryNameResult>New Zealand</m:CountryNameResult>
+    </m:CountryNameResponse>
+2023-09-09 18:19:50,862 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000003- Message-<m:CountryCurrencyResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryCurrencyResult>
+        <m:sISOCode>NZD</m:sISOCode>
+        <m:sName>New Zealand Dollars</m:sName>
+      </m:CountryCurrencyResult>
+    </m:CountryCurrencyResponse>
+2023-09-09 18:19:50,864 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000001- Message-<m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>Wellington</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-09 18:19:50,869 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000004- Message-<m:CountryIntPhoneCodeResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryIntPhoneCodeResult>64</m:CountryIntPhoneCodeResult>
+    </m:CountryIntPhoneCodeResponse>
+2023-09-09 18:19:50,998 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000000- Message-{"countryName":"New Zealand","capitalCity":"Wellington","currency":{"currencyCode":"NZD","currencyName":"New Zealand Dollars"},"intPhoneCode":"64"}
+2023-09-09 18:20:26,226 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000005,CountryCode:NZ,Message:
+2023-09-09 18:20:26,230 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000006- Message-<CountryIntPhoneCode xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryIntPhoneCode>
+2023-09-09 18:20:26,231 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000007- Message-<CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CapitalCity>
+2023-09-09 18:20:26,232 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000008- Message-<CountryCurrency xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryCurrency>
+2023-09-09 18:20:26,234 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000009- Message-<CountryName xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryName>
+2023-09-09 18:20:26,799 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000008- Message-<m:CountryCurrencyResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryCurrencyResult>
+        <m:sISOCode>NZD</m:sISOCode>
+        <m:sName>New Zealand Dollars</m:sName>
+      </m:CountryCurrencyResult>
+    </m:CountryCurrencyResponse>
+2023-09-09 18:20:26,810 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000006- Message-<m:CountryIntPhoneCodeResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryIntPhoneCodeResult>64</m:CountryIntPhoneCodeResult>
+    </m:CountryIntPhoneCodeResponse>
+2023-09-09 18:20:26,817 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000009- Message-<m:CountryNameResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryNameResult>New Zealand</m:CountryNameResult>
+    </m:CountryNameResponse>
+2023-09-09 18:20:26,818 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000007- Message-<m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>Wellington</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-09 18:20:26,822 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000005- Message-{"countryName":"New Zealand","capitalCity":"Wellington","currency":{"currencyCode":"NZD","currencyName":"New Zealand Dollars"},"intPhoneCode":"64"}
+2023-09-09 18:20:27,944 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000A,CountryCode:NZ,Message:
+2023-09-09 18:20:27,952 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000B- Message-<CountryCurrency xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryCurrency>
+2023-09-09 18:20:27,952 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000C- Message-<CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CapitalCity>
+2023-09-09 18:20:27,953 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000D- Message-<CountryName xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryName>
+2023-09-09 18:20:27,953 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000E- Message-<CountryIntPhoneCode xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryIntPhoneCode>
+2023-09-09 18:20:28,251 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000C- Message-<m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>Wellington</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-09 18:20:28,266 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000E- Message-<m:CountryIntPhoneCodeResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryIntPhoneCodeResult>64</m:CountryIntPhoneCodeResult>
+    </m:CountryIntPhoneCodeResponse>
+2023-09-09 18:20:28,269 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000D- Message-<m:CountryNameResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryNameResult>New Zealand</m:CountryNameResult>
+    </m:CountryNameResponse>
+2023-09-09 18:20:28,271 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000B- Message-<m:CountryCurrencyResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryCurrencyResult>
+        <m:sISOCode>NZD</m:sISOCode>
+        <m:sName>New Zealand Dollars</m:sName>
+      </m:CountryCurrencyResult>
+    </m:CountryCurrencyResponse>
+2023-09-09 18:20:28,274 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000A- Message-{"countryName":"New Zealand","capitalCity":"Wellington","currency":{"currencyCode":"NZD","currencyName":"New Zealand Dollars"},"intPhoneCode":"64"}
+2023-09-09 18:20:29,382 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000F,CountryCode:NZ,Message:
+2023-09-09 18:20:29,385 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000010- Message-<CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CapitalCity>
+2023-09-09 18:20:29,386 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000011- Message-<CountryIntPhoneCode xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryIntPhoneCode>
+2023-09-09 18:20:29,387 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000012- Message-<CountryCurrency xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryCurrency>
+2023-09-09 18:20:29,389 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000013- Message-<CountryName xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryName>
+2023-09-09 18:20:29,775 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000012- Message-<m:CountryCurrencyResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryCurrencyResult>
+        <m:sISOCode>NZD</m:sISOCode>
+        <m:sName>New Zealand Dollars</m:sName>
+      </m:CountryCurrencyResult>
+    </m:CountryCurrencyResponse>
+2023-09-09 18:20:29,775 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000013- Message-<m:CountryNameResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryNameResult>New Zealand</m:CountryNameResult>
+    </m:CountryNameResponse>
+2023-09-09 18:20:29,783 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000011- Message-<m:CountryIntPhoneCodeResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryIntPhoneCodeResult>64</m:CountryIntPhoneCodeResult>
+    </m:CountryIntPhoneCodeResponse>
+2023-09-09 18:20:29,785 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000010- Message-<m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>Wellington</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-09 18:20:29,789 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-000000000000000F- Message-{"countryName":"New Zealand","capitalCity":"Wellington","currency":{"currencyCode":"NZD","currencyName":"New Zealand Dollars"},"intPhoneCode":"64"}
+2023-09-09 18:21:10,942 | INFO | CamelLogger.java 166 | tracePoint:START,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000014,CountryCode:NZ,Message:
+2023-09-09 18:21:10,949 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000015- Message-<CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CapitalCity>
+2023-09-09 18:21:10,949 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000016- Message-<CountryName xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryName>
+2023-09-09 18:21:10,954 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000017- Message-<CountryCurrency xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryCurrency>
+2023-09-09 18:21:10,967 | INFO | CamelLogger.java 166 | tracePoint:BEFORE_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000018- Message-<CountryIntPhoneCode xmlns="http://www.oorsprong.org/websamples.countryinfo"><sCountryISOCode>NZ</sCountryISOCode></CountryIntPhoneCode>
+2023-09-09 18:21:11,596 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000018- Message-<m:CountryIntPhoneCodeResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryIntPhoneCodeResult>64</m:CountryIntPhoneCodeResult>
+    </m:CountryIntPhoneCodeResponse>
+2023-09-09 18:21:11,599 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000016- Message-<m:CountryNameResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryNameResult>New Zealand</m:CountryNameResult>
+    </m:CountryNameResponse>
+2023-09-09 18:21:11,608 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000015- Message-<m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CapitalCityResult>Wellington</m:CapitalCityResult>
+    </m:CapitalCityResponse>
+2023-09-09 18:21:11,612 | INFO | CamelLogger.java 166 | tracePoint:AFTER_API_OR_BACKEND,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000017- Message-<m:CountryCurrencyResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+      <m:CountryCurrencyResult>
+        <m:sISOCode>NZD</m:sISOCode>
+        <m:sName>New Zealand Dollars</m:sName>
+      </m:CountryCurrencyResult>
+    </m:CountryCurrencyResponse>
+2023-09-09 18:21:11,617 | INFO | CamelLogger.java 166 | tracePoint:END,applicationName:/services/CountryInfo/getFullCountryInfo/NZ,exchangeId:FB6F0F9AF9EDFEF-0000000000000014- Message-{"countryName":"New Zealand","capitalCity":"Wellington","currency":{"currencyCode":"NZD","currencyName":"New Zealand Dollars"},"intPhoneCode":"64"}
