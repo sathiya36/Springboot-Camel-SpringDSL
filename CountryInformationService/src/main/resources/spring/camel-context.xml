@@ -5,6 +5,21 @@
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
+    <bean id="http" class="zipkin2.reporter.beans.AsyncReporterFactoryBean">
+        <property name="sender">
+            <bean id="sender" class="zipkin2.reporter.beans.OkHttpSenderFactoryBean">
+                <property name="endpoint" value="http://localhost:9411/api/v2/spans"/>
+            </bean>
+        </property>
+        <!-- wait up to half a second for any in-flight spans on close -->
+        <property name="closeTimeout" value="500"/>
+    </bean>
+
+    <!-- setup zipkin tracer -->
+    <bean id="zipkinTracer" class="org.apache.camel.zipkin.ZipkinTracer">
+        <property name="serviceName" value="RibbonGateway-Camel"/>
+        <property name="spanReporter" ref="http"/>
+    </bean>
     <import resource="errorHandler.xml"/>
     <import resource="getFullCountryInfo.xml"/>
     <camelContext id="CountryInformationService-Camel" xmlns="http://camel.apache.org/schema/spring" trace="false" traceLoggingFormat="%-4.4s [%-30.30s] [%-50.50s]">
