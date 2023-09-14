@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sathiya.examples</groupId>
-	<artifactId>CountryInformationService</artifactId>
+	<artifactId>CountryInformationClient</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CountryInformationService</name>
-	<description>Apache Camel Project in Spring DSL</description>
+	<name>CountryInformationClient</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -71,6 +71,12 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-openapi-java</artifactId>
+			<version>3.17.0</version>
+		</dependency>
+
 		<!-- Mandatory Camel Dependencies -->
 		<dependency>
 			<groupId>org.apache.camel.springboot</groupId>
@@ -84,19 +90,6 @@
 			<groupId>org.apache.camel.springboot</groupId>
 			<artifactId>camel-servlet-starter</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.camel.springboot</groupId>
-			<artifactId>camel-jetty-starter</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.camel.springboot</groupId>
-			<artifactId>camel-jackson-starter</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.camel.springboot</groupId>
-			<artifactId>camel-swagger-java-starter</artifactId>
-		</dependency>
-
 		<!-- Dependency Required to Develop Application with Spring DSL (XML)-->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
@@ -108,28 +101,6 @@
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-spring</artifactId>
 			<version>3.17.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-cxf</artifactId>
-			<version>3.17.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.camel.springboot</groupId>
-			<artifactId>camel-jaxb-starter</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-xj</artifactId>
-			<version>3.17.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.camel.springboot</groupId>
-			<artifactId>camel-xj-starter</artifactId>
 		</dependency>
 
 		<dependency>
@@ -154,26 +125,6 @@
 			<artifactId>camel-resilience4j-starter</artifactId>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>2.0.9</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>2.0.9</version>
-		</dependency>
-
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.36</version>
-		</dependency>
-
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -195,6 +146,7 @@
 			<groupId>org.apache.camel.springboot</groupId>
 			<artifactId>camel-http-starter</artifactId>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -226,4 +178,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>

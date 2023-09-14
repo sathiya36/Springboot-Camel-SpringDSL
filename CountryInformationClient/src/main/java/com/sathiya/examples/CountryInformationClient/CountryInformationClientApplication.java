@@ -1,4 +1,4 @@
-package com.sathiya.examples.CountryInformationService;
+package com.sathiya.examples.CountryInformationClient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.context.annotation.ImportResource;
 @SpringBootApplication
 @EnableDiscoveryClient
 @ImportResource({"classpath:spring/camel-context.xml"})
-public class CountryInformationServiceApplication {
+public class CountryInformationClientApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CountryInformationServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CountryInformationClientApplication.class, args);
+    }
 
 }
