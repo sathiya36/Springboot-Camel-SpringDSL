@@ -20,16 +20,15 @@
         <rest path="/CountryInfo" bindingMode="off" consumes="application/json" produces="application/json" enableCORS="true">
             <get id="/GET-getFullCountryInfo" path="/getFullCountryInfo/{CountryCode}" skipBindingOnErrorCode="true">
                 <param name="CountryCode" type="path" description="ISO Country Code" dataType="string"/>
-                <to uri="direct:getinfo"/>
+                <to uri="direct:getFullCountryInfoClient"/>
             </get>
         </rest>
 
-        <route id="getinfo">
-            <from uri="direct:getinfo"/>
-            <log message="Before Calling Microservice-${body}"/>
-           <!--<to uri="http://COUNTRYINFORMATIONSERVICE/api?bridgeEndpoint=true"/>-->
-            <serviceCall name="countryinformationservice/api?bridgeEndpoint=true"/>
-            <log message="After Calling Microservice-${body}"/>
+        <route id="getFullCountryInfoClient" streamCache="true">
+            <from uri="direct:getFullCountryInfoClient"/>
+            <log message="tracePoint:START,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId},CountryCode:${in.headers.CountryCode},Message:${body}" loggingLevel="INFO"/>
+            <serviceCall name="cis/api?bridgeEndpoint=true"/>
+            <log message="tracePoint:END,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="INFO"/>
         </route>
 
 
