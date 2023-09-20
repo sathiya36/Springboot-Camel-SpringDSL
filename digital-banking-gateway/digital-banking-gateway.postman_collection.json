@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "5999592e-dd0d-4572-935c-5ba5036f0fa4",
+		"name": "Digital Banking POC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7544681"
+	},
+	"item": [
+		{
+			"name": "DigitalBankingGateway",
+			"item": [
+				{
+					"name": "CAM-GenerateOTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\" : \"987654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/DigitalBanking/CustomerAccessManagement/GenerateOTP",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"DigitalBanking",
+								"CustomerAccessManagement",
+								"GenerateOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CAM-UserLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"sathiyaraja\",\r\n    \"password\": \"weqwecascasdadqwe==\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/DigitalBanking/CustomerAccessManagement/UserLogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"DigitalBanking",
+								"CustomerAccessManagement",
+								"UserLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CPL-UserProfile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/DigitalBanking/CustomerProfile/UserProfile/:CIF",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"DigitalBanking",
+								"CustomerProfile",
+								"UserProfile",
+								":CIF"
+							],
+							"variable": [
+								{
+									"key": "CIF",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CPL-AccountList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/DigitalBanking/CustomerProfile/AccountList/:CIF",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"DigitalBanking",
+								"CustomerProfile",
+								"AccountList",
+								":CIF"
+							],
+							"variable": [
+								{
+									"key": "CIF",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CPL-CardList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/DigitalBanking/CustomerProfile/CardList/:CIF",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"DigitalBanking",
+								"CustomerProfile",
+								"CardList",
+								":CIF"
+							],
+							"variable": [
+								{
+									"key": "CIF",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "CustomerAccessManagement",
+					"item": [
+						{
+							"name": "UserLogin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"sathiyaraja\",\r\n    \"password\": \"weqwecascasdadqwe==\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/api/CustomerAccessManagement/UserLogin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"CustomerAccessManagement",
+										"UserLogin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GenerateOTP",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mobileNumber\" : \"987654321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/api/CustomerAccessManagement/GenerateOTP",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"CustomerAccessManagement",
+										"GenerateOTP"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CustomerProfile",
+					"item": [
+						{
+							"name": "UserProfile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/api/CustomerProfile/UserProfile/:CIF",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"CustomerProfile",
+										"UserProfile",
+										":CIF"
+									],
+									"variable": [
+										{
+											"key": "CIF",
+											"value": "10162336"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AccountList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/api/CustomerProfile/AccountList/:CIF",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"CustomerProfile",
+										"AccountList",
+										":CIF"
+									],
+									"variable": [
+										{
+											"key": "CIF",
+											"value": "123456"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CardList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/api/CustomerProfile/CardList/:CIF",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"CustomerProfile",
+										"CardList",
+										":CIF"
+									],
+									"variable": [
+										{
+											"key": "CIF",
+											"value": "10162336"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

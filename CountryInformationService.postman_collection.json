@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "95551493-f817-4865-b56c-06f5064767bc",
+		"name": "CountryInfo-Apache Camel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7544681"
+	},
+	"item": [
+		{
+			"name": "/getFullCountryInfo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"countryName is a non-empty string\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"\r",
+							"    pm.expect(responseData.countryName).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"capitalCity is a non-empty string\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"\r",
+							"    pm.expect(responseData).to.be.an('object');\r",
+							"    pm.expect(responseData.capitalCity).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"currencyCode is a non-empty string\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"\r",
+							"    pm.expect(responseData).to.be.an('object');\r",
+							"    pm.expect(responseData.currency.currencyCode).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"currencyName is a non-empty string\", function () {\r",
+							"    const responseData = pm.response.json();\r",
+							"\r",
+							"    pm.expect(responseData.currency.currencyName).to.be.a('string').and.to.have.lengthOf.at.least(1, \"currencyName should not be empty\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/api/CountryInfo/getFullCountryInfo/:CountryCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"CountryInfo",
+						"getFullCountryInfo",
+						":CountryCode"
+					],
+					"variable": [
+						{
+							"key": "CountryCode",
+							"value": "NZ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getFullCountryInfo-Gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/gateway/CountryInfo/getFullCountryInfo/:CountryCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"gateway",
+						"CountryInfo",
+						"getFullCountryInfo",
+						":CountryCode"
+					],
+					"variable": [
+						{
+							"key": "CountryCode",
+							"value": "AZ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getFullCountryInfo-Client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9092/client/CountryInfo/getFullCountryInfo/:CountryCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"client",
+						"CountryInfo",
+						"getFullCountryInfo",
+						":CountryCode"
+					],
+					"variable": [
+						{
+							"key": "CountryCode",
+							"value": "CN"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

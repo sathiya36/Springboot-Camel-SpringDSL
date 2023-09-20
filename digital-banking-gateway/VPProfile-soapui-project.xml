@@ -1,0 +1,2537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c04db0e5-d508-44e5-9086-fe6e8e5ca01f" activeEnvironment="Default" name="VPProfile" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="2ff7b010-ff19-4d5d-b5c7-ca962469ae1e" wsaVersion="NONE" name="VPProfilePortSoap11" type="wsdl" bindingName="{http://tempuri.org/VeriBranchMessages.xsd}VPProfilePortSoap11" soapVersion="1_1" anonymous="optional" definition="file:/D:/Learnings/Apache%20Camel/digital%20banking%20POC/WSDL/VPProfile.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\D:\Learnings\Apache%20Camel\digital%20banking%20POC\WSDL\VPProfile.wsdl"><con:part><con:url>file:\D:\Learnings\Apache%20Camel\digital%20banking%20POC\WSDL\VPProfile.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/VeriBranchMessages.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://www.baeldung.com/springsoap/gen" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://tempuri.org/VeriBranchMessages.xsd" xmlns:tns="http://tempuri.org/VeriBranchMessages.xsd">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/VeriBranchMessages.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="VPGIBCustomerProfileInquiryRequest">
+        <xsd:complexType mixed="true">
+          <xsd:sequence>
+            <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="TransactionRequestDate" minOccurs="0" type="xsd:dateTime"/>
+            <xsd:element name="TicketNumber" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="Header" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="ReferenceNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="NonStpTrackingNumber" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="User" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="UserId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UserName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CifNo" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="Segment" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="SubSegment" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="UserType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsCorporate" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="PerformerName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="PerformerUserID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="Password" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CustomerName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="RoleId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="BranchCode" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="TPinVerified" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Email" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="UserSettings" minOccurs="0">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="IsTooltipEnabled" minOccurs="0" type="xsd:boolean"/>
+                              <xsd:element name="CalendarStyle" minOccurs="0" type="xsd:normalizedString"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="UnreadEmailCount" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UnPaidBillCount" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="RegisteredDeviceID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="IsDeviceRegistered" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="MobileNumber" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="NationalID" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="IDType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="FirstName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="LastName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="SecondaryMobile" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="BirthDate" minOccurs="0" type="xsd:dateTime"/>
+                        <xsd:element name="SessionID" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsOnlineBankingFirstLogin" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="IsOnlineBankingFirstLoginOnThisChannel" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="CustomerPreferredLanguage" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="MemberSince" minOccurs="0" type="xsd:dateTime"/>
+                        <xsd:element name="ContactID" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="Session" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Sessionid" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Locale" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="PerformerIdentity" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="PerformerRoleId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ApproverId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ApprovalCaseId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="FutureDatedTxnId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Remarks" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="IsFutureDatedTransaction" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="CurrentUICulture" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="DeviceID" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="DeviceType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="MobileISDN" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="ExecutionStep" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="FrontOfficeOpId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="TransactionPipelineId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="CutOffDate" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="FutureTransactionId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="CutoffRescheduled" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="OperationStage" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="Performer" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="PerformerId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="PerformerIdentity" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="PerformerRoleId" minOccurs="0" type="xsd:int"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="TransactionDefinition" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Simulate" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="ByPassEDRA" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="RequiredSecretKey" minOccurs="0" type="xsd:boolean"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="APIKey" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AuthenticationData" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="SecretCodeType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="SecretCode" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CardType" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="NationalID" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="CIF" minOccurs="0" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VPGIBCustomerProfileInquiryResponse">
+        <xsd:complexType mixed="true">
+          <xsd:sequence>
+            <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ExecutionStatus" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="IsSuccess" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsRescheduled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="CutoffRescheduled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="Footer" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Result" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Warnings" minOccurs="0">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="Count" minOccurs="0" type="xsd:int"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="RuleVerifications" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="RequiresApproval" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Result" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="RequiredApprovalCount" minOccurs="0" type="xsd:int"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="SuccessMessage" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MaritalStatus" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="Gender" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="SecondaryMobile" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SocialSecurityNumber" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="VisaNumber" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="VisaExpiryDate" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="EducationCode" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="CustomerSegment" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CustomerSubSegment" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="IsStaff" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="RelationShipManagerId" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="PowerOfAttorney" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="IsMinor" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsProspect" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsResidentCustomer" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="FacebookID" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TwitterID" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="LinkedInID" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PlaceOfBirth" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="MothersMaidenName" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="CustomerPrefferedLanguage" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="DateOfBirth" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CIF" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CountryOfCIF" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BranchCode" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CustomerType" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="SalutationEN" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="FirstNameEN" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="MiddleName1EN" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="MiddleName2EN" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="LastNameEN" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="ShortNameEN" minOccurs="0" type="xsd:long"/>
+            <xsd:element name="Salutation_LS" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="FirstName_LS" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="MiddleName1_LS" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="MiddleName2_LS" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="LastName_LS" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="ShortName_LS" minOccurs="0" type="xsd:long"/>
+            <xsd:element name="CustomerNationalityCode" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="PreferredSocialMediaID" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SecondaryEmail" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PreferedAddress" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PrimaryMobileNumber" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="GuardianDetail" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="HafizaNo" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="DateOfBirthHijri" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="ProfessionOnIqama" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PassportNumber" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="LifeStatus" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="LegalStatus" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="CountryOfBirth" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CountryOfDomicile" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CountryOfNationality" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="ResidentialStatus" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="AlphaThreeCountryCode" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="AreaCode" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="EmployerNameEN" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="EmployerName_LS" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="CultureOfAddress" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SponsorNameOnIqama" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CustomerSince" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="OnboardingStatus" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CustomerIdentification" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="IdentityDocType" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="IdentityIssuingCountry" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="IdentityDocNumber" minOccurs="0" type="xsd:long"/>
+                  <xsd:element name="IdentityDocIssueDate" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="IdentityDocExpiryDate" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CustomerAddresses" maxOccurs="unbounded">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Mobile" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="County" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="City" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="Postal" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AddressLine1" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="CountryCode" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AddressType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="Email" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="NumericThreeCountryCode" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AreaCode" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AddressLine1_LS" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CustomerFinancialDetail" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="AllowancesPayableMonthly" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="GrossSalary" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="OtherAllowances" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="IsSalaryCreditInGIBAccount" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="MonthsInPresentEmployment" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="IsEndOfServiceBenefit" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="NoOfYearsInCurrentResidence" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="IncomeAmountPrimary" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="IncomeAmountAdditional" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ResidenceValue" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="TransporationValue" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NumberOfDependants" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="JobTitle" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="JobSector" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="JobBeginDate" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ExpectedMonthlyDeposit" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ExpectedMonthlyWithdrawal" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ContactID" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="IsHardRejectForPF" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="HardRejectForPFDate" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="IsHardRejectForCC" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="HardRejectForCCDate" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PreferredLanguage" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="CustomerSegmentCode" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="PassportPlaceIssuance" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Profession" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PassportExpiryDate" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CustomerNationalAddress" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="ZipCode" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="City" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="StreetName" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="District" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="UnitNumber" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="BuildingNumber" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="AdditionalNumber" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="DeclaredCountryOfBirth" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="AuthorizedSignatoryData" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="UserID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NationalID" minOccurs="0" type="xsd:long"/>
+            <xsd:element name="IDType" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="IsToolTipEnabled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="CalendarStyle" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="RequestDateInHijri" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Day" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Month" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Year" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="IsBiometricEnabled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="PendingRetryAttempts" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="TotalRetryAttempts" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ConsumedRetryAttempt" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CustomerBlackListedBySAMA" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="CustomerIPSConsentStatus" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="IsBiometricEnabledForSoftLogin" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="AccountNo" minOccurs="0" type="xsd:long"/>
+            <xsd:element name="IsKYCUpdated" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="MarsoolID" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CustomerOnboardingStatus" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="AjeebProfileInfo" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="IsConsentReceived" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="IsProfileUpdateRequired" minOccurs="0" type="xsd:boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="IsGroupIBConsentShown" minOccurs="0" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VPGIBAccountListV2InquiryRequest">
+        <xsd:complexType mixed="true">
+          <xsd:sequence>
+            <xsd:element name="ReferenceNumber" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="NonStpTrackingNumber" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="TransactionRequestDate" minOccurs="0" type="xsd:dateTime"/>
+            <xsd:element name="TicketNumber" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CurrentCulture" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="CustomLogEntryList" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Key" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Value" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Header" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="ReferenceNumber" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="NonStpTrackingNumber" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="User" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="UserId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UserName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CifNo" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="Segment" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="SubSegment" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="UserType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsCorporate" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="PerformerName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="PerformerUserID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="Password" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CustomerName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="RoleId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="BranchCode" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="TPinVerified" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Email" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="UserSettings" minOccurs="0">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="IsTooltipEnabled" minOccurs="0" type="xsd:boolean"/>
+                              <xsd:element name="CalendarStyle" minOccurs="0" type="xsd:normalizedString"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="UnreadEmailCount" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UnPaidBillCount" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="RegisteredDeviceID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="IsDeviceRegistered" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="MobileNumber" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="NationalID" minOccurs="0" type="xsd:long"/>
+                        <xsd:element name="IDType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="FirstName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="LastName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="SecondaryMobile" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="BirthDate" minOccurs="0" type="xsd:dateTime"/>
+                        <xsd:element name="SessionID" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsOnlineBankingFirstLogin" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="IsOnlineBankingFirstLoginOnThisChannel" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="CustomerPreferredLanguage" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="MemberSince" minOccurs="0" type="xsd:dateTime"/>
+                        <xsd:element name="ContactID" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="Session" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Sessionid" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Locale" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="PerformerIdentity" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="PerformerRoleId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ApproverId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ApprovalCaseId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="FutureDatedTxnId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Remarks" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="IsFutureDatedTransaction" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="CurrentUICulture" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="DeviceID" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="DeviceType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="MobileISDN" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="ExecutionStep" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="FrontOfficeOpId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="TransactionPipelineId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="CutOffDate" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="FutureTransactionId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="CutoffRescheduled" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="OperationStage" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="Performer" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="PerformerId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="PerformerIdentity" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="PerformerRoleId" minOccurs="0" type="xsd:int"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="TransactionDefinition" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Simulate" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="ByPassEDRA" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="RequiredSecretKey" minOccurs="0" type="xsd:boolean"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="APIKey" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AuthenticationData" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="SecretCodeType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="SecretCode" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CardType" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="EntitlementCode" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="TransactionActions" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="ActionCode" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="FieldSet" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Remarks" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="DocumentPackage" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Name" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Code" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="CreatedOn" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="Documents" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Name" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="NameLS" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Code" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="PackageCode" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="IsRequired" minOccurs="0" type="xsd:boolean"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TransactionRequestDateInHijri" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Day" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Month" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Year" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SelectedCampaignCode" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CIF" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="QueryType" minOccurs="0" type="xsd:normalizedString"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VPGIBAccountListV2InquiryResponse">
+        <xsd:complexType mixed="true">
+          <xsd:sequence>
+            <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ExecutionStatus" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="IsSuccess" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsRescheduled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="CutoffRescheduled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="Footer" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Result" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Warnings" minOccurs="0">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="Count" minOccurs="0" type="xsd:int"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="RuleVerifications" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="RequiresApproval" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Result" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="RequiredApprovalCount" minOccurs="0" type="xsd:int"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="SuccessMessage" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CASAAccounts" maxOccurs="unbounded">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="AccountNumber" minOccurs="0" type="xsd:long"/>
+                  <xsd:element name="AccountDescription" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="AccountStatus" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AccountType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AvailableBalanceInAccountCurrency" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="AvailableBalanceInLocalCurrency" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="BookBalanceInAccountCurrency" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="BookBalanceInLocalCurrency" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="UnclearedBalanceInAccountCurrency" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="UnclearedBalanceInLocalCurrency" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="AccountCurrency" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="IsDormantAccount" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="ProductType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AccountOperationMode" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AccountOpeningDate" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="IBAN" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="DoesHoldExist" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="TotalHoldAmount" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="QueryType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="Branch" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="IsShariaCompliant" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="AccountRecordStatus" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AccountRegulatoryStatus" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AccountBankInitiatedStatus" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="StatusDescArabic" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="StatusDescEnglish" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="OnePackAccountNumber" minOccurs="0">
+                    <xsd:complexType>
+                      <xsd:simpleContent>
+                        <xsd:extension base="xsd:string">
+                          <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                        </xsd:extension>
+                      </xsd:simpleContent>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="DataItem" maxOccurs="unbounded">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Key" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="Value" minOccurs="0">
+                          <xsd:complexType>
+                            <xsd:simpleContent>
+                              <xsd:extension base="xsd:string">
+                                <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+                              </xsd:extension>
+                            </xsd:simpleContent>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="IsDebitAllowed" minOccurs="0" type="xsd:boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="FDAccounts" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="AccountNumber" minOccurs="0" type="xsd:long"/>
+                  <xsd:element name="AccountDescription" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="AccountStatus" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AccountType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="PrinicipalAmountInAccountCurrency" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="PrincipalAmountInLocalCurrency" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="MaturityDate" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Tenure" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="AccountCurrency" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="QueryType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="IsShariaCompliant" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="Rate" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="EstimatedAccruedProfitTillDate" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="EstimatedValueAtMaturity" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="LienAmount" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="LienEffectiveDate" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="BranchCode" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="StartDate" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="MaturityPeriodCompleted" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="MaturityPeriodRemaining" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="DataItem" maxOccurs="unbounded">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Key" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="Value" minOccurs="0">
+                          <xsd:complexType>
+                            <xsd:simpleContent>
+                              <xsd:extension base="xsd:string">
+                                <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+                              </xsd:extension>
+                            </xsd:simpleContent>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="LoanAccounts" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="AccountNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AccountDescription" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="AccountStatus" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AccountType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="InterestProfitRate" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NumberofInstallmentsPaid" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NumberOfInstallmentsOutstanding" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NextRepaymentAmount" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="OutstandingBalanceInAccountCurrency" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="OutstandingBalanceInLocalCurrency" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="OverdueAmountInAccountCurrency" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="OverdueAmountInLocalCurrency" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="LoanTenure" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="AccountCurrency" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AccountOpeningDate" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="BranchCode" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="IsShariaCompliant" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="OriginalFinanceAmount" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="InstallmentAmount" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="NextPaymentDate" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="NextPaymentAmount" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="IsCancelable" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="TotalRepaymentAmount" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="PaidAmount" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="OutstandingAmount" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="APR" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="DataItem" maxOccurs="unbounded">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Key" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="Value" minOccurs="0">
+                          <xsd:complexType>
+                            <xsd:simpleContent>
+                              <xsd:extension base="xsd:string">
+                                <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+                              </xsd:extension>
+                            </xsd:simpleContent>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="UserStatus" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="OutstandingPrincipalInLocalCurrency" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="OutstandingPrincipalInAccountCurrency" minOccurs="0" type="xsd:decimal"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="OnePackAccountList" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="CurrentAccount" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="AccountNumber" minOccurs="0" type="xsd:long"/>
+                        <xsd:element name="AccountDescription" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="AccountStatus" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AccountType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AvailableBalanceInAccountCurrency" minOccurs="0" type="xsd:decimal"/>
+                        <xsd:element name="AvailableBalanceInLocalCurrency" minOccurs="0" type="xsd:decimal"/>
+                        <xsd:element name="BookBalanceInAccountCurrency" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="BookBalanceInLocalCurrency" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UnclearedBalanceInAccountCurrency" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UnclearedBalanceInLocalCurrency" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="AccountCurrency" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsDormantAccount" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="ProductType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AccountOperationMode" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AccountOpeningDate" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="IBAN" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="DoesHoldExist" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="TotalHoldAmount" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="QueryType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="Branch" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="IsShariaCompliant" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="AccountRecordStatus" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AccountRegulatoryStatus" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AccountBankInitiatedStatus" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="StatusDescArabic" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="StatusDescEnglish" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="OnePackAccountNumber" minOccurs="0" type="xsd:long"/>
+                        <xsd:element name="DataItem" maxOccurs="unbounded">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="Key" minOccurs="0" type="xsd:normalizedString"/>
+                              <xsd:element name="Value" minOccurs="0">
+                                <xsd:complexType>
+                                  <xsd:simpleContent>
+                                    <xsd:extension base="xsd:string">
+                                      <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+                                    </xsd:extension>
+                                  </xsd:simpleContent>
+                                </xsd:complexType>
+                              </xsd:element>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="IsDebitAllowed" minOccurs="0" type="xsd:boolean"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="SavingsAccount" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="AccountNumber" minOccurs="0" type="xsd:long"/>
+                        <xsd:element name="AccountDescription" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="AccountStatus" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AccountType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AvailableBalanceInAccountCurrency" minOccurs="0" type="xsd:decimal"/>
+                        <xsd:element name="AvailableBalanceInLocalCurrency" minOccurs="0" type="xsd:decimal"/>
+                        <xsd:element name="BookBalanceInAccountCurrency" minOccurs="0" type="xsd:decimal"/>
+                        <xsd:element name="BookBalanceInLocalCurrency" minOccurs="0" type="xsd:decimal"/>
+                        <xsd:element name="UnclearedBalanceInAccountCurrency" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UnclearedBalanceInLocalCurrency" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="AccountCurrency" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsDormantAccount" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="ProductType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AccountOperationMode" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AccountOpeningDate" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="IBAN" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="DoesHoldExist" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="TotalHoldAmount" minOccurs="0" type="xsd:decimal"/>
+                        <xsd:element name="QueryType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="Branch" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="IsShariaCompliant" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="AccountRecordStatus" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AccountRegulatoryStatus" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="AccountBankInitiatedStatus" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="StatusDescArabic" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="StatusDescEnglish" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="OnePackAccountNumber" minOccurs="0" type="xsd:long"/>
+                        <xsd:element name="DataItem" maxOccurs="unbounded">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="Key" minOccurs="0" type="xsd:normalizedString"/>
+                              <xsd:element name="Value" minOccurs="0">
+                                <xsd:complexType>
+                                  <xsd:simpleContent>
+                                    <xsd:extension base="xsd:string">
+                                      <xsd:attribute name="type" type="xsd:normalizedString" use="required"/>
+                                    </xsd:extension>
+                                  </xsd:simpleContent>
+                                </xsd:complexType>
+                              </xsd:element>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="IsDebitAllowed" minOccurs="0" type="xsd:boolean"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="NetBalance" minOccurs="0" type="xsd:decimal"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TodaysDate" minOccurs="0" type="xsd:dateTime"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VPGIBCardListV2InquiryRequest">
+        <xsd:complexType mixed="true">
+          <xsd:sequence>
+            <xsd:element name="NonStpTrackingNumber" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="TransactionRequestDate" minOccurs="0" type="xsd:dateTime"/>
+            <xsd:element name="TicketNumber" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CurrentCulture" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="CustomLogEntryList" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Key" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Value" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Header" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="NonStpTrackingNumber" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="User" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="UserId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UserName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CifNo" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="Segment" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="SubSegment" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="UserType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsCorporate" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="PerformerName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="PerformerUserID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="Password" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CustomerName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="RoleId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="BranchCode" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="TPinVerified" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Email" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="UserSettings" minOccurs="0">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="IsTooltipEnabled" minOccurs="0" type="xsd:boolean"/>
+                              <xsd:element name="CalendarStyle" minOccurs="0" type="xsd:normalizedString"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="UnreadEmailCount" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UnPaidBillCount" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="RegisteredDeviceID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="IsDeviceRegistered" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="MobileNumber" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="NationalID" minOccurs="0" type="xsd:long"/>
+                        <xsd:element name="IDType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="FirstName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="LastName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="SecondaryMobile" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="BirthDate" minOccurs="0" type="xsd:dateTime"/>
+                        <xsd:element name="SessionID" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsOnlineBankingFirstLogin" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="IsOnlineBankingFirstLoginOnThisChannel" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="CustomerPreferredLanguage" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="MemberSince" minOccurs="0" type="xsd:dateTime"/>
+                        <xsd:element name="ContactID" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="Session" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Sessionid" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Locale" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="PerformerIdentity" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="PerformerRoleId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ApproverId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ApprovalCaseId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="FutureDatedTxnId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Remarks" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="IsFutureDatedTransaction" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="CurrentUICulture" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="DeviceID" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="DeviceType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="MobileISDN" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="ExecutionStep" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="FrontOfficeOpId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="TransactionPipelineId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="CutOffDate" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="FutureTransactionId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="CutoffRescheduled" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="OperationStage" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="Performer" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="PerformerId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="PerformerIdentity" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="PerformerRoleId" minOccurs="0" type="xsd:int"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="APIKey" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AuthenticationData" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="SecretCodeType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="SecretCode" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CardType" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="EntitlementCode" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="TransactionActions" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="ActionCode" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="FieldSet" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Remarks" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="DocumentPackage" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Name" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Code" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="CreatedOn" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="Documents" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Name" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="NameLS" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Code" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="PackageCode" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="IsRequired" minOccurs="0" type="xsd:boolean"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TransactionRequestDateInHijri" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Day" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Month" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Year" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SelectedCampaignCode" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CIF" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="QueryType" minOccurs="0" type="xsd:normalizedString"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VPGIBCardListV2InquiryResponse">
+        <xsd:complexType mixed="true">
+          <xsd:sequence>
+            <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ExecutionStatus" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="IsSuccess" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsRescheduled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="CutoffRescheduled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="Footer" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Result" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Warnings" minOccurs="0">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="Count" minOccurs="0" type="xsd:int"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="RuleVerifications" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="RequiresApproval" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Result" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="RequiredApprovalCount" minOccurs="0" type="xsd:int"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="SuccessMessage" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PrepaidCards" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="PrepaidCardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="MaskedCardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="EmbossedName" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="ExpiryDate" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AssociatedAccounts" maxOccurs="unbounded">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="AccountNumber" minOccurs="0" type="xsd:long"/>
+                        <xsd:element name="AccountType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="BranchCode" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="QueryType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsDefault" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Failover" minOccurs="0" type="xsd:boolean"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="CardStatus" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="CardClass" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="CardType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="IsPrimaryCard" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="FaceValue" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="DataItem" maxOccurs="unbounded">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Key" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="Value" minOccurs="0" type="xsd:string"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="DateCreated" minOccurs="0" type="xsd:date"/>
+                  <xsd:element name="PrepaidCardStatusEN" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="PrepaidCardStatusAR" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="PrepaidCardAccumulatedAmounts" minOccurs="0" type="xsd:decimal"/>
+                  <xsd:element name="EncryptedCardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="CardTypeInternal" minOccurs="0" type="xsd:normalizedString"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="VirtualDebitCard" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="VirtualCardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="MaskedCardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="EmbossedName" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="ExpiryDate" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AssociatedAccounts" maxOccurs="unbounded">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="AccountNumber" minOccurs="0" type="xsd:long"/>
+                        <xsd:element name="AccountType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="BranchCode" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="QueryType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsDefault" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Failover" minOccurs="0" type="xsd:boolean"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="CardStatus" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="IsPrimaryCard" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="CardClass" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="CardType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="DataItem" maxOccurs="unbounded">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Key" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="Value" minOccurs="0" type="xsd:string"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="DateCreated" minOccurs="0" type="xsd:date"/>
+                  <xsd:element name="VirtualCardStatusEN" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="VirtualCardStatusAR" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="EncryptedCardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="IsNFCEnabled" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="IsECommerceEnabled" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="CardTypeInternal" minOccurs="0" type="xsd:normalizedString"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="IsAllCardsEnrolled" minOccurs="0" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="VPGIBCustomerProfileInquiryRequest">
+    <wsdl:part element="tns:VPGIBCustomerProfileInquiryRequest" name="VPGIBCustomerProfileInquiryRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VPGIBCustomerProfileInquiryResponse">
+    <wsdl:part element="tns:VPGIBCustomerProfileInquiryResponse" name="VPGIBCustomerProfileInquiryResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VPGIBAccountListV2InquiryRequest">
+    <wsdl:part element="tns:VPGIBAccountListV2InquiryRequest" name="VPGIBAccountListV2InquiryRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VPGIBAccountListV2InquiryResponse">
+    <wsdl:part element="tns:VPGIBAccountListV2InquiryResponse" name="VPGIBAccountListV2InquiryResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VPGIBCardListV2InquiryRequest">
+    <wsdl:part element="tns:VPGIBCardListV2InquiryRequest" name="VPGIBCardListV2InquiryRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VPGIBCardListV2InquiryResponse">
+    <wsdl:part element="tns:VPGIBCardListV2InquiryResponse" name="VPGIBCardListV2InquiryResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="VPProfilePort">
+    <wsdl:operation name="VPGIBCustomerProfileInquiry">
+      <wsdl:input message="tns:VPGIBCustomerProfileInquiryRequest" name="VPGIBCustomerProfileInquiryRequest"></wsdl:input>
+      <wsdl:output message="tns:VPGIBCustomerProfileInquiryResponse" name="VPGIBCustomerProfileInquiryResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VPGIBAccountListV2Inquiry">
+      <wsdl:input message="tns:VPGIBAccountListV2InquiryRequest" name="VPGIBAccountListV2InquiryRequest"></wsdl:input>
+      <wsdl:output message="tns:VPGIBAccountListV2InquiryResponse" name="VPGIBAccountListV2InquiryResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VPGIBCardListV2Inquiry">
+      <wsdl:input message="tns:VPGIBCardListV2InquiryRequest" name="VPGIBCardListV2InquiryRequest"></wsdl:input>
+      <wsdl:output message="tns:VPGIBCardListV2InquiryResponse" name="VPGIBCardListV2InquiryResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VPProfilePortSoap11" type="tns:VPProfilePort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="VPGIBCustomerProfileInquiry">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="VPGIBCustomerProfileInquiryRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="VPGIBCustomerProfileInquiryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VPGIBAccountListV2Inquiry">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="VPGIBAccountListV2InquiryRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="VPGIBAccountListV2InquiryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VPGIBCardListV2Inquiry">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="VPGIBCardListV2InquiryRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="VPGIBCardListV2InquiryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VPProfilePortService">
+    <wsdl:port binding="tns:VPProfilePortSoap11" name="VPProfilePortSoap11">
+      <soap:address location="http://localhost:8080/ws/VPProfile"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://SathiyaPC:8089/mockVPProfilePortSoap11</con:endpoint><con:endpoint>http://localhost:8080/ws/VPProfile</con:endpoint></con:endpoints><con:operation id="6ddfdaff-43b5-4968-92bd-2382da237708" isOneWay="false" action="" name="VPGIBAccountListV2Inquiry" bindingOperationName="VPGIBAccountListV2Inquiry" type="Request-Response" outputName="VPGIBAccountListV2InquiryResponse" inputName="VPGIBAccountListV2InquiryRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8565dfeb-40fb-40ca-9705-f66ff75badef" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@skip_soap_action">true</con:setting><con:setting id="WsdlSettings@enable-mtom">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@force_mtom">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://SathiyaPC:8089/mockVPProfilePortSoap11</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://tempuri.org/VeriBranchMessages.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <VPGIBAccountListV2InquiryRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+         <ReferenceNumber xmlns="http://tempuri.org/VeriBranchMessages.xsd"/>\r
+         <NonStpTrackingNumber xmlns="http://tempuri.org/VeriBranchMessages.xsd">0</NonStpTrackingNumber>\r
+         <NonStpTransactionID xmlns="http://tempuri.org/VeriBranchMessages.xsd">0</NonStpTransactionID>\r
+         <ChannelID xmlns="http://tempuri.org/VeriBranchMessages.xsd">1</ChannelID>\r
+         <NonStpTransactionGroupID xmlns="http://tempuri.org/VeriBranchMessages.xsd">0</NonStpTransactionGroupID>\r
+         <TransactionRequestDate xmlns="http://tempuri.org/VeriBranchMessages.xsd">2023-09-14T13:46:01</TransactionRequestDate>\r
+         <TicketNumber xmlns="http://tempuri.org/VeriBranchMessages.xsd">0</TicketNumber>\r
+         <CurrentCulture xmlns="http://tempuri.org/VeriBranchMessages.xsd">en-US</CurrentCulture>\r
+         <CustomLogEntryList xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+            <Key/>\r
+            <Value/>\r
+         </CustomLogEntryList>\r
+         <Header xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+            <ReferenceNumber/>\r
+            <NonStpTrackingNumber>0</NonStpTrackingNumber>\r
+            <NonStpTransactionID>0</NonStpTransactionID>\r
+            <ChannelID>1</ChannelID>\r
+            <NonStpTransactionGroupID>0</NonStpTransactionGroupID>\r
+            <User>\r
+               <UserId>555438</UserId>\r
+               <UserName>testuser8543</UserName>\r
+               <CifNo>10160975</CifNo>\r
+               <Segment>46</Segment>\r
+               <SubSegment>***Masked***able</SubSegment>\r
+               <UserType>Retail</UserType>\r
+               <IsCorporate>false</IsCorporate>\r
+               <PerformerName/>\r
+               <PerformerUserID>0</PerformerUserID>\r
+               <Password>***Masked***</Password>\r
+               <CustomerName>***Masked***</CustomerName>\r
+               <RoleId>0</RoleId>\r
+               <ChannelID>1</ChannelID>\r
+               <BranchCode>299</BranchCode>\r
+               <TPinVerified>false</TPinVerified>\r
+               <Email>***Masked***.com</Email>\r
+               <UserSettings>\r
+                  <IsTooltipEnabled>false</IsTooltipEnabled>\r
+                  <CalendarStyle>Gregorian</CalendarStyle>\r
+               </UserSettings>\r
+               <UnreadEmailCount>0</UnreadEmailCount>\r
+               <UnPaidBillCount>0</UnPaidBillCount>\r
+               <RegisteredDeviceID>0</RegisteredDeviceID>\r
+               <IsDeviceRegistered>false</IsDeviceRegistered>\r
+               <MobileNumber>***Masked***3700</MobileNumber>\r
+               <NationalID>1053018543</NationalID>\r
+               <IDType>ID</IDType>\r
+               <FirstName>Divya</FirstName>\r
+               <LastName>Vasudevan</LastName>\r
+               <SecondaryMobile/>\r
+               <BirthDate>1998-02-09T00:00:00</BirthDate>\r
+               <SessionID>199baa00-ef34-4b7d-9f97-799e9fc11fe1</SessionID>\r
+               <IsOnlineBankingFirstLogin>false</IsOnlineBankingFirstLogin>\r
+               <IsOnlineBankingFirstLoginOnThisChannel>false</IsOnlineBankingFirstLoginOnThisChannel>\r
+               <CustomerPreferredLanguage>English</CustomerPreferredLanguage>\r
+               <MemberSince>2022-03-10T00:00:00</MemberSince>\r
+               <ContactID>e6b21406-39a0-ec11-afaf-005056b91edb</ContactID>\r
+            </User>\r
+            <Session>\r
+               <Sessionid/>\r
+               <Locale>en-US</Locale>\r
+            </Session>\r
+            <PerformerIdentity>0</PerformerIdentity>\r
+            <PerformerRoleId>0</PerformerRoleId>\r
+            <ApproverId>0</ApproverId>\r
+            <ApprovalCaseId>0</ApprovalCaseId>\r
+            <FutureDatedTxnId>0</FutureDatedTxnId>\r
+            <Remarks/>\r
+            <IsFutureDatedTransaction>false</IsFutureDatedTransaction>\r
+            <CurrentUICulture>en-US</CurrentUICulture>\r
+            <DeviceID>76C458E1-41E6-4152-87A1-C80F774DC2C8</DeviceID>\r
+            <DeviceType>Desktop</DeviceType>\r
+            <MobileISDN>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36</MobileISDN>\r
+            <ExecutionStep>ExecutionPending</ExecutionStep>\r
+            <FrontOfficeOpId>0</FrontOfficeOpId>\r
+            <TransactionPipelineId>0</TransactionPipelineId>\r
+            <CutOffDate>2023-09-14T13:46:01</CutOffDate>\r
+            <FutureTransactionId>0</FutureTransactionId>\r
+            <CutoffRescheduled>false</CutoffRescheduled>\r
+            <OperationStage>Fetch</OperationStage>\r
+            <Performer>\r
+               <PerformerId>0</PerformerId>\r
+               <PerformerIdentity>0</PerformerIdentity>\r
+               <PerformerRoleId>0</PerformerRoleId>\r
+            </Performer>\r
+            <TransactionDefinition>\r
+               <Simulate>false</Simulate>\r
+               <ByPassEDRA>false</ByPassEDRA>\r
+               <RequiredSecretKey>false</RequiredSecretKey>\r
+            </TransactionDefinition>\r
+            <APIKey>10.190.1.105</APIKey>\r
+            <AuthenticationData>\r
+               <SecretCodeType>OTP</SecretCodeType>\r
+               <SecretCode>***Masked***</SecretCode>\r
+               <CardNumber>***Masked***mber</CardNumber>\r
+               <CardType>CreditCard</CardType>\r
+            </AuthenticationData>\r
+         </Header>\r
+         <EntitlementCode xmlns="http://tempuri.org/VeriBranchMessages.xsd"/>\r
+         <TransactionActions xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+            <ActionCode/>\r
+            <FieldSet/>\r
+            <Remarks/>\r
+         </TransactionActions>\r
+         <VPGIBAccountListV2InquiryRequest>\r
+            <ReferenceNumber xmlns="http://tempuri.org/VeriBranchMessages.xsd"/>\r
+            <NonStpTrackingNumber xmlns="http://tempuri.org/VeriBranchMessages.xsd">0</NonStpTrackingNumber>\r
+            <NonStpTransactionID xmlns="http://tempuri.org/VeriBranchMessages.xsd">0</NonStpTransactionID>\r
+            <ChannelID xmlns="http://tempuri.org/VeriBranchMessages.xsd">1</ChannelID>\r
+            <NonStpTransactionGroupID xmlns="http://tempuri.org/VeriBranchMessages.xsd">0</NonStpTransactionGroupID>\r
+            <TransactionRequestDate xmlns="http://tempuri.org/VeriBranchMessages.xsd">2023-09-14T13:46:01</TransactionRequestDate>\r
+            <TicketNumber xmlns="http://tempuri.org/VeriBranchMessages.xsd">0</TicketNumber>\r
+            <CurrentCulture xmlns="http://tempuri.org/VeriBranchMessages.xsd">en-US</CurrentCulture>\r
+            <CustomLogEntryList xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+               <Key/>\r
+               <Value/>\r
+            </CustomLogEntryList>\r
+            <Header xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+               <ReferenceNumber/>\r
+               <NonStpTrackingNumber>0</NonStpTrackingNumber>\r
+               <NonStpTransactionID>0</NonStpTransactionID>\r
+               <ChannelID>1</ChannelID>\r
+               <NonStpTransactionGroupID>0</NonStpTransactionGroupID>\r
+               <User>\r
+                  <UserId>555438</UserId>\r
+                  <UserName>testuser8543</UserName>\r
+                  <CifNo>10160975</CifNo>\r
+                  <Segment>46</Segment>\r
+                  <SubSegment>***Masked***able</SubSegment>\r
+                  <UserType>Retail</UserType>\r
+                  <IsCorporate>false</IsCorporate>\r
+                  <PerformerName/>\r
+                  <PerformerUserID>0</PerformerUserID>\r
+                  <Password>***Masked***</Password>\r
+                  <CustomerName>***Masked***</CustomerName>\r
+                  <RoleId>0</RoleId>\r
+                  <ChannelID>1</ChannelID>\r
+                  <BranchCode>299</BranchCode>\r
+                  <TPinVerified>false</TPinVerified>\r
+                  <Email>***Masked***.com</Email>\r
+                  <UserSettings>\r
+                     <IsTooltipEnabled>false</IsTooltipEnabled>\r
+                     <CalendarStyle>Gregorian</CalendarStyle>\r
+                  </UserSettings>\r
+                  <UnreadEmailCount>0</UnreadEmailCount>\r
+                  <UnPaidBillCount>0</UnPaidBillCount>\r
+                  <RegisteredDeviceID>0</RegisteredDeviceID>\r
+                  <IsDeviceRegistered>false</IsDeviceRegistered>\r
+                  <MobileNumber>***Masked***3700</MobileNumber>\r
+                  <NationalID>1053018543</NationalID>\r
+                  <IDType>ID</IDType>\r
+                  <FirstName>Divya</FirstName>\r
+                  <LastName>Vasudevan</LastName>\r
+                  <SecondaryMobile/>\r
+                  <BirthDate>1998-02-09T00:00:00</BirthDate>\r
+                  <SessionID>199baa00-ef34-4b7d-9f97-799e9fc11fe1</SessionID>\r
+                  <IsOnlineBankingFirstLogin>false</IsOnlineBankingFirstLogin>\r
+                  <IsOnlineBankingFirstLoginOnThisChannel>false</IsOnlineBankingFirstLoginOnThisChannel>\r
+                  <CustomerPreferredLanguage>English</CustomerPreferredLanguage>\r
+                  <MemberSince>2022-03-10T00:00:00</MemberSince>\r
+                  <ContactID>e6b21406-39a0-ec11-afaf-005056b91edb</ContactID>\r
+               </User>\r
+               <Session>\r
+                  <Sessionid/>\r
+                  <Locale>en-US</Locale>\r
+               </Session>\r
+               <PerformerIdentity>0</PerformerIdentity>\r
+               <PerformerRoleId>0</PerformerRoleId>\r
+               <ApproverId>0</ApproverId>\r
+               <ApprovalCaseId>0</ApprovalCaseId>\r
+               <FutureDatedTxnId>0</FutureDatedTxnId>\r
+               <Remarks/>\r
+               <IsFutureDatedTransaction>false</IsFutureDatedTransaction>\r
+               <CurrentUICulture>en-US</CurrentUICulture>\r
+               <DeviceID>76C458E1-41E6-4152-87A1-C80F774DC2C8</DeviceID>\r
+               <DeviceType>Desktop</DeviceType>\r
+               <MobileISDN>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36</MobileISDN>\r
+               <ExecutionStep>ExecutionPending</ExecutionStep>\r
+               <FrontOfficeOpId>0</FrontOfficeOpId>\r
+               <TransactionPipelineId>0</TransactionPipelineId>\r
+               <CutOffDate>2023-09-14T13:46:01</CutOffDate>\r
+               <FutureTransactionId>0</FutureTransactionId>\r
+               <CutoffRescheduled>false</CutoffRescheduled>\r
+               <OperationStage>Fetch</OperationStage>\r
+               <Performer>\r
+                  <PerformerId>0</PerformerId>\r
+                  <PerformerIdentity>0</PerformerIdentity>\r
+                  <PerformerRoleId>0</PerformerRoleId>\r
+               </Performer>\r
+               <TransactionDefinition>\r
+                  <Simulate>false</Simulate>\r
+                  <ByPassEDRA>false</ByPassEDRA>\r
+                  <RequiredSecretKey>false</RequiredSecretKey>\r
+               </TransactionDefinition>\r
+               <APIKey>10.190.1.105</APIKey>\r
+               <AuthenticationData>\r
+                  <SecretCodeType>OTP</SecretCodeType>\r
+                  <SecretCode>***Masked***</SecretCode>\r
+                  <CardNumber>***Masked***mber</CardNumber>\r
+                  <CardType>CreditCard</CardType>\r
+               </AuthenticationData>\r
+            </Header>\r
+            <EntitlementCode xmlns="http://tempuri.org/VeriBranchMessages.xsd"/>\r
+            <TransactionActions xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+               <ActionCode/>\r
+               <FieldSet/>\r
+               <Remarks/>\r
+            </TransactionActions>\r
+            <DocumentPackage xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+               <Name/>\r
+               <Code/>\r
+               <CreatedOn>1994-08-22T00:00:00</CreatedOn>\r
+               <Documents>\r
+                  <Name/>\r
+                  <NameLS/>\r
+                  <Code/>\r
+                  <PackageCode/>\r
+                  <IsRequired>false</IsRequired>\r
+               </Documents>\r
+            </DocumentPackage>\r
+            <TransactionRequestDateInHijri xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+               <Day>0</Day>\r
+               <Month>0</Month>\r
+               <Year>0</Year>\r
+            </TransactionRequestDateInHijri>\r
+            <SelectedCampaignCode xmlns="http://tempuri.org/VeriBranchMessages.xsd">0</SelectedCampaignCode>\r
+            <CIF>10160975</CIF>\r
+            <QueryType>ALL</QueryType>\r
+         </VPGIBAccountListV2InquiryRequest>\r
+         <DocumentPackage xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+            <Name/>\r
+            <Code/>\r
+            <CreatedOn>1994-08-22T00:00:00</CreatedOn>\r
+            <Documents>\r
+               <Name/>\r
+               <NameLS/>\r
+               <Code/>\r
+               <PackageCode/>\r
+               <IsRequired>false</IsRequired>\r
+            </Documents>\r
+         </DocumentPackage>\r
+         <TransactionRequestDateInHijri xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+            <Day>0</Day>\r
+            <Month>0</Month>\r
+            <Year>0</Year>\r
+         </TransactionRequestDateInHijri>\r
+         <SelectedCampaignCode xmlns="http://tempuri.org/VeriBranchMessages.xsd">0</SelectedCampaignCode>\r
+         <CIF>10160975</CIF>\r
+         <QueryType>ALL</QueryType>\r
+      </VPGIBAccountListV2InquiryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/VeriBranchMessages.xsd/VPProfilePort/VPGIBAccountListV2InquiryRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d030ce05-2e5c-4704-bb98-cde8c5bf0895" isOneWay="false" action="" name="VPGIBCardListV2Inquiry" bindingOperationName="VPGIBCardListV2Inquiry" type="Request-Response" outputName="VPGIBCardListV2InquiryResponse" inputName="VPGIBCardListV2InquiryRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0b7daacf-61d2-4dac-97a8-9e77c57b73cf" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://SathiyaPC:8089/mockVPProfilePortSoap11</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://tempuri.org/VeriBranchMessages.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <VPGIBCardListV2InquiryRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+         <NonStpTrackingNumber>0</NonStpTrackingNumber>\r
+         <NonStpTransactionID>0</NonStpTransactionID>\r
+         <ChannelID>1</ChannelID>\r
+         <NonStpTransactionGroupID>0</NonStpTransactionGroupID>\r
+         <TransactionRequestDate>2023-09-14T13:45:53</TransactionRequestDate>\r
+         <TicketNumber>0</TicketNumber>\r
+         <CurrentCulture>en-US</CurrentCulture>\r
+         <CustomLogEntryList>\r
+            <Key/>\r
+            <Value/>\r
+         </CustomLogEntryList>\r
+         <Header>\r
+            <NonStpTrackingNumber>0</NonStpTrackingNumber>\r
+            <NonStpTransactionID>0</NonStpTransactionID>\r
+            <ChannelID>1</ChannelID>\r
+            <NonStpTransactionGroupID>0</NonStpTransactionGroupID>\r
+            <User>\r
+               <UserId>555438</UserId>\r
+               <UserName>testuser8543</UserName>\r
+               <CifNo>10160975</CifNo>\r
+               <Segment>46</Segment>\r
+               <SubSegment>***Masked***able</SubSegment>\r
+               <UserType>Retail</UserType>\r
+               <IsCorporate>false</IsCorporate>\r
+               <PerformerName/>\r
+               <PerformerUserID>0</PerformerUserID>\r
+               <Password>***Masked***</Password>\r
+               <CustomerName>***Masked***</CustomerName>\r
+               <RoleId>0</RoleId>\r
+               <ChannelID>1</ChannelID>\r
+               <BranchCode>299</BranchCode>\r
+               <TPinVerified>false</TPinVerified>\r
+               <Email>***Masked***.com</Email>\r
+               <UserSettings>\r
+                  <IsTooltipEnabled>false</IsTooltipEnabled>\r
+                  <CalendarStyle>Gregorian</CalendarStyle>\r
+               </UserSettings>\r
+               <UnreadEmailCount>0</UnreadEmailCount>\r
+               <UnPaidBillCount>0</UnPaidBillCount>\r
+               <RegisteredDeviceID>0</RegisteredDeviceID>\r
+               <IsDeviceRegistered>false</IsDeviceRegistered>\r
+               <MobileNumber>***Masked***3700</MobileNumber>\r
+               <NationalID>1053018543</NationalID>\r
+               <IDType>ID</IDType>\r
+               <FirstName>Divya</FirstName>\r
+               <LastName>Vasudevan</LastName>\r
+               <SecondaryMobile/>\r
+               <BirthDate>1998-02-09T00:00:00</BirthDate>\r
+               <SessionID>199baa00-ef34-4b7d-9f97-799e9fc11fe1</SessionID>\r
+               <IsOnlineBankingFirstLogin>false</IsOnlineBankingFirstLogin>\r
+               <IsOnlineBankingFirstLoginOnThisChannel>false</IsOnlineBankingFirstLoginOnThisChannel>\r
+               <CustomerPreferredLanguage>English</CustomerPreferredLanguage>\r
+               <MemberSince>2022-03-10T00:00:00</MemberSince>\r
+               <ContactID>e6b21406-39a0-ec11-afaf-005056b91edb</ContactID>\r
+            </User>\r
+            <Session>\r
+               <Sessionid/>\r
+               <Locale>en-US</Locale>\r
+            </Session>\r
+            <PerformerIdentity>0</PerformerIdentity>\r
+            <PerformerRoleId>0</PerformerRoleId>\r
+            <ApproverId>0</ApproverId>\r
+            <ApprovalCaseId>0</ApprovalCaseId>\r
+            <FutureDatedTxnId>0</FutureDatedTxnId>\r
+            <Remarks/>\r
+            <IsFutureDatedTransaction>false</IsFutureDatedTransaction>\r
+            <CurrentUICulture>en-US</CurrentUICulture>\r
+            <DeviceID>76C458E1-41E6-4152-87A1-C80F774DC2C8</DeviceID>\r
+            <DeviceType>Desktop</DeviceType>\r
+            <MobileISDN>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36</MobileISDN>\r
+            <ExecutionStep>ExecutionPending</ExecutionStep>\r
+            <FrontOfficeOpId>0</FrontOfficeOpId>\r
+            <TransactionPipelineId>0</TransactionPipelineId>\r
+            <CutOffDate>2023-09-14T13:45:53</CutOffDate>\r
+            <FutureTransactionId>0</FutureTransactionId>\r
+            <CutoffRescheduled>false</CutoffRescheduled>\r
+            <OperationStage>Fetch</OperationStage>\r
+            <Performer>\r
+               <PerformerId>0</PerformerId>\r
+               <PerformerIdentity>0</PerformerIdentity>\r
+               <PerformerRoleId>0</PerformerRoleId>\r
+            </Performer>\r
+            <APIKey>10.190.1.105</APIKey>\r
+            <AuthenticationData>\r
+               <SecretCodeType>OTP</SecretCodeType>\r
+               <SecretCode>***Masked***</SecretCode>\r
+               <CardNumber>***Masked***mber</CardNumber>\r
+               <CardType>CreditCard</CardType>\r
+            </AuthenticationData>\r
+         </Header>\r
+         <EntitlementCode/>\r
+         <TransactionActions>\r
+            <ActionCode/>\r
+            <FieldSet/>\r
+            <Remarks/>\r
+         </TransactionActions>\r
+         <DocumentPackage>\r
+            <Name/>\r
+            <Code/>\r
+            <CreatedOn>1994-08-22T00:00:00</CreatedOn>\r
+            <Documents>\r
+               <Name/>\r
+               <NameLS/>\r
+               <Code/>\r
+               <PackageCode/>\r
+               <IsRequired>false</IsRequired>\r
+            </Documents>\r
+         </DocumentPackage>\r
+         <TransactionRequestDateInHijri>\r
+            <Day>0</Day>\r
+            <Month>0</Month>\r
+            <Year>0</Year>\r
+         </TransactionRequestDateInHijri>\r
+         <SelectedCampaignCode>0</SelectedCampaignCode>\r
+         <CIF>10160975</CIF>\r
+         <QueryType>ALL</QueryType>\r
+      </VPGIBCardListV2InquiryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/VeriBranchMessages.xsd/VPProfilePort/VPGIBCardListV2InquiryRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="fdb182ad-7735-4268-b964-34e73f49b4e4" isOneWay="false" action="" name="VPGIBCustomerProfileInquiry" bindingOperationName="VPGIBCustomerProfileInquiry" type="Request-Response" outputName="VPGIBCustomerProfileInquiryResponse" inputName="VPGIBCustomerProfileInquiryRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="562578a9-159c-401b-ad64-36f612ed0cd8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://SathiyaPC:8089/mockVPProfilePortSoap11</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://tempuri.org/VeriBranchMessages.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <VPGIBCustomerProfileInquiryRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+         <NonStpTransactionID>0</NonStpTransactionID>\r
+         <ChannelID>1</ChannelID>\r
+         <NonStpTransactionGroupID>0</NonStpTransactionGroupID>\r
+         <TransactionRequestDate>0001-01-01T00:00:00</TransactionRequestDate>\r
+         <TicketNumber>0</TicketNumber>\r
+         <Header>\r
+            <ReferenceNumber>IBR0000000000008769880</ReferenceNumber>\r
+            <NonStpTrackingNumber>0</NonStpTrackingNumber>\r
+            <NonStpTransactionID>0</NonStpTransactionID>\r
+            <ChannelID>1</ChannelID>\r
+            <NonStpTransactionGroupID>0</NonStpTransactionGroupID>\r
+            <User>\r
+               <UserId>557565</UserId>\r
+               <UserName>testuser1610</UserName>\r
+               <CifNo>10162336</CifNo>\r
+               <Segment>0</Segment>\r
+               <SubSegment>***Masked***able</SubSegment>\r
+               <UserType>Retail</UserType>\r
+               <IsCorporate>false</IsCorporate>\r
+               <PerformerName>Anonymous Performer Name</PerformerName>\r
+               <PerformerUserID>0</PerformerUserID>\r
+               <Password>***Masked***</Password>\r
+               <CustomerName>***Masked***name</CustomerName>\r
+               <RoleId>0</RoleId>\r
+               <ChannelID>1</ChannelID>\r
+               <BranchCode>299</BranchCode>\r
+               <TPinVerified>false</TPinVerified>\r
+               <Email>***Masked***</Email>\r
+               <UserSettings>\r
+                  <IsTooltipEnabled>false</IsTooltipEnabled>\r
+                  <CalendarStyle>Gregorian</CalendarStyle>\r
+               </UserSettings>\r
+               <UnreadEmailCount>0</UnreadEmailCount>\r
+               <UnPaidBillCount>0</UnPaidBillCount>\r
+               <RegisteredDeviceID>0</RegisteredDeviceID>\r
+               <IsDeviceRegistered>false</IsDeviceRegistered>\r
+               <MobileNumber>***Masked***</MobileNumber>\r
+               <NationalID/>\r
+               <IDType>ID</IDType>\r
+               <FirstName/>\r
+               <LastName/>\r
+               <SecondaryMobile/>\r
+               <BirthDate>1994-08-22T00:00:00</BirthDate>\r
+               <SessionID>c6jjk911-0r3u-r2d2-oxmc-1ff114r7s823</SessionID>\r
+               <IsOnlineBankingFirstLogin>false</IsOnlineBankingFirstLogin>\r
+               <IsOnlineBankingFirstLoginOnThisChannel>false</IsOnlineBankingFirstLoginOnThisChannel>\r
+               <CustomerPreferredLanguage>English</CustomerPreferredLanguage>\r
+               <MemberSince>2017-07-12T00:00:00</MemberSince>\r
+               <ContactID>$ContactID</ContactID>\r
+            </User>\r
+            <Session>\r
+               <Sessionid/>\r
+               <Locale>en-US</Locale>\r
+            </Session>\r
+            <PerformerIdentity>0</PerformerIdentity>\r
+            <PerformerRoleId>0</PerformerRoleId>\r
+            <ApproverId>0</ApproverId>\r
+            <ApprovalCaseId>0</ApprovalCaseId>\r
+            <FutureDatedTxnId>0</FutureDatedTxnId>\r
+            <Remarks/>\r
+            <IsFutureDatedTransaction>false</IsFutureDatedTransaction>\r
+            <CurrentUICulture>en-US</CurrentUICulture>\r
+            <DeviceID/>\r
+            <DeviceType>Desktop|Chrome|116</DeviceType>\r
+            <MobileISDN/>\r
+            <ExecutionStep>ExecutionPending</ExecutionStep>\r
+            <FrontOfficeOpId>0</FrontOfficeOpId>\r
+            <TransactionPipelineId>0</TransactionPipelineId>\r
+            <CutOffDate>2023-09-15T02:09:45</CutOffDate>\r
+            <FutureTransactionId>0</FutureTransactionId>\r
+            <CutoffRescheduled>false</CutoffRescheduled>\r
+            <OperationStage>Fetch</OperationStage>\r
+            <Performer>\r
+               <PerformerId>0</PerformerId>\r
+               <PerformerIdentity>0</PerformerIdentity>\r
+               <PerformerRoleId>0</PerformerRoleId>\r
+            </Performer>\r
+            <TransactionDefinition>\r
+               <Simulate>false</Simulate>\r
+               <ByPassEDRA>false</ByPassEDRA>\r
+               <RequiredSecretKey>false</RequiredSecretKey>\r
+            </TransactionDefinition>\r
+            <APIKey>10.198.21.174</APIKey>\r
+            <AuthenticationData>\r
+               <SecretCodeType>OTP</SecretCodeType>\r
+               <SecretCode>***Masked***</SecretCode>\r
+               <CardNumber>***Masked***</CardNumber>\r
+               <CardType>CreditCard</CardType>\r
+            </AuthenticationData>\r
+         </Header>\r
+         <NationalID>testuser1610</NationalID>\r
+         <CIF>10162336</CIF>\r
+      </VPGIBCustomerProfileInquiryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/VeriBranchMessages.xsd/VPProfilePort/VPGIBCustomerProfileInquiryRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:mockService id="26e85194-6334-4b30-a803-7018c64ec8a7" port="8089" path="/mockVPProfilePortSoap11" host="SathiyaPC" name="VPProfilePortSoap11 MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="VPGIBAccountListV2Inquiry" id="92e5e07a-8cb3-4001-a34f-d4135080cb48" interface="VPProfilePortSoap11" operation="VPGIBAccountListV2Inquiry"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="617911ac-9eaf-4d05-9b1c-38184ce9c303" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://tempuri.org/VeriBranchMessages.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <VPGIBAccountListV2InquiryResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <NonStpTransactionID>0</NonStpTransactionID>
+         <ChannelID>0</ChannelID>
+         <NonStpTransactionGroupID>0</NonStpTransactionGroupID>
+         <ExecutionStatus>Executed</ExecutionStatus>
+         <IsSuccess>true</IsSuccess>
+         <IsRescheduled>false</IsRescheduled>
+         <CutoffRescheduled>false</CutoffRescheduled>
+         <Footer>
+            <Result>
+               <Warnings>
+                  <Count>0</Count>
+               </Warnings>
+            </Result>
+            <RuleVerifications>
+               <RequiresApproval>false</RequiresApproval>
+               <Result>Success</Result>
+               <RequiredApprovalCount>0</RequiredApprovalCount>
+            </RuleVerifications>
+            <SuccessMessage>-1</SuccessMessage>
+         </Footer>
+         <CASAAccounts>
+            <AccountNumber>29900661197</AccountNumber>
+            <AccountDescription>FIRST ABDULLAH HF FOUR</AccountDescription>
+            <AccountStatus>AccountClosed</AccountStatus>
+            <AccountType>CA</AccountType>
+            <AvailableBalanceInAccountCurrency>0</AvailableBalanceInAccountCurrency>
+            <AvailableBalanceInLocalCurrency>0</AvailableBalanceInLocalCurrency>
+            <BookBalanceInAccountCurrency>0</BookBalanceInAccountCurrency>
+            <BookBalanceInLocalCurrency>0</BookBalanceInLocalCurrency>
+            <UnclearedBalanceInAccountCurrency>0</UnclearedBalanceInAccountCurrency>
+            <UnclearedBalanceInLocalCurrency>0</UnclearedBalanceInLocalCurrency>
+            <AccountCurrency>OMR</AccountCurrency>
+            <IsDormantAccount>false</IsDormantAccount>
+            <ProductType>FCURAC</ProductType>
+            <AccountOperationMode>Single</AccountOperationMode>
+            <AccountOpeningDate>20230301</AccountOpeningDate>
+            <IBAN>SA6090000000029900661197</IBAN>
+            <DoesHoldExist>false</DoesHoldExist>
+            <TotalHoldAmount>0</TotalHoldAmount>
+            <QueryType>CASA</QueryType>
+            <Branch>299</Branch>
+            <IsShariaCompliant>false</IsShariaCompliant>
+            <AccountRecordStatus>C</AccountRecordStatus>
+            <AccountRegulatoryStatus>AC</AccountRegulatoryStatus>
+            <AccountBankInitiatedStatus>AC</AccountBankInitiatedStatus>
+            <StatusDescArabic>مغلق</StatusDescArabic>
+            <StatusDescEnglish>Closed</StatusDescEnglish>
+            <OnePackAccountNumber/>
+            <DataItem>
+               <Key>FriendlyName</Key>
+               <Value>Foreign Currency Account</Value>
+            </DataItem>
+            <DataItem>
+               <Key>FriendlyNameAR</Key>
+               <Value>Foreign Currency Account</Value>
+            </DataItem>
+            <DataItem>
+               <Key>AccountImage</Key>
+               <Value/>
+            </DataItem>
+            <DataItem>
+               <Key>AccountNumber_Mask</Key>
+               <Value>29900661197</Value>
+            </DataItem>
+            <IsDebitAllowed>true</IsDebitAllowed>
+         </CASAAccounts>
+         <CASAAccounts>
+            <AccountNumber>29900661391</AccountNumber>
+            <AccountDescription>FIRST ABDULLAH HF FOUR</AccountDescription>
+            <AccountStatus>AccountClosed</AccountStatus>
+            <AccountType>CA</AccountType>
+            <AvailableBalanceInAccountCurrency>0</AvailableBalanceInAccountCurrency>
+            <AvailableBalanceInLocalCurrency>0</AvailableBalanceInLocalCurrency>
+            <BookBalanceInAccountCurrency>0</BookBalanceInAccountCurrency>
+            <BookBalanceInLocalCurrency>0</BookBalanceInLocalCurrency>
+            <UnclearedBalanceInAccountCurrency>0</UnclearedBalanceInAccountCurrency>
+            <UnclearedBalanceInLocalCurrency>0</UnclearedBalanceInLocalCurrency>
+            <AccountCurrency>BHD</AccountCurrency>
+            <IsDormantAccount>false</IsDormantAccount>
+            <ProductType>FCURAC</ProductType>
+            <AccountOperationMode>Single</AccountOperationMode>
+            <AccountOpeningDate>20230306</AccountOpeningDate>
+            <IBAN>SA6090000000029900661391</IBAN>
+            <DoesHoldExist>false</DoesHoldExist>
+            <TotalHoldAmount>0</TotalHoldAmount>
+            <QueryType>CASA</QueryType>
+            <Branch>299</Branch>
+            <IsShariaCompliant>false</IsShariaCompliant>
+            <AccountRecordStatus>C</AccountRecordStatus>
+            <AccountRegulatoryStatus>AC</AccountRegulatoryStatus>
+            <AccountBankInitiatedStatus>AC</AccountBankInitiatedStatus>
+            <StatusDescArabic>مغلق</StatusDescArabic>
+            <StatusDescEnglish>Closed</StatusDescEnglish>
+            <OnePackAccountNumber/>
+            <DataItem>
+               <Key>FriendlyName</Key>
+               <Value>Foreign Currency Account</Value>
+            </DataItem>
+            <DataItem>
+               <Key>FriendlyNameAR</Key>
+               <Value>Foreign Currency Account</Value>
+            </DataItem>
+            <DataItem>
+               <Key>AccountImage</Key>
+               <Value/>
+            </DataItem>
+            <DataItem>
+               <Key>AccountNumber_Mask</Key>
+               <Value>29900661391</Value>
+            </DataItem>
+            <IsDebitAllowed>true</IsDebitAllowed>
+         </CASAAccounts>
+         <FDAccounts>
+            <AccountNumber>29900663135</AccountNumber>
+            <AccountDescription>First HF Four</AccountDescription>
+            <AccountStatus>AccountActive</AccountStatus>
+            <AccountType>FD</AccountType>
+            <PrinicipalAmountInAccountCurrency>5000</PrinicipalAmountInAccountCurrency>
+            <PrincipalAmountInLocalCurrency>18782.5</PrincipalAmountInLocalCurrency>
+            <MaturityDate>20240509</MaturityDate>
+            <Tenure>360</Tenure>
+            <AccountCurrency>USD</AccountCurrency>
+            <QueryType>FD</QueryType>
+            <IsShariaCompliant>true</IsShariaCompliant>
+            <Rate>0.23</Rate>
+            <EstimatedAccruedProfitTillDate>3.9</EstimatedAccruedProfitTillDate>
+            <EstimatedValueAtMaturity>5011.5</EstimatedValueAtMaturity>
+            <LienAmount>0</LienAmount>
+            <LienEffectiveDate>1900-01-01T00:00:00</LienEffectiveDate>
+            <BranchCode>299</BranchCode>
+            <StartDate>2023-05-15T00:00:00</StartDate>
+            <MaturityPeriodCompleted>-238</MaturityPeriodCompleted>
+            <MaturityPeriodRemaining>238</MaturityPeriodRemaining>
+            <DataItem>
+               <Key>FriendlyName</Key>
+               <Value>Murabaha deposit</Value>
+            </DataItem>
+            <DataItem>
+               <Key>FriendlyNameAR</Key>
+               <Value>وديعة مرابحة</Value>
+            </DataItem>
+            <DataItem>
+               <Key>AccountNumber_Mask</Key>
+               <Value>29900663135</Value>
+            </DataItem>
+         </FDAccounts>
+         <LoanAccounts>
+            <AccountNumber>299TWRS222190005</AccountNumber>
+            <AccountDescription>Tawarruq Financing</AccountDescription>
+            <AccountStatus>AccountActive</AccountStatus>
+            <AccountType>TWRS</AccountType>
+            <InterestProfitRate>0</InterestProfitRate>
+            <NumberofInstallmentsPaid>10</NumberofInstallmentsPaid>
+            <NumberOfInstallmentsOutstanding>266</NumberOfInstallmentsOutstanding>
+            <NextRepaymentAmount>0</NextRepaymentAmount>
+            <OutstandingBalanceInAccountCurrency>0</OutstandingBalanceInAccountCurrency>
+            <OutstandingBalanceInLocalCurrency>1158902.94</OutstandingBalanceInLocalCurrency>
+            <OverdueAmountInAccountCurrency>0</OverdueAmountInAccountCurrency>
+            <OverdueAmountInLocalCurrency>8588.7</OverdueAmountInLocalCurrency>
+            <LoanTenure>276</LoanTenure>
+            <AccountCurrency>SAR</AccountCurrency>
+            <AccountOpeningDate>20220807</AccountOpeningDate>
+            <BranchCode>299</BranchCode>
+            <IsShariaCompliant>true</IsShariaCompliant>
+            <OriginalFinanceAmount>702000</OriginalFinanceAmount>
+            <InstallmentAmount>4294.35</InstallmentAmount>
+            <NextPaymentDate>27-SEP-23</NextPaymentDate>
+            <NextPaymentAmount>4294.35</NextPaymentAmount>
+            <IsCancelable>false</IsCancelable>
+            <TotalRepaymentAmount>1201846.44</TotalRepaymentAmount>
+            <PaidAmount>42943.5</PaidAmount>
+            <OutstandingAmount>1158902.94</OutstandingAmount>
+            <APR>5.02274</APR>
+            <DataItem>
+               <Key>FriendlyName</Key>
+               <Value>Home Finance – Off plan</Value>
+            </DataItem>
+            <DataItem>
+               <Key>FriendlyNameAR</Key>
+               <Value>التمويل العقاري – بيع علي الخارطة</Value>
+            </DataItem>
+            <DataItem>
+               <Key>AccountNumber_Mask</Key>
+               <Value>299TWRS*****0005</Value>
+            </DataItem>
+            <UserStatus>DLNQ</UserStatus>
+            <OutstandingPrincipalInLocalCurrency>693679.49</OutstandingPrincipalInLocalCurrency>
+            <OutstandingPrincipalInAccountCurrency>693679.49</OutstandingPrincipalInAccountCurrency>
+         </LoanAccounts>
+         <OnePackAccountList>
+            <CurrentAccount>
+               <AccountNumber>29900654658</AccountNumber>
+               <AccountDescription>First HF Four</AccountDescription>
+               <AccountStatus>ACDBAC</AccountStatus>
+               <AccountType>CA</AccountType>
+               <AvailableBalanceInAccountCurrency>485272.80</AvailableBalanceInAccountCurrency>
+               <AvailableBalanceInLocalCurrency>485272.80</AvailableBalanceInLocalCurrency>
+               <BookBalanceInAccountCurrency>156060</BookBalanceInAccountCurrency>
+               <BookBalanceInLocalCurrency>156060</BookBalanceInLocalCurrency>
+               <UnclearedBalanceInAccountCurrency>0</UnclearedBalanceInAccountCurrency>
+               <UnclearedBalanceInLocalCurrency>0</UnclearedBalanceInLocalCurrency>
+               <AccountCurrency>SAR</AccountCurrency>
+               <IsDormantAccount>false</IsDormantAccount>
+               <ProductType>CUROP</ProductType>
+               <AccountOperationMode>Single</AccountOperationMode>
+               <AccountOpeningDate>20220310</AccountOpeningDate>
+               <IBAN>SA7390000000029900654658</IBAN>
+               <DoesHoldExist>true</DoesHoldExist>
+               <TotalHoldAmount>156000</TotalHoldAmount>
+               <QueryType>CASA</QueryType>
+               <Branch>299</Branch>
+               <IsShariaCompliant>false</IsShariaCompliant>
+               <AccountRecordStatus>O</AccountRecordStatus>
+               <AccountRegulatoryStatus>DF</AccountRegulatoryStatus>
+               <AccountBankInitiatedStatus>AC</AccountBankInitiatedStatus>
+               <StatusDescArabic>مجمد</StatusDescArabic>
+               <StatusDescEnglish>Freeze</StatusDescEnglish>
+               <OnePackAccountNumber>29900654658</OnePackAccountNumber>
+               <DataItem>
+                  <Key>FriendlyName</Key>
+                  <Value>Meem OnePack</Value>
+               </DataItem>
+               <DataItem>
+                  <Key>FriendlyNameAR</Key>
+                  <Value>حساب م</Value>
+               </DataItem>
+               <DataItem>
+                  <Key>AccountNumber_Mask</Key>
+                  <Value>29900654658</Value>
+               </DataItem>
+               <IsDebitAllowed>true</IsDebitAllowed>
+            </CurrentAccount>
+            <SavingsAccount>
+               <AccountNumber>29900654659</AccountNumber>
+               <AccountDescription>One Pack Savings Acc for 29900654658</AccountDescription>
+               <AccountStatus>AccountActive</AccountStatus>
+               <AccountType>SA</AccountType>
+               <AvailableBalanceInAccountCurrency>485212.80</AvailableBalanceInAccountCurrency>
+               <AvailableBalanceInLocalCurrency>485212.80</AvailableBalanceInLocalCurrency>
+               <BookBalanceInAccountCurrency>487712.79</BookBalanceInAccountCurrency>
+               <BookBalanceInLocalCurrency>487712.79</BookBalanceInLocalCurrency>
+               <UnclearedBalanceInAccountCurrency>0</UnclearedBalanceInAccountCurrency>
+               <UnclearedBalanceInLocalCurrency>0</UnclearedBalanceInLocalCurrency>
+               <AccountCurrency>SAR</AccountCurrency>
+               <IsDormantAccount>false</IsDormantAccount>
+               <ProductType>SAVOP</ProductType>
+               <AccountOperationMode>Single</AccountOperationMode>
+               <AccountOpeningDate>20220310</AccountOpeningDate>
+               <IBAN>SA4690000000029900654659</IBAN>
+               <DoesHoldExist>true</DoesHoldExist>
+               <TotalHoldAmount>2499.99</TotalHoldAmount>
+               <QueryType>CASA</QueryType>
+               <Branch>299</Branch>
+               <IsShariaCompliant>false</IsShariaCompliant>
+               <AccountRecordStatus>O</AccountRecordStatus>
+               <AccountRegulatoryStatus>AC</AccountRegulatoryStatus>
+               <AccountBankInitiatedStatus>AC</AccountBankInitiatedStatus>
+               <StatusDescArabic>نشط</StatusDescArabic>
+               <StatusDescEnglish>Active</StatusDescEnglish>
+               <OnePackAccountNumber>29900654658</OnePackAccountNumber>
+               <DataItem>
+                  <Key>FriendlyName</Key>
+                  <Value>Savings Account</Value>
+               </DataItem>
+               <DataItem>
+                  <Key>FriendlyNameAR</Key>
+                  <Value>حساب التوفير</Value>
+               </DataItem>
+               <DataItem>
+                  <Key>AccountNumber_Mask</Key>
+                  <Value>29900654659</Value>
+               </DataItem>
+               <IsDebitAllowed>true</IsDebitAllowed>
+            </SavingsAccount>
+            <NetBalance>487772.79</NetBalance>
+         </OnePackAccountList>
+         <TodaysDate>2023-09-14T16:46:02.9378556+03:00</TodaysDate>
+      </VPGIBAccountListV2InquiryResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/VeriBranchMessages.xsd/VPProfilePort/VPGIBAccountListV2InquiryResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="VPGIBCardListV2Inquiry" id="bdba983b-f885-4cf0-9bf9-1aa5406f2001" interface="VPProfilePortSoap11" operation="VPGIBCardListV2Inquiry"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="6162af1c-c3ea-4ba1-8195-542312677b30" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://tempuri.org/VeriBranchMessages.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <VPGIBCardListV2InquiryResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/VeriBranchMessages.xsd">
+         <NonStpTransactionID>0</NonStpTransactionID>
+         <ChannelID>0</ChannelID>
+         <NonStpTransactionGroupID>0</NonStpTransactionGroupID>
+         <ExecutionStatus>Executed</ExecutionStatus>
+         <IsSuccess>true</IsSuccess>
+         <IsRescheduled>false</IsRescheduled>
+         <CutoffRescheduled>false</CutoffRescheduled>
+         <Footer>
+            <Result>
+               <Warnings>
+                  <Count>0</Count>
+               </Warnings>
+            </Result>
+            <RuleVerifications>
+               <RequiresApproval>false</RequiresApproval>
+               <Result>Success</Result>
+               <RequiredApprovalCount>0</RequiredApprovalCount>
+            </RuleVerifications>
+            <SuccessMessage>-1</SuccessMessage>
+         </Footer>
+         <PrepaidCards>
+            <PrepaidCardNumber>***Masked***7177</PrepaidCardNumber>
+            <MaskedCardNumber>***Masked***5386</MaskedCardNumber>
+            <EmbossedName>***Masked***FOUR</EmbossedName>
+            <ExpiryDate>***Masked***0131</ExpiryDate>
+            <AssociatedAccounts>
+               <AccountNumber>29900663783</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>false</IsDefault>
+               <Failover>false</Failover>
+            </AssociatedAccounts>
+            <AssociatedAccounts>
+               <AccountNumber>29900661198</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>false</IsDefault>
+               <Failover>false</Failover>
+            </AssociatedAccounts>
+            <AssociatedAccounts>
+               <AccountNumber>29900661199</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>false</IsDefault>
+               <Failover>false</Failover>
+            </AssociatedAccounts>
+            <AssociatedAccounts>
+               <AccountNumber>29900661200</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>false</IsDefault>
+               <Failover>false</Failover>
+            </AssociatedAccounts>
+            <AssociatedAccounts>
+               <AccountNumber>29900661197</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>false</IsDefault>
+               <Failover>false</Failover>
+            </AssociatedAccounts>
+            <AssociatedAccounts>
+               <AccountNumber>29900654658</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>true</IsDefault>
+               <Failover>true</Failover>
+            </AssociatedAccounts>
+            <CardStatus>Active</CardStatus>
+            <CardClass>VDT1</CardClass>
+            <CardType>PC</CardType>
+            <IsPrimaryCard>true</IsPrimaryCard>
+            <FaceValue>0</FaceValue>
+            <DataItem>
+               <Key>FriendlyName</Key>
+               <Value>FIRST HF FOUR</Value>
+            </DataItem>
+            <DataItem>
+               <Key>MaskedCardNumber</Key>
+               <Value>VCT*********7177</Value>
+            </DataItem>
+            <DataItem>
+               <Key>PrepaidAccumulatedAmount</Key>
+               <Value>3,883.05</Value>
+            </DataItem>
+            <DateCreated>2023-01-22</DateCreated>
+            <PrepaidCardStatusEN>Active</PrepaidCardStatusEN>
+            <PrepaidCardStatusAR>نشط</PrepaidCardStatusAR>
+            <PrepaidCardAccumulatedAmounts>3883.05</PrepaidCardAccumulatedAmounts>
+            <EncryptedCardNumber>D661519A6D4A0679A5B</EncryptedCardNumber>
+            <CardTypeInternal>StandardPhysicalCard</CardTypeInternal>
+         </PrepaidCards>
+         <VirtualDebitCard>
+            <VirtualCardNumber>VDC4010000000478</VirtualCardNumber>
+            <MaskedCardNumber>***Masked***7900</MaskedCardNumber>
+            <EmbossedName>***Masked***FOUR</EmbossedName>
+            <ExpiryDate>***Masked***0831</ExpiryDate>
+            <AssociatedAccounts>
+               <AccountNumber>29900663785</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>false</IsDefault>
+               <Failover>false</Failover>
+            </AssociatedAccounts>
+            <AssociatedAccounts>
+               <AccountNumber>29900663800</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>false</IsDefault>
+               <Failover>false</Failover>
+            </AssociatedAccounts>
+            <AssociatedAccounts>
+               <AccountNumber>29900663801</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>false</IsDefault>
+               <Failover>false</Failover>
+            </AssociatedAccounts>
+            <AssociatedAccounts>
+               <AccountNumber>29900661393</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>false</IsDefault>
+               <Failover>false</Failover>
+            </AssociatedAccounts>
+            <AssociatedAccounts>
+               <AccountNumber>29900663784</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>false</IsDefault>
+               <Failover>false</Failover>
+            </AssociatedAccounts>
+            <AssociatedAccounts>
+               <AccountNumber>29900654658</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>true</IsDefault>
+               <Failover>true</Failover>
+            </AssociatedAccounts>
+            <AssociatedAccounts>
+               <AccountNumber>29900661662</AccountNumber>
+               <AccountType>CA</AccountType>
+               <BranchCode>299</BranchCode>
+               <QueryType>CASA</QueryType>
+               <IsDefault>false</IsDefault>
+               <Failover>false</Failover>
+            </AssociatedAccounts>
+            <CardStatus>Active</CardStatus>
+            <IsPrimaryCard>true</IsPrimaryCard>
+            <CardClass>VDVC</CardClass>
+            <CardType>DC</CardType>
+            <DataItem>
+               <Key>FriendlyName</Key>
+               <Value>FIRST HF FOUR</Value>
+            </DataItem>
+            <DataItem>
+               <Key>MaskedCardNumber</Key>
+               <Value>VDC*********0478</Value>
+            </DataItem>
+            <DateCreated>2022-08-07</DateCreated>
+            <VirtualCardStatusEN>Active</VirtualCardStatusEN>
+            <VirtualCardStatusAR>نشط</VirtualCardStatusAR>
+            <EncryptedCardNumber>D0612B4D29F5B03B5FB</EncryptedCardNumber>
+            <IsNFCEnabled>true</IsNFCEnabled>
+            <IsECommerceEnabled>true</IsECommerceEnabled>
+            <CardTypeInternal>StandardVirtualCard</CardTypeInternal>
+         </VirtualDebitCard>
+         <IsAllCardsEnrolled>false</IsAllCardsEnrolled>
+      </VPGIBCardListV2InquiryResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/VeriBranchMessages.xsd/VPProfilePort/VPGIBCardListV2InquiryResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="VPGIBCustomerProfileInquiry" id="887bb439-321c-4388-a47a-d40783315cf6" interface="VPProfilePortSoap11" operation="VPGIBCustomerProfileInquiry"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="49e19d62-58ad-4c4b-b644-d51550af98f8" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://tempuri.org/VeriBranchMessages.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <VPGIBCustomerProfileInquiryResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/VeriBranchMessages.xsd">
+         <NonStpTransactionID>0</NonStpTransactionID>
+         <ChannelID>0</ChannelID>
+         <NonStpTransactionGroupID>0</NonStpTransactionGroupID>
+         <ExecutionStatus>Executed</ExecutionStatus>
+         <IsSuccess>true</IsSuccess>
+         <IsRescheduled>false</IsRescheduled>
+         <CutoffRescheduled>false</CutoffRescheduled>
+         <Footer>
+            <Result>
+               <Warnings>
+                  <Count>0</Count>
+               </Warnings>
+            </Result>
+            <RuleVerifications>
+               <RequiresApproval>false</RequiresApproval>
+               <Result>Success</Result>
+               <RequiredApprovalCount>0</RequiredApprovalCount>
+            </RuleVerifications>
+            <SuccessMessage>-1</SuccessMessage>
+         </Footer>
+         <MaritalStatus>S</MaritalStatus>
+         <Gender>M</Gender>
+         <SecondaryMobile xsi:nil="true"/>
+         <SocialSecurityNumber xsi:nil="true"/>
+         <VisaNumber xsi:nil="true"/>
+         <VisaExpiryDate xsi:nil="true"/>
+         <EducationCode>G</EducationCode>
+         <CustomerSegment>46</CustomerSegment>
+         <CustomerSubSegment xsi:nil="true"/>
+         <IsStaff>false</IsStaff>
+         <RelationShipManagerId>CRMAdminTest1</RelationShipManagerId>
+         <PowerOfAttorney xsi:nil="true"/>
+         <IsMinor>false</IsMinor>
+         <IsProspect>false</IsProspect>
+         <IsResidentCustomer>false</IsResidentCustomer>
+         <FacebookID xsi:nil="true"/>
+         <TwitterID xsi:nil="true"/>
+         <LinkedInID xsi:nil="true"/>
+         <PlaceOfBirth>الظهران</PlaceOfBirth>
+         <MothersMaidenName>SAUDI ARABIA</MothersMaidenName>
+         <CustomerPrefferedLanguage xsi:nil="true"/>
+         <DateOfBirth>19881015</DateOfBirth>
+         <CIF>10162336</CIF>
+         <CountryOfCIF xsi:nil="true"/>
+         <BranchCode>299</BranchCode>
+         <CustomerType>Existing Customer</CustomerType>
+         <SalutationEN>Mr.</SalutationEN>
+         <FirstNameEN>KABOOS</FirstNameEN>
+         <MiddleName1EN>KABOOS</MiddleName1EN>
+         <MiddleName2EN>HASSAN</MiddleName2EN>
+         <LastNameEN>AlRAYAH</LastNameEN>
+         <ShortNameEN>10557716102023164427</ShortNameEN>
+         <Salutation_LS xsi:nil="true"/>
+         <FirstName_LS>KABOOS</FirstName_LS>
+         <MiddleName1_LS>احمد</MiddleName1_LS>
+         <MiddleName2_LS>سليمان</MiddleName2_LS>
+         <LastName_LS>الامير</LastName_LS>
+         <ShortName_LS>10557716102023164427</ShortName_LS>
+         <CustomerNationalityCode>SA</CustomerNationalityCode>
+         <PreferredSocialMediaID xsi:nil="true"/>
+         <SecondaryEmail xsi:nil="true"/>
+         <PreferedAddress xsi:nil="true"/>
+         <PrimaryMobileNumber>***Masked***6564</PrimaryMobileNumber>
+         <GuardianDetail/>
+         <HafizaNo xsi:nil="true"/>
+         <DateOfBirthHijri>3-5-1409 00:00:00</DateOfBirthHijri>
+         <ProfessionOnIqama xsi:nil="true"/>
+         <PassportNumber>W830266</PassportNumber>
+         <LifeStatus>Alive</LifeStatus>
+         <LegalStatus>Legal</LegalStatus>
+         <CountryOfBirth xsi:nil="true"/>
+         <CountryOfDomicile xsi:nil="true"/>
+         <CountryOfNationality>SAUDI ARABIA</CountryOfNationality>
+         <ResidentialStatus>Owned</ResidentialStatus>
+         <AlphaThreeCountryCode>966</AlphaThreeCountryCode>
+         <AreaCode>***Masked***</AreaCode>
+         <EmployerNameEN>Abdul Rahman Saad Al-Rashid &amp; Sons Company LTD</EmployerNameEN>
+         <EmployerName_LS>شركة عبدالرحمن سعد الراشد وأولاده</EmployerName_LS>
+         <CultureOfAddress xsi:nil="true"/>
+         <SponsorNameOnIqama xsi:nil="true"/>
+         <CustomerSince>20230816</CustomerSince>
+         <OnboardingStatus>11</OnboardingStatus>
+         <CustomerIdentification>
+            <IdentityDocType>National Identity Document</IdentityDocType>
+            <IdentityIssuingCountry>الدمام</IdentityIssuingCountry>
+            <IdentityDocNumber>1055771610</IdentityDocNumber>
+            <IdentityDocIssueDate>20210729</IdentityDocIssueDate>
+            <IdentityDocExpiryDate>20310327</IdentityDocExpiryDate>
+         </CustomerIdentification>
+         <CustomerAddresses>
+            <Mobile>***Masked***6564</Mobile>
+            <County>SAUDI ARABIA</County>
+            <City>Dammam</City>
+            <Postal>***Masked***2433</Postal>
+            <AddressLine1>4340 8639</AddressLine1>
+            <CountryCode>SA</CountryCode>
+            <AddressType>R</AddressType>
+            <Email>***Masked***.com</Email>
+            <NumericThreeCountryCode>***Masked***</NumericThreeCountryCode>
+            <AreaCode>***Masked***</AreaCode>
+            <AddressLine1_LS>4340 8639</AddressLine1_LS>
+         </CustomerAddresses>
+         <CustomerAddresses>
+            <County>SAUDI ARABIA</County>
+            <CountryCode>SA</CountryCode>
+            <AddressType>W</AddressType>
+            <NumericThreeCountryCode>***Masked***</NumericThreeCountryCode>
+            <AreaCode>***Masked***</AreaCode>
+         </CustomerAddresses>
+         <CustomerAddresses>
+            <County>SAUDI ARABIA</County>
+            <CountryCode>SA</CountryCode>
+            <AddressType>H</AddressType>
+            <NumericThreeCountryCode>***Masked***</NumericThreeCountryCode>
+            <AreaCode>***Masked***</AreaCode>
+         </CustomerAddresses>
+         <CustomerFinancialDetail>
+            <AllowancesPayableMonthly>0</AllowancesPayableMonthly>
+            <GrossSalary>25000.0000</GrossSalary>
+            <OtherAllowances>0</OtherAllowances>
+            <IsSalaryCreditInGIBAccount>False</IsSalaryCreditInGIBAccount>
+            <MonthsInPresentEmployment>0</MonthsInPresentEmployment>
+            <IsEndOfServiceBenefit>false</IsEndOfServiceBenefit>
+            <NoOfYearsInCurrentResidence>0</NoOfYearsInCurrentResidence>
+            <IncomeAmountPrimary>300000.0000</IncomeAmountPrimary>
+            <IncomeAmountAdditional>0</IncomeAmountAdditional>
+            <ResidenceValue>0</ResidenceValue>
+            <TransporationValue>0</TransporationValue>
+            <NumberOfDependants>0</NumberOfDependants>
+            <JobTitle>other</JobTitle>
+            <JobSector>Private</JobSector>
+            <JobBeginDate>20220317</JobBeginDate>
+            <ExpectedMonthlyDeposit>0</ExpectedMonthlyDeposit>
+            <ExpectedMonthlyWithdrawal>0</ExpectedMonthlyWithdrawal>
+         </CustomerFinancialDetail>
+         <ContactID>19affd9a-3a3c-ee11-819f-0050568096a0</ContactID>
+         <IsHardRejectForPF>false</IsHardRejectForPF>
+         <HardRejectForPFDate xsi:nil="true"/>
+         <IsHardRejectForCC>false</IsHardRejectForCC>
+         <HardRejectForCCDate xsi:nil="true"/>
+         <PreferredLanguage>English</PreferredLanguage>
+         <CustomerSegmentCode>TECH</CustomerSegmentCode>
+         <PassportPlaceIssuance xsi:nil="true"/>
+         <Profession xsi:nil="true"/>
+         <PassportExpiryDate xsi:nil="true"/>
+         <CustomerNationalAddress>
+            <ZipCode>32433</ZipCode>
+            <City>Dammam</City>
+            <StreetName>King Fahad Bin Abdul Aziz Rd</StreetName>
+            <District>Muhammadiyah neighbourhood</District>
+            <UnitNumber>1</UnitNumber>
+            <BuildingNumber>4340</BuildingNumber>
+            <AdditionalNumber>8639</AdditionalNumber>
+         </CustomerNationalAddress>
+         <DeclaredCountryOfBirth xsi:nil="true"/>
+         <AuthorizedSignatoryData/>
+         <UserID>557565</UserID>
+         <NationalID>1055771610</NationalID>
+         <IDType>ID</IDType>
+         <IsToolTipEnabled>true</IsToolTipEnabled>
+         <CalendarStyle>Gregorian</CalendarStyle>
+         <RequestDateInHijri>
+            <Day>30</Day>
+            <Month>2</Month>
+            <Year>1445</Year>
+         </RequestDateInHijri>
+         <IsBiometricEnabled>false</IsBiometricEnabled>
+         <PendingRetryAttempts>3</PendingRetryAttempts>
+         <TotalRetryAttempts>3</TotalRetryAttempts>
+         <ConsumedRetryAttempt>0</ConsumedRetryAttempt>
+         <CustomerBlackListedBySAMA>false</CustomerBlackListedBySAMA>
+         <CustomerIPSConsentStatus>RemindLater</CustomerIPSConsentStatus>
+         <IsBiometricEnabledForSoftLogin>false</IsBiometricEnabledForSoftLogin>
+         <AccountNo>29900664470</AccountNo>
+         <IsKYCUpdated>true</IsKYCUpdated>
+         <MarsoolID xsi:nil="true"/>
+         <CustomerOnboardingStatus>OnboardingCompleted</CustomerOnboardingStatus>
+         <AjeebProfileInfo>
+            <IsConsentReceived>false</IsConsentReceived>
+            <IsProfileUpdateRequired>true</IsProfileUpdateRequired>
+         </AjeebProfileInfo>
+         <IsGroupIBConsentShown>true</IsGroupIBConsentShown>
+      </VPGIBCustomerProfileInquiryResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/VeriBranchMessages.xsd/VPProfilePort/VPGIBCustomerProfileInquiryResponse"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

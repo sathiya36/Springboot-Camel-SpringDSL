@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9c0472ce-4b35-4a1b-9c0f-e1e948891c92" activeEnvironment="Default" name="VPSecurity" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="757ffd65-aba2-451b-a6d4-6db29f66c886" wsaVersion="NONE" name="VPSecurityPortSoap11" type="wsdl" bindingName="{http://tempuri.org/VeriBranchMessages.xsd}VPSecurityPortSoap11" soapVersion="1_1" anonymous="optional" definition="file:/D:/Learnings/Apache%20Camel/digital%20banking%20POC/WSDL/VPSecurity.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/D:/Learnings/Apache%20Camel/digital%20banking%20POC/WSDL/VPSecurity.wsdl"><con:part><con:url>file:/D:/Learnings/Apache%20Camel/digital%20banking%20POC/WSDL/VPSecurity.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/VeriBranchMessages.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://www.baeldung.com/springsoap/gen" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://tempuri.org/VeriBranchMessages.xsd" xmlns:tns="http://tempuri.org/VeriBranchMessages.xsd">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/VeriBranchMessages.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="VPCustomerLoginOperationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ReferenceNumber" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="NonStpTrackingNumber" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="TransactionRequestDate" minOccurs="0" type="xsd:dateTime"/>
+            <xsd:element name="TicketNumber" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CurrentCulture" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="CustomLogEntryList" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Key" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Value" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Header" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="ReferenceNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="NonStpTrackingNumber" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="User" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="UserId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UserName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CifNo" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="Segment" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="SubSegment" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="UserType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsCorporate" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="PerformerName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="PerformerUserID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="Password" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CustomerName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="RoleId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="BranchCode" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="TPinVerified" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Email" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="UserSettings" minOccurs="0">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="IsTooltipEnabled" minOccurs="0" type="xsd:boolean"/>
+                              <xsd:element name="CalendarStyle" minOccurs="0" type="xsd:normalizedString"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="UnreadEmailCount" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UnPaidBillCount" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="RegisteredDeviceID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="IsDeviceRegistered" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="MobileNumber" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="NationalID" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="IDType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="FirstName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="LastName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="SecondaryMobile" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="BirthDate" minOccurs="0" type="xsd:dateTime"/>
+                        <xsd:element name="SessionID" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsOnlineBankingFirstLogin" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="IsOnlineBankingFirstLoginOnThisChannel" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="CustomerPreferredLanguage" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="MemberSince" minOccurs="0" type="xsd:dateTime"/>
+                        <xsd:element name="ContactID" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="Session" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Sessionid" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Locale" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="PerformerIdentity" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="PerformerRoleId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ApproverId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ApprovalCaseId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="FutureDatedTxnId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Remarks" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="IsFutureDatedTransaction" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="CurrentUICulture" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="DeviceID" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="DeviceType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="MobileISDN" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="ExecutionStep" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="FrontOfficeOpId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="TransactionPipelineId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="CutOffDate" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="FutureTransactionId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="CutoffRescheduled" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="OperationStage" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="Performer" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="PerformerId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="PerformerIdentity" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="PerformerRoleId" minOccurs="0" type="xsd:int"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="APIKey" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AuthenticationData" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="SecretCodeType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="SecretCode" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CardType" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="EntitlementCode" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="TransactionActions" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="ActionCode" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="FieldSet" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Remarks" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="DocumentPackage" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Name" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Code" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="CreatedOn" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="Documents" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Name" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="NameLS" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Code" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="PackageCode" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="IsRequired" minOccurs="0" type="xsd:boolean"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TransactionRequestDateInHijri" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Day" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Month" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Year" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SelectedCampaignCode" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="UserName" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="Password" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="LoginIP" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="CardInfo" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="CardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="CardPin" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="CardTokenNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="CardType" minOccurs="0" type="xsd:normalizedString"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TDeviceID" minOccurs="0" type="xsd:normalizedString"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VPCustomerLoginOperationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ReferenceNumber" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ExecutionStatus" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="IsSuccess" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsRescheduled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="CutoffRescheduled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="Footer" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Result" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Warnings" minOccurs="0">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="Count" minOccurs="0" type="xsd:int"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="RuleVerifications" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="RequiresApproval" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Result" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="RequiredApprovalCount" minOccurs="0" type="xsd:int"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="SuccessMessage" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PasswordRetiresCount" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="MaximumPasswordRetriesAllowed" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="DebitCardCreated" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsTempUsernameAndPasswordUpdated" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="CifNo" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NationalID" minOccurs="0" type="xsd:long"/>
+            <xsd:element name="IsApplePayPopupShown" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsCredentialsActivated" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="CustomerSegment" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="IsDeviceTrustedForOtherUser" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsLimitReached" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsDeviceRegistrationAllowed" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsDeviceAlreadyRegistred" minOccurs="0" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VPSendOTPOperationRequest">
+        <xsd:complexType mixed="true">
+          <xsd:sequence>
+            <xsd:element name="ReferenceNumber" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="NonStpTrackingNumber" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="TransactionRequestDate" minOccurs="0" type="xsd:dateTime"/>
+            <xsd:element name="TicketNumber" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CurrentCulture" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="CustomLogEntryList" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Key" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Value" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Header" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="ReferenceNumber" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="NonStpTrackingNumber" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="User" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="UserId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UserName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="CifNo" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="Segment" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="SubSegment" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="UserType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsCorporate" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="PerformerName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="PerformerUserID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="Password" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CustomerName" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="RoleId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="BranchCode" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="TPinVerified" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Email" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="UserSettings" minOccurs="0">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="IsTooltipEnabled" minOccurs="0" type="xsd:boolean"/>
+                              <xsd:element name="CalendarStyle" minOccurs="0" type="xsd:normalizedString"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="UnreadEmailCount" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="UnPaidBillCount" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="RegisteredDeviceID" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="IsDeviceRegistered" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="MobileNumber" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="NationalID" minOccurs="0" type="xsd:long"/>
+                        <xsd:element name="IDType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="FirstName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="LastName" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="SecondaryMobile" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="BirthDate" minOccurs="0" type="xsd:dateTime"/>
+                        <xsd:element name="SessionID" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="IsOnlineBankingFirstLogin" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="IsOnlineBankingFirstLoginOnThisChannel" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="CustomerPreferredLanguage" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="MemberSince" minOccurs="0" type="xsd:dateTime"/>
+                        <xsd:element name="ContactID" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="Session" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Sessionid" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Locale" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="PerformerIdentity" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="PerformerRoleId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ApproverId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="ApprovalCaseId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="FutureDatedTxnId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Remarks" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="IsFutureDatedTransaction" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="CurrentUICulture" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="DeviceID" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="DeviceType" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="MobileISDN" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="ExecutionStep" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="FrontOfficeOpId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="TransactionPipelineId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="CutOffDate" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="FutureTransactionId" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="CutoffRescheduled" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="OperationStage" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="Performer" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="PerformerId" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="PerformerIdentity" minOccurs="0" type="xsd:int"/>
+                        <xsd:element name="PerformerRoleId" minOccurs="0" type="xsd:int"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="APIKey" minOccurs="0" type="xsd:normalizedString"/>
+                  <xsd:element name="AuthenticationData" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="SecretCodeType" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="SecretCode" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CardNumber" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="CardType" minOccurs="0" type="xsd:normalizedString"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="EntitlementCode" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="TransactionActions" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="ActionCode" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="FieldSet" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Remarks" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="DocumentPackage" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Name" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Code" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="CreatedOn" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="Documents" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Name" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="NameLS" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Code" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="PackageCode" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="IsRequired" minOccurs="0" type="xsd:boolean"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TransactionRequestDateInHijri" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Day" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Month" minOccurs="0" type="xsd:int"/>
+                  <xsd:element name="Year" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SelectedCampaignCode" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CustomerNumber" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="CustomerUserName" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="MobileNumber" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="TransactionName" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="Purpose" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="SubPurpose" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="Amount" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Currency" minOccurs="0">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="nil" type="xsd:boolean" use="required"/>
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="VPSendOTPOperationResponse">
+        <xsd:complexType mixed="true">
+          <xsd:sequence>
+            <xsd:element name="ReferenceNumber" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="NonStpTransactionID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ChannelID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="NonStpTransactionGroupID" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="ExecutionStatus" minOccurs="0" type="xsd:normalizedString"/>
+            <xsd:element name="IsSuccess" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="IsRescheduled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="CutoffRescheduled" minOccurs="0" type="xsd:boolean"/>
+            <xsd:element name="Footer" minOccurs="0">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="Result" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="Warnings" minOccurs="0">
+                          <xsd:complexType mixed="true">
+                            <xsd:sequence>
+                              <xsd:element name="Count" minOccurs="0" type="xsd:int"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="RuleVerifications" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                      <xsd:sequence>
+                        <xsd:element name="RequiresApproval" minOccurs="0" type="xsd:boolean"/>
+                        <xsd:element name="Result" minOccurs="0" type="xsd:normalizedString"/>
+                        <xsd:element name="RequiredApprovalCount" minOccurs="0" type="xsd:int"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="SuccessMessage" minOccurs="0" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="OTPTimeOutInMinutes" minOccurs="0" type="xsd:int"/>
+            <xsd:element name="OTP" minOccurs="0" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="VPCustomerLoginOperationResponse">
+    <wsdl:part element="tns:VPCustomerLoginOperationResponse" name="VPCustomerLoginOperationResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VPCustomerLoginOperationRequest">
+    <wsdl:part element="tns:VPCustomerLoginOperationRequest" name="VPCustomerLoginOperationRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VPSendOTPOperationRequest">
+    <wsdl:part element="tns:VPSendOTPOperationRequest" name="VPSendOTPOperationRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VPSendOTPOperationResponse">
+    <wsdl:part element="tns:VPSendOTPOperationResponse" name="VPSendOTPOperationResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="VPSecurityPort">
+    <wsdl:operation name="VPCustomerLoginOperation">
+      <wsdl:input message="tns:VPCustomerLoginOperationRequest" name="VPCustomerLoginOperationRequest"></wsdl:input>
+      <wsdl:output message="tns:VPCustomerLoginOperationResponse" name="VPCustomerLoginOperationResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VPSendOTPOperation">
+      <wsdl:input message="tns:VPSendOTPOperationRequest" name="VPSendOTPOperationRequest"></wsdl:input>
+      <wsdl:output message="tns:VPSendOTPOperationResponse" name="VPSendOTPOperationResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VPSecurityPortSoap11" type="tns:VPSecurityPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="VPCustomerLoginOperation">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="VPCustomerLoginOperationRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="VPCustomerLoginOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VPSendOTPOperation">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="VPSendOTPOperationRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="VPSendOTPOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VPSecurityPortService">
+    <wsdl:port binding="tns:VPSecurityPortSoap11" name="VPSecurityPortSoap11">
+      <soap:address location="http://localhost:8080/ws/VPSecurity"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://SathiyaPC:8088/mockVPSecurityPortSoap11</con:endpoint><con:endpoint>http://localhost:8080/ws/VPSecurity</con:endpoint></con:endpoints><con:operation id="cfec2e18-001f-4e82-8069-a044e8d7e127" isOneWay="false" action="" name="VPCustomerLoginOperation" bindingOperationName="VPCustomerLoginOperation" type="Request-Response" outputName="VPCustomerLoginOperationResponse" inputName="VPCustomerLoginOperationRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1844d768-c0ba-43ed-9f66-bd45c5f7f297" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://SathiyaPC:8088/mockVPSecurityPortSoap11</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://tempuri.org/VeriBranchMessages.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <VPCustomerLoginOperationRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/VeriBranchMessages.xsd">\r
+         <ReferenceNumber>IBR0000000000008769874</ReferenceNumber>\r
+         <NonStpTrackingNumber>0</NonStpTrackingNumber>\r
+         <NonStpTransactionID>0</NonStpTransactionID>\r
+         <ChannelID>1</ChannelID>\r
+         <NonStpTransactionGroupID>0</NonStpTransactionGroupID>\r
+         <TransactionRequestDate>2023-09-15T02:05:59</TransactionRequestDate>\r
+         <TicketNumber>0</TicketNumber>\r
+         <CurrentCulture>en-US</CurrentCulture>\r
+         <CustomLogEntryList>\r
+            <Key/>\r
+            <Value/>\r
+         </CustomLogEntryList>\r
+         <Header>\r
+            <ReferenceNumber>IBR0000000000008769874</ReferenceNumber>\r
+            <NonStpTrackingNumber>0</NonStpTrackingNumber>\r
+            <NonStpTransactionID>0</NonStpTransactionID>\r
+            <ChannelID>1</ChannelID>\r
+            <NonStpTransactionGroupID>0</NonStpTransactionGroupID>\r
+            <User>\r
+               <UserId>557562</UserId>\r
+               <UserName>testuser1650</UserName>\r
+               <CifNo>10162334</CifNo>\r
+               <Segment>0</Segment>\r
+               <SubSegment>***Masked***able</SubSegment>\r
+               <UserType>Retail</UserType>\r
+               <IsCorporate>false</IsCorporate>\r
+               <PerformerName>Anonymous Performer Name</PerformerName>\r
+               <PerformerUserID>0</PerformerUserID>\r
+               <Password>***Masked***</Password>\r
+               <CustomerName>***Masked***name</CustomerName>\r
+               <RoleId>0</RoleId>\r
+               <ChannelID>1</ChannelID>\r
+               <BranchCode>299</BranchCode>\r
+               <TPinVerified>false</TPinVerified>\r
+               <Email>***Masked***</Email>\r
+               <UserSettings>\r
+                  <IsTooltipEnabled>false</IsTooltipEnabled>\r
+                  <CalendarStyle>Gregorian</CalendarStyle>\r
+               </UserSettings>\r
+               <UnreadEmailCount>0</UnreadEmailCount>\r
+               <UnPaidBillCount>0</UnPaidBillCount>\r
+               <RegisteredDeviceID>0</RegisteredDeviceID>\r
+               <IsDeviceRegistered>false</IsDeviceRegistered>\r
+               <MobileNumber>***Masked***</MobileNumber>\r
+               <NationalID/>\r
+               <IDType>ID</IDType>\r
+               <FirstName/>\r
+               <LastName/>\r
+               <SecondaryMobile/>\r
+               <BirthDate>1994-08-22T00:00:00</BirthDate>\r
+               <SessionID>4s7zti37-va85-09r4-i6gp-3n4533v8do66</SessionID>\r
+               <IsOnlineBankingFirstLogin>false</IsOnlineBankingFirstLogin>\r
+               <IsOnlineBankingFirstLoginOnThisChannel>false</IsOnlineBankingFirstLoginOnThisChannel>\r
+               <CustomerPreferredLanguage>English</CustomerPreferredLanguage>\r
+               <MemberSince>2017-07-12T00:00:00</MemberSince>\r
+               <ContactID>$ContactID</ContactID>\r
+            </User>\r
+            <Session>\r
+               <Sessionid/>\r
+               <Locale>en-US</Locale>\r
+            </Session>\r
+            <PerformerIdentity>0</PerformerIdentity>\r
+            <PerformerRoleId>0</PerformerRoleId>\r
+            <ApproverId>0</ApproverId>\r
+            <ApprovalCaseId>0</ApprovalCaseId>\r
+            <FutureDatedTxnId>0</FutureDatedTxnId>\r
+            <Remarks/>\r
+            <IsFutureDatedTransaction>false</IsFutureDatedTransaction>\r
+            <CurrentUICulture>en-US</CurrentUICulture>\r
+            <DeviceID>5B2EF0F4-BA19-4D8C-A059-372F07DD2A8F</DeviceID>\r
+            <DeviceType>Desktop|Chrome|116</DeviceType>\r
+            <MobileISDN/>\r
+            <ExecutionStep>ExecutionPending</ExecutionStep>\r
+            <FrontOfficeOpId>0</FrontOfficeOpId>\r
+            <TransactionPipelineId>0</TransactionPipelineId>\r
+            <CutOffDate>2023-09-15T02:05:59</CutOffDate>\r
+            <FutureTransactionId>0</FutureTransactionId>\r
+            <CutoffRescheduled>false</CutoffRescheduled>\r
+            <OperationStage>Execute</OperationStage>\r
+            <Performer>\r
+               <PerformerId>0</PerformerId>\r
+               <PerformerIdentity>0</PerformerIdentity>\r
+               <PerformerRoleId>0</PerformerRoleId>\r
+            </Performer>\r
+            <APIKey>10.198.21.174</APIKey>\r
+            <AuthenticationData>\r
+               <SecretCodeType>OTP</SecretCodeType>\r
+               <SecretCode>***Masked***</SecretCode>\r
+               <CardNumber>***Masked***</CardNumber>\r
+               <CardType>CreditCard</CardType>\r
+            </AuthenticationData>\r
+         </Header>\r
+         <EntitlementCode/>\r
+         <TransactionActions>\r
+            <ActionCode/>\r
+            <FieldSet/>\r
+            <Remarks/>\r
+         </TransactionActions>\r
+         <DocumentPackage>\r
+            <Name/>\r
+            <Code/>\r
+            <CreatedOn>1994-08-22T00:00:00</CreatedOn>\r
+            <Documents>\r
+               <Name/>\r
+               <NameLS/>\r
+               <Code/>\r
+               <PackageCode/>\r
+               <IsRequired>false</IsRequired>\r
+            </Documents>\r
+         </DocumentPackage>\r
+         <TransactionRequestDateInHijri>\r
+            <Day>0</Day>\r
+            <Month>0</Month>\r
+            <Year>0</Year>\r
+         </TransactionRequestDateInHijri>\r
+         <SelectedCampaignCode>0</SelectedCampaignCode>\r
+         <UserName>xyzabc123</UserName>\r
+         <Password>weqwecascasdadqwe==</Password>\r
+         <LoginIP>185.3.123.138</LoginIP>\r
+         <CardInfo>\r
+            <CardNumber>***Masked***</CardNumber>\r
+            <CardPin>***Masked***dPin</CardPin>\r
+            <CardTokenNumber>$CardTokenNumber</CardTokenNumber>\r
+            <CardType>CreditCard</CardType>\r
+         </CardInfo>\r
+         <TDeviceID>b5M8WCa0nXYLjebzPfQqSbNYyAMVQVU2j8fvA4d90Q5DtwQRfulcf75SXfdlM6LJKbZjNmnalM5uu3oTaNf9dzS7WgIxGrcnL4+FHZI0wXNt/aX+fQXbvAsDNWXPgKaUS6gK/5UXnlqkcEZ9l+cHjL6JgAD7LQ/toWAIxo2X35s=</TDeviceID>\r
+      </VPCustomerLoginOperationRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/VeriBranchMessages.xsd/VPSecurityPort/VPCustomerLoginOperationRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="821e9349-bdec-4702-a73b-4189d174c50e" isOneWay="false" action="" name="VPSendOTPOperation" bindingOperationName="VPSendOTPOperation" type="Request-Response" outputName="VPSendOTPOperationResponse" inputName="VPSendOTPOperationRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0e898a34-28ab-451d-b161-e340428be680" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://SathiyaPC:8088/mockVPSecurityPortSoap11</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://tempuri.org/VeriBranchMessages.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ver:VPSendOTPOperationRequest>\r
+         e\r
+         <!--Optional:-->\r
+         <ver:ReferenceNumber>?</ver:ReferenceNumber>\r
+         gero\r
+         <!--Optional:-->\r
+         <ver:NonStpTrackingNumber>?</ver:NonStpTrackingNumber>\r
+         cum\r
+         <!--Optional:-->\r
+         <ver:NonStpTransactionID>?</ver:NonStpTransactionID>\r
+         sonoras\r
+         <!--Optional:-->\r
+         <ver:ChannelID>?</ver:ChannelID>\r
+         aeoliam\r
+         <!--Optional:-->\r
+         <ver:NonStpTransactionGroupID>?</ver:NonStpTransactionGroupID>\r
+         quae\r
+         <!--Optional:-->\r
+         <ver:TransactionRequestDate>?</ver:TransactionRequestDate>\r
+         ventos\r
+         <!--Optional:-->\r
+         <ver:TicketNumber>?</ver:TicketNumber>\r
+         verrantque\r
+         <!--Optional:-->\r
+         <ver:CurrentCulture>?</ver:CurrentCulture>\r
+         temperat\r
+         <!--Optional:-->\r
+         <ver:CustomLogEntryList>\r
+            per\r
+            <!--Optional:-->\r
+            <ver:Key>?</ver:Key>\r
+            turbine\r
+            <!--Optional:-->\r
+            <ver:Value>?</ver:Value>\r
+            circum\r
+         </ver:CustomLogEntryList>\r
+         regemque\r
+         <!--Optional:-->\r
+         <ver:Header>\r
+            nimborum\r
+            <!--Optional:-->\r
+            <ver:ReferenceNumber>?</ver:ReferenceNumber>\r
+            fremunt\r
+            <!--Optional:-->\r
+            <ver:NonStpTrackingNumber>?</ver:NonStpTrackingNumber>\r
+            foedere\r
+            <!--Optional:-->\r
+            <ver:NonStpTransactionID>?</ver:NonStpTransactionID>\r
+            ferant\r
+            <!--Optional:-->\r
+            <ver:ChannelID>?</ver:ChannelID>\r
+            profundum\r
+            <!--Optional:-->\r
+            <ver:NonStpTransactionGroupID>?</ver:NonStpTransactionGroupID>\r
+            sceptra\r
+            <!--Optional:-->\r
+            <ver:User>\r
+               et\r
+               <!--Optional:-->\r
+               <ver:UserId>?</ver:UserId>\r
+               turbine\r
+               <!--Optional:-->\r
+               <ver:UserName>?</ver:UserName>\r
+               iovis\r
+               <!--Optional:-->\r
+               <ver:CifNo>?</ver:CifNo>\r
+               flammato\r
+               <!--Optional:-->\r
+               <ver:Segment>?</ver:Segment>\r
+               speluncis\r
+               <!--Optional:-->\r
+               <ver:SubSegment>?</ver:SubSegment>\r
+               profundum\r
+               <!--Optional:-->\r
+               <ver:UserType>?</ver:UserType>\r
+               bella\r
+               <!--Optional:-->\r
+               <ver:IsCorporate>?</ver:IsCorporate>\r
+               nubibus\r
+               <!--Optional:-->\r
+               <ver:PerformerName>?</ver:PerformerName>\r
+               flammas\r
+               <!--Optional:-->\r
+               <ver:PerformerUserID>?</ver:PerformerUserID>\r
+               ac\r
+               <!--Optional:-->\r
+               <ver:Password>?</ver:Password>\r
+               hoc\r
+               <!--Optional:-->\r
+               <ver:CustomerName>?</ver:CustomerName>\r
+               rapidum\r
+               <!--Optional:-->\r
+               <ver:RoleId>?</ver:RoleId>\r
+               ac\r
+               <!--Optional:-->\r
+               <ver:ChannelID>?</ver:ChannelID>\r
+               caelumque\r
+               <!--Optional:-->\r
+               <ver:BranchCode>?</ver:BranchCode>\r
+               speluncis\r
+               <!--Optional:-->\r
+               <ver:TPinVerified>?</ver:TPinVerified>\r
+               circum\r
+               <!--Optional:-->\r
+               <ver:Email>?</ver:Email>\r
+               aris\r
+               <!--Optional:-->\r
+               <ver:UserSettings>\r
+                  coniunx\r
+                  <!--Optional:-->\r
+                  <ver:IsTooltipEnabled>?</ver:IsTooltipEnabled>\r
+                  praeterea\r
+                  <!--Optional:-->\r
+                  <ver:CalendarStyle>?</ver:CalendarStyle>\r
+                  arce\r
+               </ver:UserSettings>\r
+               claustra\r
+               <!--Optional:-->\r
+               <ver:UnreadEmailCount>?</ver:UnreadEmailCount>\r
+               circum\r
+               <!--Optional:-->\r
+               <ver:UnPaidBillCount>?</ver:UnPaidBillCount>\r
+               imperio\r
+               <!--Optional:-->\r
+               <ver:RegisteredDeviceID>?</ver:RegisteredDeviceID>\r
+               certo\r
+               <!--Optional:-->\r
+               <ver:IsDeviceRegistered>?</ver:IsDeviceRegistered>\r
+               quisquam\r
+               <!--Optional:-->\r
+               <ver:MobileNumber>?</ver:MobileNumber>\r
+               et\r
+               <!--Optional:-->\r
+               <ver:NationalID>?</ver:NationalID>\r
+               ac\r
+               <!--Optional:-->\r
+               <ver:IDType>?</ver:IDType>\r
+               feta\r
+               <!--Optional:-->\r
+               <ver:FirstName>?</ver:FirstName>\r
+               ac\r
+               <!--Optional:-->\r
+               <ver:LastName>?</ver:LastName>\r
+               sed\r
+               <!--Optional:-->\r
+               <ver:SecondaryMobile>?</ver:SecondaryMobile>\r
+               pectore\r
+               <!--Optional:-->\r
+               <ver:BirthDate>?</ver:BirthDate>\r
+               talia\r
+               <!--Optional:-->\r
+               <ver:SessionID>?</ver:SessionID>\r
+               pectore\r
+               <!--Optional:-->\r
+               <ver:IsOnlineBankingFirstLogin>?</ver:IsOnlineBankingFirstLogin>\r
+               austris\r
+               <!--Optional:-->\r
+               <ver:IsOnlineBankingFirstLoginOnThisChannel>?</ver:IsOnlineBankingFirstLoginOnThisChannel>\r
+               annos\r
+               <!--Optional:-->\r
+               <ver:CustomerPreferredLanguage>?</ver:CustomerPreferredLanguage>\r
+               sciret\r
+               <!--Optional:-->\r
+               <ver:MemberSince>?</ver:MemberSince>\r
+               certo\r
+               <!--Optional:-->\r
+               <ver:ContactID>?</ver:ContactID>\r
+               dare\r
+            </ver:User>\r
+            rates\r
+            <!--Optional:-->\r
+            <ver:Session>\r
+               bella\r
+               <!--Optional:-->\r
+               <ver:Sessionid>?</ver:Sessionid>\r
+               volutans\r
+               <!--Optional:-->\r
+               <ver:Locale>?</ver:Locale>\r
+               dedit\r
+            </ver:Session>\r
+            faciat\r
+            <!--Optional:-->\r
+            <ver:PerformerIdentity>?</ver:PerformerIdentity>\r
+            magno\r
+            <!--Optional:-->\r
+            <ver:PerformerRoleId>?</ver:PerformerRoleId>\r
+            et\r
+            <!--Optional:-->\r
+            <ver:ApproverId>?</ver:ApproverId>\r
+            ac\r
+            <!--Optional:-->\r
+            <ver:ApprovalCaseId>?</ver:ApprovalCaseId>\r
+            et\r
+            <!--Optional:-->\r
+            <ver:FutureDatedTxnId>?</ver:FutureDatedTxnId>\r
+            regemque\r
+            <!--Optional:-->\r
+            <ver:Remarks>?</ver:Remarks>\r
+            annos\r
+            <!--Optional:-->\r
+            <ver:IsFutureDatedTransaction>?</ver:IsFutureDatedTransaction>\r
+            infixit\r
+            <!--Optional:-->\r
+            <ver:CurrentUICulture>?</ver:CurrentUICulture>\r
+            ventos\r
+            <!--Optional:-->\r
+            <ver:DeviceID>?</ver:DeviceID>\r
+            tenens\r
+            <!--Optional:-->\r
+            <ver:DeviceType>?</ver:DeviceType>\r
+            regina\r
+            <!--Optional:-->\r
+            <ver:MobileISDN>?</ver:MobileISDN>\r
+            montis\r
+            <!--Optional:-->\r
+            <ver:ExecutionStep>?</ver:ExecutionStep>\r
+            rapidum\r
+            <!--Optional:-->\r
+            <ver:FrontOfficeOpId>?</ver:FrontOfficeOpId>\r
+            habenas\r
+            <!--Optional:-->\r
+            <ver:TransactionPipelineId>?</ver:TransactionPipelineId>\r
+            insuper\r
+            <!--Optional:-->\r
+            <ver:CutOffDate>?</ver:CutOffDate>\r
+            mollitque\r
+            <!--Optional:-->\r
+            <ver:FutureTransactionId>?</ver:FutureTransactionId>\r
+            cum\r
+            <!--Optional:-->\r
+            <ver:CutoffRescheduled>?</ver:CutoffRescheduled>\r
+            iovisque\r
+            <!--Optional:-->\r
+            <ver:OperationStage>?</ver:OperationStage>\r
+            in\r
+            <!--Optional:-->\r
+            <ver:Performer>\r
+               soror\r
+               <!--Optional:-->\r
+               <ver:PerformerId>?</ver:PerformerId>\r
+               abdidit\r
+               <!--Optional:-->\r
+               <ver:PerformerIdentity>?</ver:PerformerIdentity>\r
+               iunonis\r
+               <!--Optional:-->\r
+               <ver:PerformerRoleId>?</ver:PerformerRoleId>\r
+               coniunx\r
+            </ver:Performer>\r
+            adorat\r
+            <!--Optional:-->\r
+            <ver:APIKey>?</ver:APIKey>\r
+            ipsa\r
+            <!--Optional:-->\r
+            <ver:AuthenticationData>\r
+               illum\r
+               <!--Optional:-->\r
+               <ver:SecretCodeType>?</ver:SecretCodeType>\r
+               frenat\r
+               <!--Optional:-->\r
+               <ver:SecretCode>?</ver:SecretCode>\r
+               aris\r
+               <!--Optional:-->\r
+               <ver:CardNumber>?</ver:CardNumber>\r
+               nimborum\r
+               <!--Optional:-->\r
+               <ver:CardType>?</ver:CardType>\r
+               aris\r
+            </ver:AuthenticationData>\r
+            mollitque\r
+         </ver:Header>\r
+         premere\r
+         <!--Optional:-->\r
+         <ver:EntitlementCode>?</ver:EntitlementCode>\r
+         montis\r
+         <!--Optional:-->\r
+         <ver:TransactionActions>\r
+            insuper\r
+            <!--Optional:-->\r
+            <ver:ActionCode>?</ver:ActionCode>\r
+            molemque\r
+            <!--Optional:-->\r
+            <ver:FieldSet>?</ver:FieldSet>\r
+            ferant\r
+            <!--Optional:-->\r
+            <ver:Remarks>?</ver:Remarks>\r
+            gero\r
+         </ver:TransactionActions>\r
+         nimborum\r
+         <!--Optional:-->\r
+         <ver:DocumentPackage>\r
+            circum\r
+            <!--Optional:-->\r
+            <ver:Name>?</ver:Name>\r
+            vasto\r
+            <!--Optional:-->\r
+            <ver:Code>?</ver:Code>\r
+            montis\r
+            <!--Optional:-->\r
+            <ver:CreatedOn>?</ver:CreatedOn>\r
+            flammato\r
+            <!--Optional:-->\r
+            <ver:Documents>\r
+               aris\r
+               <!--Optional:-->\r
+               <ver:Name>?</ver:Name>\r
+               tempestatesque\r
+               <!--Optional:-->\r
+               <ver:NameLS>?</ver:NameLS>\r
+               aris\r
+               <!--Optional:-->\r
+               <ver:Code>?</ver:Code>\r
+               tenens\r
+               <!--Optional:-->\r
+               <ver:PackageCode>?</ver:PackageCode>\r
+               incedo\r
+               <!--Optional:-->\r
+               <ver:IsRequired>?</ver:IsRequired>\r
+               premit\r
+            </ver:Documents>\r
+            ac\r
+         </ver:DocumentPackage>\r
+         iras\r
+         <!--Optional:-->\r
+         <ver:TransactionRequestDateInHijri>\r
+            acuto\r
+            <!--Optional:-->\r
+            <ver:Day>?</ver:Day>\r
+            nubibus\r
+            <!--Optional:-->\r
+            <ver:Month>?</ver:Month>\r
+            et\r
+            <!--Optional:-->\r
+            <ver:Year>?</ver:Year>\r
+            austris\r
+         </ver:TransactionRequestDateInHijri>\r
+         dedit\r
+         <!--Optional:-->\r
+         <ver:SelectedCampaignCode>?</ver:SelectedCampaignCode>\r
+         qui\r
+         <!--Optional:-->\r
+         <ver:CustomerNumber>?</ver:CustomerNumber>\r
+         profundum\r
+         <!--Optional:-->\r
+         <ver:CustomerUserName>?</ver:CustomerUserName>\r
+         atris\r
+         <!--Optional:-->\r
+         <ver:MobileNumber>?</ver:MobileNumber>\r
+         imposuit\r
+         <!--Optional:-->\r
+         <ver:TransactionName>?</ver:TransactionName>\r
+         atris\r
+         <!--Optional:-->\r
+         <ver:Purpose>?</ver:Purpose>\r
+         magno\r
+         <!--Optional:-->\r
+         <ver:SubPurpose>?</ver:SubPurpose>\r
+         animos\r
+         <!--Optional:-->\r
+         <ver:Amount nil="?">?</ver:Amount>\r
+         iras\r
+         <!--Optional:-->\r
+         <ver:Currency nil="?">?</ver:Currency>\r
+         sonoras\r
+      </ver:VPSendOTPOperationRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/VeriBranchMessages.xsd/VPSecurityPort/VPSendOTPOperationRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:mockService id="022955d8-b7f7-4ff8-b9e3-04ef2daa8143" port="8088" path="/mockVPSecurityPortSoap11" host="SathiyaPC" name="VPSecurityPortSoap11 MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="VPCustomerLoginOperation" id="861ac66b-3a77-499d-9a47-733b1945a1fd" interface="VPSecurityPortSoap11" operation="VPCustomerLoginOperation"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="b68961f3-53da-47fc-92a1-0bb12e6f6410" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://tempuri.org/VeriBranchMessages.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <VPCustomerLoginOperationResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/VeriBranchMessages.xsd">
+         <ReferenceNumber>IBR0000000000008769874</ReferenceNumber>
+         <NonStpTransactionID>0</NonStpTransactionID>
+         <ChannelID>0</ChannelID>
+         <NonStpTransactionGroupID>0</NonStpTransactionGroupID>
+         <ExecutionStatus>Executed</ExecutionStatus>
+         <IsSuccess>true</IsSuccess>
+         <IsRescheduled>false</IsRescheduled>
+         <CutoffRescheduled>false</CutoffRescheduled>
+         <Footer>
+            <Result>
+               <Warnings>
+                  <Count>0</Count>
+               </Warnings>
+            </Result>
+            <RuleVerifications>
+               <RequiresApproval>false</RequiresApproval>
+               <Result>Success</Result>
+               <RequiredApprovalCount>0</RequiredApprovalCount>
+            </RuleVerifications>
+            <SuccessMessage>-1</SuccessMessage>
+         </Footer>
+         <PasswordRetiresCount>0</PasswordRetiresCount>
+         <MaximumPasswordRetriesAllowed>3</MaximumPasswordRetriesAllowed>
+         <DebitCardCreated>false</DebitCardCreated>
+         <IsTempUsernameAndPasswordUpdated>true</IsTempUsernameAndPasswordUpdated>
+         <CifNo>10162334</CifNo>
+         <NationalID>1037551650</NationalID>
+         <IsApplePayPopupShown>false</IsApplePayPopupShown>
+         <IsCredentialsActivated>true</IsCredentialsActivated>
+         <CustomerSegment>46</CustomerSegment>
+         <IsDeviceTrustedForOtherUser>false</IsDeviceTrustedForOtherUser>
+         <IsLimitReached>false</IsLimitReached>
+         <IsDeviceRegistrationAllowed>false</IsDeviceRegistrationAllowed>
+         <IsDeviceAlreadyRegistred>true</IsDeviceAlreadyRegistred>
+      </VPCustomerLoginOperationResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/VeriBranchMessages.xsd/VPSecurityPort/VPCustomerLoginOperationResponse"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="VPSendOTPOperation" id="16857817-b2f3-4415-b3e2-5b096fb5814f" interface="VPSecurityPortSoap11" operation="VPSendOTPOperation"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="7d220a21-43ea-47aa-8106-103ada473cb6" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://tempuri.org/VeriBranchMessages.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <VPSendOTPOperationResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/VeriBranchMessages.xsd">
+	<ReferenceNumber>IBR0000000000008769875</ReferenceNumber>
+	<NonStpTransactionID>0</NonStpTransactionID>
+	<ChannelID>0</ChannelID>
+	<NonStpTransactionGroupID>0</NonStpTransactionGroupID>
+	<ExecutionStatus>Executed</ExecutionStatus>
+	<IsSuccess>true</IsSuccess>
+	<IsRescheduled>false</IsRescheduled>
+	<CutoffRescheduled>false</CutoffRescheduled>
+	<Footer>
+		<Result>
+			<Warnings>
+				<Count>0</Count>
+			</Warnings>
+		</Result>
+		<RuleVerifications>
+			<RequiresApproval>false</RequiresApproval>
+			<Result>Success</Result>
+			<RequiredApprovalCount>0</RequiredApprovalCount>
+		</RuleVerifications>
+		<SuccessMessage>-1</SuccessMessage>
+	</Footer>
+	<OTPTimeOutInMinutes>3</OTPTimeOutInMinutes>
+	<OTP>123456</OTP>
+</VPSendOTPOperationResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/VeriBranchMessages.xsd/VPSecurityPort/VPSendOTPOperationResponse"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
