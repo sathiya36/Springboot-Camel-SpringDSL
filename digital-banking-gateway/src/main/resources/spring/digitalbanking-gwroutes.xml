@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+    ">
+
+    <routeContext id="digitalbankinggatewayRoutes" xmlns="http://camel.apache.org/schema/spring">
+        <route id="/CustomerAccessManagementGateway-Route">
+            <from uri="direct:cam-gwRoute"/>
+            <onException>
+                <exception>java.lang.Exception</exception>
+                <handled>
+                    <constant>true</constant>
+                </handled>
+                <log message="tracePoint:END,applicationName:${in.headers},exchangeId:${exchangeId}- Exception:${exception}" loggingLevel="ERROR"/>
+            </onException>
+            <log message="tracePoint:START,exchangeId:${exchangeId},applicationName:${in.headers.CamelHttpUri},Message:${body}" loggingLevel="INFO"/>
+            <circuitBreaker>
+            <serviceCall name="cam/api${in.headers.CamelServletContextPath}?bridgeEndpoint=true"/>
+                <onFallback>
+                    <setBody>
+                        <simple>{"message": "Circuit Breaker Activated"}</simple>
+                    </setBody>
+                    <setHeader name="Exchange.HTTP_RESPONSE_CODE">
+                        <constant>503</constant>
+                    </setHeader>
+                    <log message="tracePoint:FALLBACK,exchangeId:${exchangeId},applicationName:${in.headers.CamelHttpUri},Message:${body}" loggingLevel="ERROR"/>
+                </onFallback>
+            </circuitBreaker>
+            <log message="tracePoint:END,exchangeId:${exchangeId},applicationName:${in.headers.CamelHttpUri},Message:${body}" loggingLevel="INFO"/>
+        </route>
+
+        <route id="/CustomerProfileGateway-Route">
+            <from uri="direct:cpl-gwRoute"/>
+            <onException>
+                <exception>java.lang.Exception</exception>
+                <handled>
+                    <constant>true</constant>
+                </handled>
+                <log message="tracePoint:END,applicationName:${in.headers},exchangeId:${exchangeId}- Exception:${exception}" loggingLevel="ERROR"/>
+            </onException>
+            <log message="tracePoint:START,exchangeId:${exchangeId},applicationName:${in.headers.CamelHttpUri},Message:${body}" loggingLevel="INFO"/>
+            <circuitBreaker>
+            <serviceCall name="cpl/api?bridgeEndpoint=true"/>
+                <onFallback>
+                    <setBody>
+                        <simple>{"message": "Circuit Breaker Activated"}</simple>
+                    </setBody>
+                    <setHeader name="Exchange.HTTP_RESPONSE_CODE">
+                        <constant>503</constant>
+                    </setHeader>
+                    <log message="tracePoint:FALLBACK,exchangeId:${exchangeId},applicationName:${in.headers.CamelHttpUri},Message:${body}" loggingLevel="ERROR"/>
+                </onFallback>
+            </circuitBreaker>
+            <log message="tracePoint:END,exchangeId:${exchangeId},applicationName:${in.headers.CamelHttpUri},Message:${body}" loggingLevel="INFO"/>
+        </route>
+    </routeContext>
+
+</beans>

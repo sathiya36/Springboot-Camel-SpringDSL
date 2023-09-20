@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camel="http://camel.apache.org/schema/spring"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <bean id="http" class="zipkin2.reporter.beans.AsyncReporterFactoryBean">
+        <property name="sender">
+            <bean id="sender" class="zipkin2.reporter.beans.OkHttpSenderFactoryBean">
+                <property name="endpoint" value="http://localhost:9411/api/v2/spans"/>
+            </bean>
+        </property>
+        <!-- wait up to 5 seconds for any in-flight spans on close -->
+        <property name="closeTimeout" value="2000"/>
+    </bean>
+
+    <!-- setup zipkin tracer -->
+    <bean id="zipkinTracer" class="org.apache.camel.zipkin.ZipkinTracer">
+        <property name="serviceName" value="${camel.springboot.name}"/>
+        <property name="spanReporter" ref="http"/>
+    </bean>
+    <import resource="errorHandler.xml"/>
+    <import resource="customer-access-management-routes.xml"/>
+    <camelContext id="CustomerAccessManagement-Camel" xmlns="http://camel.apache.org/schema/spring" trace="false" traceLoggingFormat="%-4.4s [%-30.30s] [%-50.50s]">
+        <routeContextRef ref="errorHandler"/>
+        <routeContextRef ref="custAccessMgmtRoutes"/>
+        <threadPoolProfile id="defaultThreadPoolProfile" defaultProfile="true" poolSize="10" maxPoolSize="20"/>
+
+        <restConfiguration component="servlet" bindingMode="off" apiContextPath="api-doc">
+            <dataFormatProperty key="prettyPrint" value="true"/>
+            <apiProperty key="api.version" value="1.0.0"/>
+            <apiProperty key="api.title" value="Customer Access Management  API"/>
+            <apiProperty key="api.description" value="Microservice to Manage Customer Access "/>
+        </restConfiguration>
+        <rest path="/CustomerAccessManagement" bindingMode="off" enableCORS="true">
+            <post id="POST-/UserLogin" path="/UserLogin" skipBindingOnErrorCode="true">
+                <to uri="direct:UserLogin-Route"/>
+            </post>
+            <post id="POST-/LoginGenerateOTP" path="/GenerateOTP" skipBindingOnErrorCode="true">
+                <to uri="direct:GenerateOTP-Route"/>
+            </post>
+        </rest>
+    </camelContext>
+
+</beans>

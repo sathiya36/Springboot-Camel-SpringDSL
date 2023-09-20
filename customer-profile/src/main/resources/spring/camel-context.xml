@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camel="http://camel.apache.org/schema/spring"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <bean id="http" class="zipkin2.reporter.beans.AsyncReporterFactoryBean">
+        <property name="sender">
+            <bean id="sender" class="zipkin2.reporter.beans.OkHttpSenderFactoryBean">
+                <property name="endpoint" value="http://localhost:9411/api/v2/spans"/>
+            </bean>
+        </property>
+        <!-- wait up to 5 seconds for any in-flight spans on close -->
+        <property name="closeTimeout" value="2000"/>
+    </bean>
+
+    <!-- setup zipkin tracer -->
+    <bean id="zipkinTracer" class="org.apache.camel.zipkin.ZipkinTracer">
+        <property name="serviceName" value="${camel.springboot.name}"/>
+        <property name="spanReporter" ref="http"/>
+    </bean>
+    <import resource="errorHandler.xml"/>
+    <import resource="customer-profile-routes.xml"/>
+    <camelContext id="CustomerProfile-Camel" xmlns="http://camel.apache.org/schema/spring" trace="false" traceLoggingFormat="%-4.4s [%-30.30s] [%-50.50s]">
+        <routeContextRef ref="errorHandler"/>
+        <routeContextRef ref="custProfileRoutes"/>
+        <threadPoolProfile id="defaultThreadPoolProfile" defaultProfile="true" poolSize="10" maxPoolSize="20"/>
+
+        <restConfiguration component="servlet" bindingMode="off" apiContextPath="api-doc">
+            <dataFormatProperty key="prettyPrint" value="true"/>
+            <apiProperty key="api.version" value="1.0.0"/>
+            <apiProperty key="api.title" value="Customer Profile  API"/>
+            <apiProperty key="api.description" value="Microservice to manage customer profile and products"/>
+        </restConfiguration>
+        <rest path="/CustomerProfile" bindingMode="off" consumes="application/json" produces="application/json" enableCORS="true">
+            <get id="GET-/UserProfile" path="/UserProfile/{CIF}" skipBindingOnErrorCode="true">
+                <param name="CIF" type="path" dataType="string"/>
+                <to uri="direct:UserProfile-Route"/>
+            </get>
+            <get id="GET-/AccountList" path="/AccountList/{CIF}" skipBindingOnErrorCode="true">
+                <param name="CIF" type="path" dataType="string"/>
+                <to uri="direct:AccountList-Route"/>
+            </get>
+            <get id="GET-/CardList" path="/CardList/{CIF}" skipBindingOnErrorCode="true">
+                <param name="CIF" type="path" dataType="string"/>
+                <to uri="direct:CardList-Route"/>
+            </get>
+        </rest>
+    </camelContext>
+
+</beans>

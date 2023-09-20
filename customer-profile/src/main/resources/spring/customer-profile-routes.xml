@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!-- START SNIPPET: e1 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+    ">
+
+    <!-- this is an included XML file where we only the routeContext -->
+    <routeContext id="custProfileRoutes" xmlns="http://camel.apache.org/schema/spring">
+        <route id="/UserProfile-Route">
+            <from uri="direct:UserProfile-Route"/>
+            <onException>
+                <exception>java.lang.Exception</exception>
+                <handled>
+                    <constant>true</constant>
+                </handled>
+                <log message="tracePoint:END,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Exception:${exception}" loggingLevel="ERROR"/>
+            </onException>
+            <removeHeader name="*"/>
+            <log message="tracePoint:START,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId},CIF:${in.headers.CIF},Message:${body}" loggingLevel="INFO"/>
+            <transform>
+                <simple>&lt;message&gt;&lt;CIF&gt;${in.headers.CIF}&lt;/CIF&gt;&lt;/message&gt;</simple>
+            </transform>
+            <setHeader name="operationName">
+                <simple>UserProfile</simple>
+            </setHeader>
+            <log message="tracePoint:BEFORE_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="INFO"/>
+            <to uri="xslt:xslt/VPProfile-Request.xsl"/>
+            <log message="tracePoint:AFTER_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+            <to uri="direct:VPProfileServiceCall"/>
+            <to uri="xj:xslt/customer-profile-response.xsl?transformDirection=XML2JSON"/>
+        </route>
+
+       <route id="/AccountList-Route">
+            <from uri="direct:AccountList-Route"/>
+            <onException>
+                <exception>java.lang.Exception</exception>
+                <handled>
+                    <constant>true</constant>
+                </handled>
+                <log message="tracePoint:END,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Exception:${exception}" loggingLevel="ERROR"/>
+            </onException>
+            <removeHeader name="*"/>
+            <log message="tracePoint:START,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId},CIF:${in.headers.CIF},Message:${body}" loggingLevel="INFO"/>
+            <setHeader name="operationName">
+                <simple>AccountList</simple>
+            </setHeader>
+            <log message="tracePoint:BEFORE_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+           <transform>
+               <simple>&lt;message&gt;&lt;CIF&gt;${in.headers.CIF}&lt;/CIF&gt;&lt;/message&gt;</simple>
+           </transform>
+            <to uri="xslt:xslt/VPProfile-Request.xsl"/>
+            <log message="tracePoint:AFTER_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+            <to uri="direct:VPProfileServiceCall"/>
+            <to uri="xj:xslt/customer-profile-response.xsl?transformDirection=XML2JSON"/>
+        </route>
+
+          <route id="/CardList-Route">
+             <from uri="direct:CardList-Route"/>
+             <onException>
+                 <exception>java.lang.Exception</exception>
+                 <handled>
+                     <constant>true</constant>
+                 </handled>
+                 <log message="tracePoint:END,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Exception:${exception}" loggingLevel="ERROR"/>
+             </onException>
+             <removeHeader name="*"/>
+             <log message="tracePoint:START,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId},CIF:${in.headers.CIF},Message:${body}" loggingLevel="INFO"/>
+             <setHeader name="operationName">
+                 <simple>CardList</simple>
+             </setHeader>
+             <log message="tracePoint:BEFORE_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+              <transform>
+                  <simple>&lt;message&gt;&lt;CIF&gt;${in.headers.CIF}&lt;/CIF&gt;&lt;/message&gt;</simple>
+              </transform>
+             <to uri="xslt:xslt/VPProfile-Request.xsl"/>
+             <log message="tracePoint:AFTER_TRANSFORM,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="DEBUG"/>
+             <to uri="direct:VPProfileServiceCall"/>
+             <to uri="xj:xslt/customer-profile-response.xsl?transformDirection=XML2JSON"/>
+         </route>
+
+
+        <route id="VPProfileServiceCall-Route">
+            <from uri="direct:VPProfileServiceCall"/>
+            <onException>
+                <exception>java.lang.Exception</exception>
+                <handled>
+                    <constant>true</constant>
+                </handled>
+                <log message="tracePoint:EXCEPTION,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Exception:${exception}" loggingLevel="ERROR"/>
+                <to uri="direct:error"/>
+            </onException>
+            <log message="tracePoint:BEFORE_API_OR_BACKEND,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="INFO"/>
+            <circuitBreaker>
+                <to uri="spring-ws:{{vpprofile.service.endpoint}}?timeout={{vpprofile.service.responseTimeout}}"/>
+                <onFallback>
+                    <setBody>
+                        <simple>&lt;message&gt;Circuit Breaker Activated&lt;/message&gt;</simple>
+                    </setBody>
+                    <setHeader name="Exchange.HTTP_RESPONSE_CODE">
+                        <constant>503</constant>
+                    </setHeader>
+                    <setProperty name="ErrorCode">
+                        <constant>404</constant>
+                    </setProperty>
+                    <log message="tracePoint:FALLBACK,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="ERROR"/>
+                </onFallback>
+            </circuitBreaker>
+            <convertBodyTo type="java.lang.String"></convertBodyTo>
+            <log message="tracePoint:AFTER_API_OR_BACKEND,applicationName:${in.headers.CamelHttpUri},exchangeId:${exchangeId}- Message-${body}" loggingLevel="INFO"/>
+            <to uri="xslt:xslt/Remove-Namespaces.xsl"/>
+        </route>
+    </routeContext>
+
+</beans>
